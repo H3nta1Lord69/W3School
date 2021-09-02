@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Attributes</title>
+</head>
+<body>
+    
+    <h1>HTML Attributes</h1>
+
+    <p>HTML attributes provide additional information about HTML elements.</p>
+
+    <hr>
+
+    <h2>HTML Attributes</h2>
+        <ul>
+            <li>All HTML elements can have attributes.</li>
+            <li>Attributes provide additional information about elements.</li>
+            <li>Attributes are always specified in the start tag.</li>
+            <li>Attributes usually come in name/value pairs like: <strong>name="value"</strong></li>
+        </ul>
+
+    <hr>
+
+    <h2>The href Attribute</h2>
+        <p>The <strong><-a></strong> tag defines a hyperlink. The <strong>href</strong> attribute specifies the URL of the page the link goes to:</p>
+            <h3>Example</h3>
+            <p><strong><-a href="https://www.google.com"></strong>Visit Google<strong><-/a></strong></p>
+
+    <hr>
+
+    <h2>The src Attribute</h2>
+        <p>The <strong><-img></strong> tag is used to embed an image in an HTML page. The <strong>src</strong> attribute specifies the path to the image to be displayed.</p>
+            <h3>Example</h3>
+            <p><strong><-img src="an_image.jpg"></strong></p>
+
+        <p>There are two ways to specify the URL in the <strong>src</strong> attribute.</p>
+        <ol>
+            <li><strong>Absolute URL - </strong>Links to an external image that is hosted on another website. Example: src="https://www.google.com/images/an_image.jpg".</li>
+            <p><em><strong>Note: </strong>External images might be under copyright. If you do not get permission to use it, you may in violation of copyright laws. In addition, you cannot control external images; it can suddenly be removed or changed.</em></p>
+            <li><strong>Relative URL - </strong>Links to an image that is hosted within the website. Here, the URL does not include the domain name. If the URL begins without a slash, it will be relative to the current page. Example: src="an_image.jpg". If the URL begins with a slash, it will be relative to the domain. Example: src="./images/an_image.jpg".</li>
+            <p><em><strong>Tip: </strong>It is almost always best to use relative URLs. They will not break if you change domain.</em></p>
+        </ol>
+
+    <hr>
+
+    <h2>The width and height Attributes</h2>
+        <p>The <strong><-img></strong> tag should also contain the <strong>width</strong> and <strong>height</strong> attributes, which specifies the width and height of the image (in pixels):</p>
+            <h3>Example</h3>
+            <p><strong><-img src="an_image.jpg" width="500" height="600"></strong></p>
+
+    <hr>
+
+    <h2>The alt Attribute</h2>
+        <p>The required <strong>alt</strong> attribute for the <strong><-img></strong> tag specifies an alternate text for an image, if the image for some reason cannot be displayed. This can be due to slow connection, or an error in the <strong>src</strong> attribute, or if the user uses a screen reader.</p>
+            <h3>Example</h3>
+            <p><strong><-img src="an_image.jpg" alt="An frekin image"></strong></p>
+
+    <hr>
+
+    <h2>The style Attribute</h2>
+        <p>The <strong>style</strong> attribute is used to add styles to an element, such as color, font size, and more.</p>
+            <h3>Example</h3>
+            <p><strong><-p style="color:red;"></strong>This is a red paragraph.<strong><-p></strong></p>
+
+    <hr>
+
+    <h2>The lang Attribute</h2>
+        <p>You should always include the <strong>lang</strong> attribute inside the <strong><-html></strong> tag, to declare the language of the Web page. This is meant to assist search engines and browsers.</p>
+        <p>The following example specifies English as the language:</p>
+            <p> <-!DOCTYPE html>
+                <-html lang="en">
+                <-body>
+                ...
+                <-/body>
+                <-/html>
+            </p>
+
+    <hr>
+
+    <h2>The title Attribute</h2>
+        <p>The <strong>title</strong> attribute defines some extra information about an element.</p>
+        <p>The value of the title attribute will be displayed as a tooltip when you mouse over the element:</p>
+            <h3>Example</h3>
+            <p><strong><-p title="I'm a tooltip"></strong>This is a paragraph.<strong><-p></strong></p>
+    
+    <hr>
+
+    <h2>Always Use Lowercase Attributes</h2>
+        <p>The HTML standard does not require lowercase attribute names.</p>
+        <p>The title (and all other attributes) can be written with uppercase or lowercase like <strong>title</strong> or <strong>TITLE</strong></p>
+        <p>However, W3C <strong>recommends</strong> lowercase attributes in HTML, and <strong>demands</strong> lowercase attributes for stricter document types like XHTML.</p>
+
+    <hr>
+
+    <h2>Always Quote Attribute Values</h2>
+        <p>The HTML standard does not require quotes around attribute values.</p>
+        <p>However, W3C <strong>recommends</strong> quotes in HTML, and <strong>demands</strong> quotes for stricter document types like XHTML.</p>
+            <h3>Good:</h3>
+            <p><strong><-a href="https://www.google.com"></strong>Visit Google<strong><-/a></strong></p>
+            <h3>Bad:</h3>
+            <p><strong><-a href=https://www.google.com></strong>Visit Google<strong><-/a></strong></p>
+        <p>Sometimes you have to use quotes. This example will not display the title attribute correctly, because it contains a space:</p>
+            <h3>Example</h3>
+            <p><strong><-p title=About Google></strong></p>
+
+    <hr>
+
+    <h2>Single or Double Quotes?</h2>
+        <p>Double quotes around attribute values are the most common in HTML, but single quotes can also be used.</p>
+        <p>In some situations, when the attribute value itself contains double quotes, it is necessary to use single quotes:</p>
+            <p><strong><-p title='John "ShotGun" Nelson'</strong></p>
+            <p>Or vice versa:</p>
+            <p><strong><-p title="John 'ShotGun' Nelson"</strong></p>
+
+    <hr>
+
+    <h2>Chapter Summary</h2>
+        <ul>
+            <li>All HTML elements can have <strong>attributes.</strong></li>
+            <li>The <strong>href</strong> attribute of <strong><-a></strong> specifies the URL of the page the link goes to.</li>
+            <li>The <strong>src</strong> attribute of <strong><-img></strong> specifies the path to the image to be displayed.</li>
+            <li>The <strong>width</strong> and <strong>height</strong> attributes of <strong><-img></strong> provide size information for images.</li>
+            <li>The <strong>alt</strong> attribute of <strong><-img></strong> provides an alternate text for an image.</li>
+            <li>The <strong>style</strong> attribute is used to add styles to an element, such as color, font, size, and more.</li>
+            <li>The <strong>lang</strong> attribute of <strong><-html></strong> tag declares the language of the Web page.</li>
+            <li>The <strong>title</strong> attribute defines some extra information about an element.</li>
+        </ul>
+
+</body>
+</html>
