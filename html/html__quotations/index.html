@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quotation and Citation Elements</title>
+</head>
+<body>
+
+    <h1>HTML Quotation and Citation Elements</h1>
+    <p>We will go through the <strong style="color: red;"><-blockquote></strong>, <strong style="color: red;"><-q></strong>, <strong style="color: red;"><-abbr></strong>, <strong style="color: red;"><-address></strong>, <strong style="color: red;"><-cite></strong>, and <strong style="color: red;"><-bdo></strong> HTML elements.</p>
+
+    <hr>
+
+    <h2>HTML <-blockquote> for Quotations</h2>
+        <p>The HTML <strong style="color: red;"><-blockquote></strong> element defines a section that is quoted from another source.</p>
+        <p>Browsers usually indent <strong style="color: red;"><-blockquote></strong> elements.</p>
+            <h3>Example</h3>
+            <p><-p>Here is a quote from WWF's website:<-/p></p>
+            <blockquote cite="http://www.worldwildlife.org/who/index.html">
+                For 50 years, WWF has been protecting the future of nature.
+                The world's leading conservation organization,
+                WWF works in 100 countries and is supported by
+                1.2 million memebers in the United States and
+                close to 5 milion globally.
+            </blockquote>
+
+    <hr>
+
+    <h2>HTML <-q> for Short Quotations</h2>
+        <p>The HTML <strong style="color: red;"><-q></strong> tag defines a short quotation.</p>
+        <p>Browsers normally insert quotation marks around the quotation.</p>
+            <h3>Example</h3>
+            <p><-p>WWF's goal is to: <q><-q>Build a future where people live in harmony with nature.<-/q></q><-/p></p>
+
+    <hr>
+
+    <h2>HTML <-abbr> for Abbreviations</h2>
+        <p>The HTML <strong style="color: red;"><-abbr></strong> tag defines an abbrevation or an acronym, like "HTML", "CSS", "Mr.", "Dr.", "ASAP", "ATM".</p>
+        <p>Marking abbrevations can give useful information to browsers, translation systems and search-engines.</p>
+        <p><em><strong>Tip: </strong>Use the global title attribute to show the description for the abbrevation/acronym when you mouse over the element.</em></p>
+            <h3>Example</h3>
+            <p><-p>The <abbr title="World Health Organization"><-abbr title="World Health Organization">WHO<-/abbr></abbr> was founded in 1948.<-/p></p>
+
+    <hr>
+
+    <h2>HTML <-address> for Contact Information</h2>
+        <p>The HTML <strong style="color: red;"><-address></strong> tag defines the contact information for the author/owner of a document or an article.</p>
+        <p>The contact information can be an email address, URL, physical address, phone number, social media handle, etc.</p>
+        <p>The text in the <strong style="color: red;"><-address></strong> element usually renders in <i>italic</i>, and browsers will always add a line brak before and after the <strong style="color: red;"><-address></strong> element.</p>
+            <h3>Example</h3>
+            <p>
+                <address>
+                    <-address>
+                        Written by John Doe.<-/br></br>
+                        Visit us at:<-/br></br>
+                        Example.com<-/br></br>
+                        Box 564, Disneyland<-/br><br>
+                        USA
+                    <-/address>
+                </address>
+            </p>
+
+    <hr>
+
+    <h2>HTML <-cite> for Work Title</h2>
+        <p>The HTML <strong style="color: red;"><-cite></strong> tag defines the title of a creative work (e.g. a book, a poem, a song, a movie, a painting, a sculpture, etc.).</p>
+        <p><em><strong>Note:</strong> A person's name is not the title of a work.</em></p>
+        <p>The text in the <strong style="color: red;"><-cite></strong> element usually renders in <i>italic</i>.</p>
+            <h3>Example</h3>
+            <p><-p><cite><-cite>The Scream<-/cite></cite> by Edvard Munch. Painted in 1893.<-/p></p>
+
+    <hr>
+
+    <h2>HTML <-bdo> for Bi-Directional Override</h2>
+        <p>BDO stands for Bi-Directional Override.</p>
+        <p>The HTML <strong style="color: red;"><-bdo></strong> tag is used to override the current text direction.</p>
+            <h3>Example</h3>
+            <-bdo dir="rtl"><bdo dir="rtl">This text will be written from right to left.</bdo><-/bdo>
+    
+    <hr>
+
+    <table>
+        <tr>
+            <th>Tag</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td><-abbr></td>
+            <td>Defines an abbrevation or acronym.</td>
+        </tr>
+        <tr>
+            <td><-address></td>
+            <td>Defines contact information for the author/owner of a document.</td>
+        </tr>
+        <tr>
+            <td><-bdo></td>
+            <td>Defines the text direction.</td>
+        </tr>
+        <tr>
+            <td><-blockquote></td>
+            <td>Defines a section that is quoted from another source.</td>
+        </tr>
+        <tr>
+            <td><-cite></td>
+            <td>Defines the title of a work.</td>
+        </tr>
+        <tr>
+            <td><-q></td>
+            <td>Defines a short inline quotation.</td>
+        </tr>
+    </table>
+
+</body>
+</html>
