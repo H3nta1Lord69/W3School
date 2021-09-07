@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+<body>
+
+    <h1>HTML Styles - CSS</h1>
+        <p>CSS stands for Cascading Style Sheets.</p>
+        <p>CSS saves a lot of work. It can control the layout of multiple web pages all at once.</p>
+
+    <hr>
+
+    <h2>What is CSS?</h2>
+        <p>Cascading Style Sheets (CSS) is used to format the layout of a webpage.</p>
+        <p>With CSS, you can control the color, font, the size of text, the spacing between elements, how elements are positioned and laid out, what background images or background colors are to be used, different displays for different devices and screen sizes, and much more!</p>
+        <p><em><strong>Tip:</strong> The word <strong>cascading</strong> means that a style applied to a parent element will also apply to all children elements within the parent. So, if you set the color of the
+                                    body text to "blue", all headings, paragraphs, and other text elements within the body will also get the same color (unless you specify something else)!</em></p>
+
+    <hr>
+
+    <h2>Using CSS</h2>
+        <p>CSS can be added to HTML documents in 3 ways:</p>
+        <ul>
+            <li><strong>Inline</strong> - by using the <strong style="color: red;">style</strong> attribute inside HTML elements.</li>
+            <li><strong>Internal</strong> - by using a <strong style="color: red;"><-style></strong> element in the <strong style="color: red;"><-head></strong> section.</li>
+            <li><strong>External</strong> - by using a <strong style="color: red;"><-link></strong> element to link to an external CSS file.</li>
+        </ul>
+        <p>The mos common way to add CSS, is to keep the styles in external CSS files.</p>
+
+    <hr>
+
+    <h2>Inline CSS</h2>
+        <p>An inline CSS is used to apply a unique style to a single HTML element.</p>
+        <p>An inline CSS uses the <strong style="color: red;"><-style></strong> attribute of an HTML element.</p>
+            <h3>Example</h3>
+            <pre>
+                <-h1 style="color:blue;">A Blue Heading</-h1>
+
+                <-p style="color:red;">A red paragraph.</-p>
+            </pre>
+
+    <hr>
+
+    <h2>Internal CSS</h2>
+        <p>An internal CSS is used to define a style for a single HTML page.</p>
+        <p>An internal CSS is defined in the <strong style="color: red;"><-head></strong> section of an HTML page, within a <strong style="color: red;"><-style></strong> element.</p>
+        <p>The following example sets the text color of ALL the <strong style="color: red;"><-h1></strong> elements (on that page) to blue, and the text color of ALL the <strong style="color: red;"><-p></strong> elements to red. In addition, the page will be displayed with a "powderblue" background color:</p>
+        <p><a href="./examples/internal.html">Here</a></p>
+
+    <hr>
+
+    <h2>External CSS</h2>
+        <p>An external style sheet is used to define the style for many HTML pages.</p>
+        <p>To use an external style sheet, add a link to it in the <strong style="color: red;"><-head></strong> section of each HTML page:</p>
+        <p><a href="./examples/external.html">Example here</a></p>
+
+        <p><em><strong>Tip:</strong> With an external style sheet, you can change the look of an entire web site, by changing one file!</em></p>
+
+    <hr>
+
+    <h2>CSS Colors, Fonts and Sizes</h2>
+        <p>Here, we will demonstrate some commonly used CSS properties. You will learn more about them later.</p>
+        <p>The CSS <strong style="color: red;">color</strong> property defines the text color to be used.</p>
+        <p>The CSS <strong style="color: red;">font-family</strong> property defines the font to be used.</p>
+        <p>The CSS <strong style="color: red;">font-size</strong> property defines the text size to be used.</p>
+        <p><a href="./examples/colors-fonts-sizes.html">Example here</a></p>
+
+    <hr>
+
+    <h2>CSS Border</h2>
+        <p>The CSS <strong style="color: red;">border</strong> property defines a border around an HTML element.</p>
+        <p><em><strong>Tip:</strong> You can define a border for nearly all HTML elements.</em></p>
+            <h3>Example</h3>
+            <p style="border: 2px solid powderblue;">Hello there!</p>
+
+    <hr>
+
+    <h2>CSS Padding</h2>
+        <p>The CSS <strong style="color: red;">padding</strong> property defines a padding (space) between the text and the border.</p>
+            <h3>Example</h3>
+            <p style="border: 2px solid powderblue; padding: 30px;">Hello there!</p>
+
+    <hr>
+
+    <h2>CSS Margin</h2>
+        <p>The CSS <strong style="color: red;">margin</strong> property defines a margin (space) outside the border.</p>
+            <h3>Example</h3>
+            <p style="border: 2px solid powderblue; margin:50px;">Hello there!</p>
+
+    <hr>
+
+    <h2>Chapter Summary</h2>
+        <ul>
+            <li>Use the HTML <strong style="color: red;">style</strong> attribute for inline styling.</li>
+            <li>Use the HTML <strong style="color: red;"><-style></strong> element to define internal CSS.</li>
+            <li>Use the HTML <strong style="color: red;"><-link></strong> element to refer to an external CSS file.</li>
+            <li>Use the HTML <strong style="color: red;"><-head></strong> element to store <-style> and <-link> elements.</li>
+            <li>Use the CSS <strong style="color: red;">color</strong> property for text colors.</li>
+            <li>Use the CSS <strong style="color: red;">font-family</strong> property for text fonts.</li>
+            <li>Use the CSS <strong style="color: red;">font-color</strong> property for text sizes.</li>
+            <li>Use the CSS <strong style="color: red;">border</strong> property for borders.</li>
+            <li>Use the CSS <strong style="color: red;">padding</strong> property for space inside the border.</li>
+            <li>Use the CSS <strong style="color: red;">margin</strong> property for space outside the border.</li>
+        </ul>
+
+    <hr>
+
+    <h2>HTML Tag Reference</h2>
+        <table>
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><-style></td>
+                <td>Defines style information for an HTML document.</td>
+            </tr>
+            <tr>
+                <td><-link></td>
+                <td>Defines a link between a document and an external resource.</td>
+            </tr>
+        </table>
+    
+</body>
+</html>
