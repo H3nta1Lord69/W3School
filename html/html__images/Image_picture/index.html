@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>HTML <-picture> Element</h1>
+    <hr>
+        <p>The HTML <strong><-picture></strong> element allows you to display different pictures for different devices or screen sizes.</p>
+            <img src="./assets/picture_example.jpg" alt="Devices">
+
+    <hr>
+
+    <h2>The HTML <-picture> Element</h2>
+        <p>The HTML <strong><-picture></strong> element gives web developers more flexibility in specifying image resources.</p>
+        <p>The <strong><-picture></strong> element contains one or more <strong><-source></strong> elements, each referring to different images through the <strong>srcset</strong> attribute. This way the browser can choose the image that best fits the current view and/or device.</p>
+        <p>Each <strong><-source></strong> element has a <strong>media</strong> attribute that defines when the image is most suitable.</p>
+
+            <picture>
+                <source media="(min-width: 650px)" srcset="./assets/img_food.jpg">
+                <source media="(min-width: 465px)" srcset="./assets/img_car.jpg">
+                <img src="./assets/img_girl.jpg" alt="Girl in a jacket" style="width:auto;">
+            </picture>
+            
+            <p>Resize the browser to see different versions of the picture loading at different viewport sizes.
+            The browser looks for the first source element where the media query matches the user's current viewport width,
+            and fetches the image specified in the srcset attribute.</p>
+            
+            <p>The img element is required as the last child tag of the picture declaration block.
+            The img element is used to provide backward compatibility for browsers that do not support the picture element, or if none of the source tags matched.
+            </p>
+            
+            <p><b>Note:</b> The picture element is not supported in IE12 and earlier or Safari 9.0 and earlier.</p>
+
+        <p><em><b>Note:</b> Always specify an <strong><-img></strong> element as the last child element of the <strong><-picture></strong> element. The <strong><-img></strong> element is used by browsers that do not support the <strong><-picture></strong> element, or if none of the <strong><-source></strong> tags match.</em></p>
+
+        <hr>
+
+        <h2>When to use the Picture Element</h2>
+            <p>There are two main purposes for the <strong><-picture></strong> element:</p>
+            <h3><b>1. Bandwidth</b></h3>
+            <p>If you have a small screen or device, it is not necessary to load a large image file. The browser will use the first <strong><-source></strong> element with matching attribute values, and ignore any of the following elements.</p>
+            <h3><b>2. Format Support</b></h3>
+            <p>Some browsers or devices may not support all image formats. By using the <strong><-picture></strong> element, you can add images of all formats, and the browser will use the first format it recognizes, and ignore any of the following elements.</p>
+
+            <p><em><b>Note:</b></em> The browser will use the forst <strong><-source></strong> element with matching attribute values, and ignore any following <strong><-source></strong> elements.</p>
+
+        <hr>
+
+        <h2>HTML Image Tags</h2>
+
+        <table>
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td><-img></td>
+                <td>Defines an image.</td>
+            </tr>
+            <tr>
+                <td><-map></td>
+                <td>Defines an image map.</td>
+            </tr>
+            <tr>
+                <td><-area></td>
+                <td>Defines a clickable area inside an image map.</td>
+            </tr>
+            <tr>
+                <td><-picture></td>
+                <td>Defines a container for multiple image resources.</td>
+            </tr>
+        </table>
+    
+</body>
+</html>

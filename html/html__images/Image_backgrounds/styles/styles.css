@@ -1,0 +1,9 @@
+strong
+{
+    color: red;
+}
+
+.bg-image
+{
+    background-image: url('../assets/img_girl.jpg');
+}
