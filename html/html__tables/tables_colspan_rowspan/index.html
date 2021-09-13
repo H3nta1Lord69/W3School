@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Table Colspan & Rowspan</title>
+</head>
+<body>
+
+    <h1>HTML Table Colspan & Rowspan</h1>
+    <hr>
+        <p>HTML tables can have cells that spans over multiple rows and/or columns.</p>
+
+    <hr>
+
+    <h2>HTML Table - Colspan</h2>
+        <p>To make a cell span over multiple columns, use the <strong>colspan</strong> attribute.</p>
+            <h2>Cell that spans two columns</h2>
+            <p>To make a cell span more than one column, use the colspan attribute.</p>
+            
+            <table style="width:100%">
+                <tr>
+                    <th colspan="2">Name</th>
+                    <th>Age</th>
+                </tr>
+                <tr>
+                    <td>Jill</td>
+                    <td>Smith</td>
+                    <td>43</td>
+                </tr>
+                <tr>
+                    <td>Eve</td>
+                    <td>Jackson</td>
+                    <td>57</td>
+                </tr>
+            </table>
+
+        <p><em><b>Note:</b> The value of the <strong>colspan</strong> attribute represents the number of columns to span.</em></p>
+
+    <hr>
+
+    <h2>HTML Table - Rowspan</h2>
+        <p>To make a cell span over multiple rows, use the <strong>rowspan</strong> attribute.</p>
+            <h2>Cell that spans two rows</h2>
+            <p>To make a cell span more than one row, use the rowspan attribute.</p>
+            
+            <table style="width:100%">
+                <tr>
+                    <th>Name</th>
+                    <td>Jill</td>
+                </tr>
+                <tr>
+                    <th rowspan="2">Phone</th>
+                    <td>555-1234</td>
+                </tr>
+                <tr>
+                    <td>555-8745</td>
+                </tr>
+            </table>
+
+        <p><em><b>Note:</b> The value of the <strong>rowspan</strong> attribute represents the number of rows to span.</em></p>
+    
+</body>
+</html>

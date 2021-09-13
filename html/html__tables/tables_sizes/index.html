@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/styles.css">
+    <title>Tables Sizes</title>
+</head>
+<body>
+
+    <h1>HTML Table Sizes</h1>
+    <hr>
+        <p>HTML tables can have different sizes for each column, row or the entire table.</p>
+
+    <hr>
+
+    <p>Use the <strong>style</strong> attribute with the <strong>width</strong> or <strong>height</strong> propertires to specify the size of a table, row or column.</p>
+
+    <hr>
+
+    <h2>HTML Table Width</h2>
+        <p>To set the width of a table, add the <strong>style</strong> attribute to the <strong><-table></strong> element.</p>
+        <p><em><b>Note:</b> Using a percentage as the size unit for a width means how wide will this element be compared to its parent element, which in this case is the <strong><-body></strong> element.</em></p>
+
+    <hr>
+
+    <h2>HTML Table Column Width</h2>
+        <p>To set the size of a specific column, add the <strong>style</strong> attribute on a <strong><-th></strong> or <strong><-td></strong> element.</p>
+
+            <h2>Set the first column to 70% of the table width</h2>
+
+            <table style="width:100%">
+            <tr>
+                <th style="width:70%">Firstname</th>
+                <th>Lastname</th> 
+                <th>Age</th>
+            </tr>
+            <tr>
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+            </tr>
+            </table>
+
+    <hr>
+
+    <h2>HTML Table Row Height</h2>
+        <p>To set the height of a specific row, add the <strong>style</strong> attribute on a table row element.</p>
+
+            <h2>Set the height of the second row to 200 pixels</h2>
+
+            <table style="width:100%">
+            <tr>
+                <th>Firstname</th>
+                <th>Lastname</th> 
+                <th>Age</th>
+            </tr>
+            <tr style="height:200px">
+                <td>Jill</td>
+                <td>Smith</td>
+                <td>50</td>
+            </tr>
+            <tr>
+                <td>Eve</td>
+                <td>Jackson</td>
+                <td>94</td>
+            </tr>
+            <tr>
+                <td>John</td>
+                <td>Doe</td>
+                <td>80</td>
+            </tr>
+            </table>
+    
+</body>
+</html>

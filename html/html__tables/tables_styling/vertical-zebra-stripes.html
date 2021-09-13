@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/vertical-zebra-stripes.css">
+    <title>Vertical Zebra Stripes</title>
+</head>
+<body>
+
+    <h1>HTML Table - Vertical Zebra Stripes</h1>
+    <hr>
+        <p>To make vertical zebra stripes, style every other <em>column</em>, instead of every other <em>row</em>.</p>
+        
+            <h2>Striped Table</h2>
+            <p>For zebra-striped tables, use the nth-child() selector and add a background-color to all even (or odd) table rows:</p>
+            
+            <table style="width:100%">
+                <tr>
+                    <th>MON</th>
+                    <th>TUE</th>
+                    <th>WED</th>
+                    <th>THU</th>
+                    <th>FRI</th>
+                    <th>SAT</th>
+                    <th>SUN</th>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+                <tr>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                    <td> </td>
+                </tr>
+            </table>
+
+    <hr>
+
+        <p>Set the <strong>:nth-child(even)</strong> for table data elements.</p>
+        <p><em><b>Note:</b> Put the <strong>:nth-child()</strong> selector on both <strong>th</strong> and <strong>td</strong> elements if you want to have the styling on both headers and regular table cells.</em></p>
+    
+</body>
+</html>
