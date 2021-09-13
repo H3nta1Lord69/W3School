@@ -22,7 +22,253 @@
             <p>The <strong>span</strong> attribute specifies how many columns that gets the style.</p>
             <p>The <strong>style</strong> attribute specifies the style to give the columns.</p>
 
+                <h2>Colgroup</h2>
+                <p>Add the a colgroup with a col element that spans over two columns to define a style for the two columns:</p>
+                
+                <table style="width: 100%;">
+                <colgroup>
+                    <col span="2" style="background-color: #D6EEEE">
+                </colgroup>
+                    <tr>
+                        <th>MON</th>
+                        <th>TUE</th>
+                        <th>WED</th>
+                        <th>THU</th>
+                        <th>FRI</th>
+                        <th>SAT</th>
+                        <th>SUN</th>
+                    </tr>
+                    <tr>
+                        <td>1</td>
+                        <td>2</td>
+                        <td>3</td>
+                        <td>4</td>
+                        <td>5</td>
+                        <td>6</td>
+                        <td>7</td>
+                    </tr>
+                    <tr>
+                        <td>8</td>
+                        <td>9</td>
+                        <td>10</td>
+                        <td>11</td>
+                        <td>12</td>
+                        <td>13</td>
+                        <td>14</td>
+                    </tr>
+                    <tr>
+                        <td>15</td>
+                        <td>16</td>
+                        <td>17</td>
+                        <td>18</td>
+                        <td>19</td>
+                        <td>20</td>
+                        <td>21</td>
+                    </tr>
+                    <tr>
+                        <td>22</td>
+                        <td>23</td>
+                        <td>24</td>
+                        <td>25</td>
+                        <td>26</td>
+                        <td>27</td>
+                        <td>28</td>
+                    </tr>
+                </table>
+
+        <p><em><b>Note:</b> The <strong><-colgroup></strong> tag must be a child of a <strong><-table></strong> element and should be placed before any other table elements, like <strong><-thead></strong>, <strong><-tr></strong>, <strong><-td></strong> etc., but after the <strong><-caption></strong> element, if present.</em></p>
+    
+    <hr>
+
+    <h2>Legal CSS Properties</h2>
+        <p>There are only a very limited section of CSS properties that are allowed to be used in the colgroup.</p>
+            <p><strong>width</strong> property.</p>
+            <p><strong>visibility</strong> property.</p>
+            <p><strong>background</strong> properties.</p>
+            <p><strong>border</strong> properties.</p>
+        <p>All other CSS properties will have no effect on your tables.</p>
+
+    <hr>
+
+    <h2>Multiple Col Elements</h2>
+        <p>If you want to style more columns with different styles, use more <strong><-col></strong> elements inside the <strong><-colgroup></strong></p>
+
+            <h2>Multiple Col Elements</h2>
+            <p>Add multiple col elements in the colgroup:</p>
+
+            <table style="width: 100%;">
+            <colgroup>
+                <col span="2" style="background-color: #D6EEEE">
+                <col span="3" style="background-color: pink">
+            </colgroup>
+                <tr>
+                    <th>MON</th>
+                    <th>TUE</th>
+                    <th>WED</th>
+                    <th>THU</th>
+                    <th>FRI</th>
+                    <th>SAT</th>
+                    <th>SUN</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                </tr>
+            </table>
+
+    <hr>
+
+    <h2>Empty Colgroups</h2>
+        <p>If you want to style columns in the middle of a table, insert an "empty" <strong><-col></strong> element (with no styles) for the columns before.</p>
+
+            <h2>Empty Colgroups</h2>
+            <p>Add "empty" col elements that represents the columns before the columns you want to style:</p>
+
+            <table style="width: 100%;">
+            <colgroup>
+            <col span="3">
+            <col span="2" style="background-color: pink">
+            </colgroup>
+                <tr>
+                    <th>MON</th>
+                    <th>TUE</th>
+                    <th>WED</th>
+                    <th>THU</th>
+                    <th>FRI</th>
+                    <th>SAT</th>
+                    <th>SUN</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                </tr>
+            </table>
+
+    <hr>
+
+    <h2>Hide Columns</h2>
+        <p>You can hide columns with the <strong>visibility: collapse</strong> property.</p>
+
+            <h2>Hide Columns</h2>
+            <p>You can hide specific columns with the visibility property:</p>
             
+            <table style="width: 100%;">
+            <colgroup>
+                <col span="2">
+                <col span="3" style="visibility: collapse">
+            </colgroup>
+                <tr>
+                    <th>MON</th>
+                    <th>TUE</th>
+                    <th>WED</th>
+                    <th>THU</th>
+                    <th>FRI</th>
+                    <th>SAT</th>
+                    <th>SUN</th>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                    <td>3</td>
+                    <td>4</td>
+                    <td>5</td>
+                    <td>6</td>
+                    <td>7</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>9</td>
+                    <td>10</td>
+                    <td>11</td>
+                    <td>12</td>
+                    <td>13</td>
+                    <td>14</td>
+                </tr>
+                <tr>
+                    <td>15</td>
+                    <td>16</td>
+                    <td>17</td>
+                    <td>18</td>
+                    <td>19</td>
+                    <td>20</td>
+                    <td>21</td>
+                </tr>
+                <tr>
+                    <td>22</td>
+                    <td>23</td>
+                    <td>24</td>
+                    <td>25</td>
+                    <td>26</td>
+                    <td>27</td>
+                    <td>28</td>
+                </tr>
+            </table>
+            
+            <p><b>Note:</b> The table columns does not collapse properly in Safari browsers.</p>
     
 </body>
 </html>
