@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>iFrames</title>
+</head>
+<body>
+
+    <h1>HTML iFrames</h1>
+    <hr>
+        <p>An HTML iframe is used to display a web page within a web page.</p>
+
+    <hr>
+
+    <h2></h2>
+        <p>The HTML <strong><-iframe></strong> tag specifies an inline frame.</p>
+        <p>An inline frame is used to embed another document within the current HTML document.</p>
+
+            <-iframe src="url" title="description"></-iframe>
+
+        <p><em><b>Tip:</b> It is a good practice to always include a <strong>title</strong> attribute for the <strong><-iframe></strong>. This is used by screen readers to read out what the content of the iframe is.</em></p>
+
+    <hr>
+
+    <h2>iFrame - Set Height and Width</h2>
+        <p>Use the <strong>height</strong> and <strong>width</strong> attributes to specify the size of the iframe.</p>
+        <p>The height and width are specified in pixels by default.</p>
+
+            <h2>HTML Iframes</h2>
+            <p>You can use the height and width attributes to specify the size of the iframe:</p>
+            
+            <iframe src="demo_iframe.html" height="200" width="300" title="Iframe Example"></iframe>
+
+        <p>Or you can add the <strong>style</strong> attribute and use the CSSS <strong>height</strong> and <strong>width</strong> properties.</p>
+
+            <h2>HTML Iframes</h2>
+            <p>You can also use the CSS height and width properties to specify the size of the iframe:</p>
+            
+            <iframe src="demo_iframe.html" style="height:200px;width:300px" title="Iframe Example"></iframe>
+
+    <hr>
+
+    <h2>iFrame - Remove the Border</h2>
+        <p>By default, an iframe has a border around it.</p>
+        <p>To remove the border, add the <strong>style</strong> attribute and use the CSS <strong>border</strong> property.</p>
+
+            <h2>Remove the Iframe Border</h2>
+            <p>To remove the default border of the iframe, use CSS:</p>
+            
+            <iframe src="demo_iframe.html" style="border:none;" title="Iframe Example"></iframe>
+
+        <p>With CSS, you can also change the size, style and color of the iframe's border.</p>
+            
+            <h2>Custom Iframe Border</h2>
+            <p>With CSS, you can also change the size, style and color of the iframe's border:</p>
+            
+            <iframe src="demo_iframe.html" style="border:2px solid red;" title="Iframe Example"></iframe>
+
+    <hr>
+
+    <h2>iFrame - Target for a Link</h2>
+        <p>An iframe can be used as the target fram for a link.</p>
+        <p>The <strong>target</strong> attribute of the link must refer to the <strong>name</strong> attribute of the iframe.</p>
+
+            <h2>Iframe - Target for a Link</h2>
+
+            <iframe src="demo_iframe.html" name="iframe_a" height="300px" width="100%" title="Iframe Example"></iframe>
+            
+            <p><a href="https://www.w3schools.com" target="iframe_a">W3Schools.com</a></p>
+            
+            <p>When the target attribute of a link matches the name of an iframe, the link will open in the iframe.</p>
+
+    <hr>
+
+    <p>Chapter Summary</p>
+        <ul>
+            <li>The HTML <strong><-iframe></strong> tag specifies an inline frame.</li>
+            <li>The <strong>src</strong> attribute defines the URL of the page to embed.</li>
+            <li>Always include a <strong>title</strong> attribute (for screen readers).</li>
+            <li>The <strong>height</strong> and <strong>width</strong> attributes specifies the size of the iframe.</li>
+            <li>Use <strong>border:none;</strong> to remove the border around the iframe.</li>
+        </ul>
+    
+</body>
+</html>
