@@ -41,6 +41,255 @@
                 <li>summary</li>
                 <li>time</li>
             </ul>
+
+    <hr>
+
+    <h2>HTML <-section> Element</h2>
+        <p>The <strong><-section></strong> element defines a section in a document.</p>
+        <p>According to W3C's HTML documentation: "A section is a thematic grouping of content, typically with a heading."</p>
+        <p>Examples of where a <strong>section</strong> element can be used:</p>
+            <ul>
+                <li>Chapters</li>
+                <li>Introduction</li>
+                <li>News items</li>
+                <li>Contact Information</li>
+            </ul>
+
+        <p>A web page could normally be split into section for introduction, content, and contact information.</p>
+
+            <section>
+                <h1>WWF</h1>
+                <p>The World Wide Fund for Nature (WWF) is an international organization working on issues regarding the conservation, research and restoration of the environment, formerly named the World Wildlife Fund. WWF was founded in 1961.</p>
+            </section>
+            
+            <section>
+                <h1>WWF's Panda symbol</h1>
+                <p>The Panda has become the symbol of WWF. The well-known panda logo of WWF originated from a panda named Chi Chi that was transferred from the Beijing Zoo to the London Zoo in the same year of the establishment of WWF.</p>
+            </section>
+
+    <hr>
+
+    <h2>HTML <-article> Element</h2>
+        <p>The <strong>article</strong> element specifies independent, self-contained content.</p>
+        <p>An article should make sense on its own, and it should be possible to distribute it independently from the rest of the web site.</p>
+        <p>Examples of where a <strong>article</strong> element can be used:</p>
+
+            <ul>
+                <li>Forum posts</li>
+                <li>Blog posts</li>
+                <li>User comments</li>
+                <li>Product cards</li>
+                <li>Newspaper articles</li>
+            </ul>
+
+            <h1>The article element</h1>
+
+            <article>
+                <h2>Google Chrome</h2>
+                <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+            </article>
+
+            <article>
+                <h2>Mozilla Firefox</h2>
+                <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+            </article>
+
+            <article>
+                <h2>Microsoft Edge</h2>
+                <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+            </article>
+
+            <article class="all-browsers">
+
+                <h1>Most Popular Browsers</h1>
+
+                <article class="browser">
+                    <h2>Google Chrome</h2>
+                    <p>Google Chrome is a web browser developed by Google, released in 2008. Chrome is the world's most popular web browser today!</p>
+                </article>
+
+                <article class="browser">
+                    <h2>Mozilla Firefox</h2>
+                    <p>Mozilla Firefox is an open-source web browser developed by Mozilla. Firefox has been the second most popular web browser since January, 2018.</p>
+                </article>
+
+                <article class="browser">
+                    <h2>Microsoft Edge</h2>
+                    <p>Microsoft Edge is a web browser developed by Microsoft, released in 2015. Microsoft Edge replaced Internet Explorer.</p>
+                </article>
+
+            </article>
+
+    <hr>
+
+    <h2>Nesting <-article> in <-section> or viceversa?</h2>
+        <p>The <strong>article</strong> element specifies independent, self-contained content.</p>
+        <p>The <strong>section</strong> element defines section in a document.</p>
+        <p>Can we use the definitions to decide how to nest those elements? No, we cannot!</p>
+        <p>So, you will find HTML pages with <strong>section</strong> elements containing <strong>article</strong> elements, and <strong>article</strong> elements containing <strong>section</strong> elements.</p>
+
+    <hr>
+
+    <h2>HTML <-header> Element</h2>
+        <p>The <strong>header</strong> element represents a container for introductory content or a set of navigational links.</p>
+        <p>A <strong>header</strong> element typically contains:</p>
+
+            <ul>
+                <li>One or more heading elements (<-h1-> / <-h6>)</li>
+                <li>Logo or icon</li>
+                <li>Authorship information</li>
+            </ul>
+
+        <p><em><b>Note:</b> You can have several <strong>header</strong> elements in one HTML document. However, <strong>header</strong> cannot be placed within a <strong>footer</strong>, <strong>address</strong> or another <strong>header</strong> element.</em></p>
+
+            <article>
+                <header>
+                    <h1>What Does WWF Do?</h1>
+                    <p>WWF's mission:</p>
+                </header>
+                    <p>WWF's mission is to stop the degradation of our planet's natural environment, and build a future in which humans live in harmony with nature.</p>
+            </article>
+
+    <hr>
+
+    <h2>HTML <-footer> Element</h2>
+        <p>The <strong>footer</strong> element defines a footer for a document or section.</p>
+        <p>A <strong>footer</strong> element typically contains:</p>
+            
+            <ul>
+                <li>Authorship information</li>
+                <li>Copyright information</li>
+                <li>Contact information</li>
+                <li>Sitemap</li>
+                <li>Back to top links</li>
+                <li>Related documents</li>
+            </ul>
+
+        <p>You can have several <strong>footer</strong> elements in one document.</p>
+
+            <footer>
+                <p>Author: Hege Refsnes</p>
+                <p><a href="mailto:hege@example.com">hege@example.com</a></p>
+            </footer>
+
+    <hr>
+
+    <h2>HTML <-nav> Element</h2>
+        <p>The <strong>nav</strong> element defines a set of navigation links.</p>
+        <p><em>Notice that NOT all links of a documentshould be inside a <strong>nav</strong> element. The <strong>nav</strong> element is intended only for major block of navigation links.</em></p>
+        <p><em>Browsers, such as screen readers for disabled users, can use this element to determine whether to omit the initial rendering of this content.</em></p>
+
+            <nav>
+                <a href="/html/">HTML</a> |
+                <a href="/css/">CSS</a> |
+                <a href="/js/">JavaScript</a> |
+                <a href="/jquery/">jQuery</a>
+            </nav>
+
+    <hr>
+
+    <h2>HTML <-aside> Element</h2>
+        <p>The <strong>aside</strong> element defines some content aside from the content it is placed in (like a sidebar).</p>
+        <p>The <strong>aside</strong> content should be indirectly related to the surrounding content.</p>
+
+            <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+
+            <aside>
+                <h4>Epcot Center</h4>
+                <p>Epcot is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+            </aside>
+
+            <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+
+            <aside class="aside">
+                <p>The Epcot center is a theme park at Walt Disney World Resort featuring exciting attractions, international pavilions, award-winning fireworks and seasonal special events.</p>
+            </aside>
+
+            <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+            <p>My family and I visited The Epcot center this summer. The weather was nice, and Epcot was amazing! I had a great summer together with my family!</p>
+
+    <hr>
+
+    <h2>HTML <-figure> and <-figcaption> Elements</h2>
+        <p>The <strong>figure</strong> tag specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.</p>
+        <p>The <strong>figcaption</strong> tag defines a caption for a <strong>figure</strong> element. The <strong>figcaption</strong> element can be placed as the first or as the last child of a <strong>figure</strong> element.</p>
+        <p>The <strong>img</strong> element defines the actual image/illustration.</p>
+
+            <h2>Places to Visit</h2>
+
+            <p>Puglia's most famous sight is the unique conical houses (Trulli) found in the area around Alberobello, a declared UNESCO World Heritage Site.</p>
+            
+            <figure>
+                <img src="./img/pic_trulli.jpg" alt="Trulli" style="width:100%">
+                <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+            </figure>
+
+    <hr>
+
+    <h2>Why Semantic Elements?</h2>
+        <p>According to the W3C: "A semantic Web allows data to be shared and reused across applications, enterprises, and communities."</p>
+
+    <hr>
+
+    <h2>Semantic Elements in HTML</h2>
+        <table>
+            <tr>
+                <th>Tag</th>
+                <th>Description</th>
+            </tr>
+            <tr>
+                <td>article</td>
+                <td>Defines independent, self-contained content</td>
+            </tr>
+            <tr>
+                <td>aside</td>
+                <td>Defines content aside from the page content</td>
+            </tr>
+            <tr>
+                <td>details</td>
+                <td>Defines additional details that the user can view or hide</td>
+            </tr>
+            <tr>
+                <td>figcaption</td>
+                <td>Defines a caption for a <-figure> element</td>
+            </tr>
+            <tr>
+                <td>figure</td>
+                <td>Specifies self-contained content, like illustrations, diagrams, photos, code listings, etc.</td>
+            </tr>
+            <tr>
+                <td>footer</td>
+                <td>Defines a footer for a document or section</td>
+            </tr>
+            <tr>
+                <td>header</td>
+                <td>Specifies a header for a document or section</td>
+            </tr>
+            <tr>
+                <td>main</td>
+                <td>Specifies the main content of a document</td>
+            </tr>
+            <tr>
+                <td>mark</td>
+                <td>Defines marked/highlighted text</td>
+            </tr>
+            <tr>
+                <td>nav</td>
+                <td>Defines navigation links</td>
+            </tr>
+            <tr>
+                <td>section</td>
+                <td>Defines a section in a document</td>
+            </tr>
+            <tr>
+                <td>summary</td>
+                <td>Defines a visible heading for a <-details> element</td>
+            </tr>
+            <tr>
+                <td>time</td>
+                <td>Defines a date/time</td>
+            </tr>
+        </table>
     
 </body>
 </html>
