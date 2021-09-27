@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Styles Guide</title>
+</head>
+<body>
+
+    <h1>HTML Style Guide and Coding Conventions</h1>
+    <hr>
+        <p>A consisten, clean, and tidy HTML code makes it easier for others to read and understand your code.</p>
+        <p>Here are some guidelines and tips for creating good HTML code.</p>
+
+    <hr>
+
+    <h2>Always Declare Document Type</h2>
+        <p>Always declare the document type as the first line in your document.</p>
+        <p><-!DOCTYPE html></p>
+
+    <hr>
+
+    <h2>Use Lowercase Element Name</h2>
+        <p>HTML allows mixing uppercase and lowecase letter in element names.</p>
+        <p>However, the recommendation is using lowercase element names, because:</p>
+            
+            <ul>
+                <li>Mixing uppercase and lowercase names looks bad</li>
+                <li>Developers normally use lowercase names</li>
+                <li>Lowercase look cleaner</li>
+                <li>Lowercase is easier to write</li>
+            </ul>
+
+    <hr>
+
+    <h2>Close all HTML Elements</h2>
+        <p>In HTML, you do not have to close all elements (for example the <strong>paragraph</strong> element).</p>
+        <p>However, it's strongly recommend closing all HTML elements.</p>
+
+    <hr>    
+
+    <h2>Use Lowercase Attribute Names</h2>
+        <p>HTML allows mixing uppercase and lowercase letters in attribute names.</p>
+        <p>However, the recommendation is using lowercase attribute names, because:</p>
+
+            <ul>
+                <li>Mixing uppercase and lowercase names looks bad</li>
+                <li>Developers normally use lowercase names</li>
+                <li>Lowercase look cleaner</li>
+                <li>Lowercase is easier to write</li>
+            </ul>
+
+    <hr>
+
+    <h2>Always Quote Attribute Values</h2>
+        <p>HTML allows attribute values without quotes.</p>
+        <p>Anyway, it's highly recommendable quoting attribute values.</p>
+
+            <ul>
+                <li>Developers normally use quote attribute values</li>
+                <li>Quoted values are easier to read</li>
+                <li>You must use quotes if the value contains spaces</li>
+            </ul>
+
+    <hr>
+
+    <h2>Always Specify alt, width, and height for Images</h2>
+        <p>Always specify the <strong>alt</strong> attribute for images. This attribute is important if the image for some reason cannot be displayed.</p>
+        <p>Also, always define the <strong>width</strong> and <strong>height</strong> of images. This reduces flickering, because the browser can reserve space for the image before loading.</p>
+
+    <hr>
+
+    <h2>Spaces and Equal Signs</h2>
+        <p>HTML allows spaces around equal signs. But space-less is easier to read and groups entities better together.</p>
+
+    <hr>
+
+    <h2>Avoid Long Code Lines</h2>
+        <p>When using an HTML editor, it is not convenient to scroll right and left to read the HTML code.</p>
+        <p>Try to avoid too long code lines.</p>
+
+    <hr>
+
+    <h2>Blank Lines and Indentation</h2>
+        <p>Do not add blank lines, spaces, or indentations without a reason.</p>
+        <p>For readability, add blank lines to separate large or logical code blocks.</p>
+        <p>For readability, add teo spaces of indentation. Do not use the tab key.</p>
+
+    <hr>
+
+    <h2>Never Skip the <-title> Element</h2>
+        <p>The <strong>title</strong> element is required in HTML.</p>
+        <p>The contents of a page title is very important for search engine optimization (SEO)! The page title is used by search engine algorithms to decide the order when listing pages in search results.</p>
+        <p>The <strong>title</strong> element.</p>
+            <ul>
+                <li>Defines a title in the browser toolbar</li>
+                <li>Provides a title for the page when it is added to favorites</li>
+                <li>Displays a title for the page in search-engine results</li>
+            </ul>
+
+    <hr>
+
+    <h2>Omitting <-html> and <-body>?</h2>
+        <p>An HTML page will validate without the <strong>html</strong> and <strong>body</strong> tag.</p>
+        <p>However, we strongly recommend to always add the <strong>html</strong> and <strong>body</strong> tags!</p>
+        <p>Omitting <strong>body</strong> can produce errors in older browsers.</p>
+        <p>Omitting <strong>html</strong> and <strong>body</strong> can also crash DOM and XML software.</p>
+
+    <hr>
+
+    <h2>Ommiting <-head>?</h2>
+        <p>The HTML <strong>head</strong> tag can also be omitted.</p>
+        <p>Browsers will add all elements before <strong>body</strong>, to a default <strong>head</strong> element.</p>
+
+    <hr>
+
+    <h2>Close Empty HTML Elements?</h2>
+        <p>In HTML, it is optional to close empty elements with an "/" before the tag closes.</p>
+        <p><em><b>Note:</b> If you expect XML/XHTML software to access your page, keed the closing slash (/), because it is required in XML and XHTML.</em></p>
+
+    <hr>
+
+    <h2>Add the lang Attribute</h2>
+        <p>you should always include the <strong>lang</strong> attribute inside the <strong>html</strong> tag, to declare the language of the web page. This is meant to assist search engines and browsers.</p>
+
+    <hr>
+
+    <h2>Meta Data</h2>
+        <p>To ensure proper interpretation and correct search engine indexing, both the language and the character encoding <strong>meta charset="<em>charset</em>"</strong> should be defined as early as possible in an HTML document.</p>
+
+    <hr>
+
+    <h2>Setting the Viewport</h2>
+        <p>The viewport is the user's visible area of a web page. It varies with the device - it will be smaller on a mobile phone than on a computer screen.</p>
+        <p>The <strong>width=device-width</strong> part sets the width of the page to follow the screen-width of the device (which will vary depending on the device).</p>
+        <p>The <strong>initial-scale=1.0</strong> part sets the initial zoom level when the page is first loaded by the browser.</p>
+
+    <hr>
+
+    <h2>HTML Comments</h2>
+        <p>Short comments should be written on one line.</p>
+        <!-- Like This -->
+        <p>Comments that spans more than one line.</p>
+        <!-- 
+            Like
+            This
+         -->
+         <p>Long comments are easier to observe if they are indented with two spaces.</p>
+
+    <hr>
+
+    <h2>Use Lower Case File Names</h2>
+        <p>Some web servers (Apache, Unix) are case sensitive about file names: "london.jpg" cannot be accessed as "London.jpg".</p>
+        <p>Other web servers (Microsoft, IIS) are not case sensitive: "london.jpg" can be accessed as "London.jpg".</p>
+        <p>If you use a mix of uppercase and lowercase, you have to be aware of this.</p>
+        <p>If you move from a case-insensitive to a case-sensitive server, even small errors will break your web!</p>
+        <p>To avoid these problems, always use lowercase file names!</p>
+
+    <hr>
+
+    <h2>File Extensions</h2>
+        <p>HTML files should have a <b>.html</b> extension (<b>.htm</b> is allowed).</p>
+        <p>CSS files should have a <b>.css</b> extension.</p>
+        <p>JavaScript files should have a <b>.js</b> extension.</p>
+
+    <hr>
+
+    <h2>Differences Between .htm and .html?</h2>
+        <p>There is no difference between the .htm and .html file extensions!</p>
+        <p>Both will be treated as HTML by any web browser and web server.</p>
+
+    <hr>
+
+    <h2>Default Filenames</h2>
+        <p>When a URL does not specify a filename at the end (like "https://www.w3schools.com/"), the server just adds a default filename, such as "index.html", "index.htm", "default.html", or "default.htm".</p>
+        <p>If your server is configured only with "index.html" as the default filename, your file must be named "index.html", and not "default.html".</p>
+        <p>However, servers can be configured with more than one default filename; usually you can set up as many default filenames as you want.</p>
+    
+</body>
+</html>
