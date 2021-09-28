@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./">
+    <title>HTML VS XHTML</title>
+</head>
+<body>
+
+    <h1>HTML Versus XHTML</h1>
+    <hr>
+        <p>XHTML is a stricter, more XML-based version of HTML.</p>
+
+    <hr>
+
+    <h2>What is XHTML?</h2>
+        <ul>
+            <li>XHTML stands for EXtensible HyperText Markup Language</li>
+            <li>XHTML is a stricter, more XML-based version of HTML</li>
+            <li>XHTML is HTML defined as an XML application</li>
+            <li>XHTML is supported by all major browsers</li>
+        </ul>
+
+    <hr>
+
+    <h2>Why XHTML?</h2>
+        <p>XML is a markup language where all documents must be marked up correctly (be "well-formed").</p>
+        <p>XHTML was developed to make HTML more extensible and flexible to work with other data formats (such as XML). In addition, browsers ignore errors in HTML pages, and try to display the website even if it has some errors in the markup. So XHTML comes with a much stricter error handling.</p>
+
+    <hr>
+
+    <h2>The Most Important Differences from HTML</h2>
+        <ul>
+            <li><-DOCTYPE> is <b>mandatory</b></li>
+            <li>The xmlns attribute in <-html> is <b>mandatory</b></li>
+            <li><-html>, <-head>, <-title>, and <-body> are <b>mandatory</b></li>
+            <li>Elements must always be <b>properly nested</b></li>
+            <li>Elements must always be <b>closed</b></li>
+            <li>Elements must always be in <b>lowercase</b></li>
+            <li>Attribute names must always be in <b>lowercase</b></li>
+            <li>Attribute values must always be <b>quoted</b></li>
+            <li>Attribute minimization is <b>forbidden</b></li>
+        </ul>
+
+    <hr>
+
+    <h2>XHTML - <-!DOCTYPE ...> Is Mandatory</h2>
+        <p>An XHTML document must have an XHTML !DOCTYPE declaration.</p>
+        <p>The <-html>, <-head>, <-title>, and <-body> elements must also be present, and the xmlns attribute in <-html> must specify the xml namespace for the document.</p>
+
+    <hr>
+
+    <h2>XHTML Elements Must be Properly Nested</h2>
+        <p>In XHTML, elements must always be properly nested within each other.</p>
+
+    <hr>
+
+    <h2>XHTML Elements Must Always be Closed</h2>
+        <p>In XHTML, elements must always be closed.</p>
+
+    <hr>
+
+    <h2>XHTML Empty Elements Must Always be Closed</h2>
+        <p>In XHTML, empty elements must always be closed.</p>
+
+    <hr>
+
+    <h2>XHTML Elements Must be in Lowercase</h2>
+        <p>In XHTML, element names must always be in lowercase.</p>
+
+    <hr>
+
+    <h2>XHTML Attribute Names Must be in Lowercase</h2>
+
+    <hr>
+
+    <h2>XHTML Attribute Values Must be Quoted</h2>
+    <p>In XHTML, attribute values must always be quoted.</p>
+
+    <hr>
+
+    <h2>XHTML Attribute Minimization is Forbidden</h2>
+        <p>In XHTML, attribute minimization is forbidden.</p>
+        <h3>Correct</h3>
+        <-input type="checkbox" name="vehicle" value="car" checked="checked" />
+        <-input type="text" name="lastname" disabled="disabled" />
+        <h3>Wrong</h3>
+        <-input type="checkbox" name="vehicle" value="car" checked />
+        <-input type="text" name="lastname" disabled />
+    
+</body>
+</html>
