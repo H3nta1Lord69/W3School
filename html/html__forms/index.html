@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Forms</title>
+</head>
+<body>
+
+    <h1>HTML Forms</h1>
+    <hr>
+        <p>An HTML form is used to collect user input. The user input is most often sent to a server for processing.</p>
+
+    <hr>
+
+    <h2>The <-form> Element</h2>
+        <p>The HTML <strong><-form></strong> element is used to create an HTML form for user input:</p>
+        <p>The HTML <strong><-form></strong> element s a container for different types of input elements, such as: text fields, checkboxes, radio buttons, submit buttons, etc.</p>
+
+    <hr>
+
+    <h2>The <-input> Element</h2>
+        <p>The HTML <strong><-input></strong> element is the most used form element.</p>
+        <p>An <strong><-input></strong> element can be displayed in many ways, depending on the <strong>type</strong> attribute.</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Type</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="text"&gt;</td>
+                        <td>Displays a single-line text input field</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="radio"&gt;</td>
+                        <td>Displays a radio button (for selecting one of many choices)</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="checkbox"&gt;</td>
+                        <td>Displays a checkbox (for selecting zero or more of many choices)</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="submit"&gt;</td>
+                        <td>Displays a submit button (for submitting the form)</td>
+                    </tr>
+                    <tr>
+                        <td>&lt;input type="button"&gt;</td>
+                        <td>Displays a clickable button</td>
+                    </tr>
+                </tbody>
+            </table>
+
+    <hr>
+
+    <h2>Text Fields</h2>
+        <p>The <strong><-input type="text"></strong> defines a single-line input field for text input.</p>
+            <h2>Text input fields</h2>
+
+            <form>
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Doe">
+            </form>
+
+            <p>Note that the form itself is not visible.</p>
+
+            <p>Also note that the default width of text input fields is 20 characters.</p>
+
+    <h2>The <-label> Element</h2>
+        <p>The <strong><-label></strong> tag defines a label for many form elements.</p>
+        <p>The <strong><-label></strong> element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element.</p>
+        <p>The <strong><-label></strong> element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the <strong><-label></strong> element, it toggles the radio button/checkbox.</p>
+        <p>The <strong>for</strong> attribute of the <strong><-label></strong> tag should be equal to the id attribute of the <strong><-input></strong> element to bind them together.</p>
+
+    <hr>
+
+    <h2>Radio Buttons</h2>
+        <p>The <strong><-input type="radio"></strong> defines a radio button.</p>
+        <p>Radio buttons let a user select ONE of a limited number of choices.</p>
+            <h2>Radio Buttons</h2>
+
+            <p>Choose your favorite Web language:</p>
+            
+            <form>
+                <input type="radio" id="html" name="fav_language" value="HTML">
+                <label for="html">HTML</label><br>
+                <input type="radio" id="css" name="fav_language" value="CSS">
+                <label for="css">CSS</label><br>
+                <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                <label for="javascript">JavaScript</label>
+            </form> 
+
+    <hr>
+
+    <h2>Checkboxes</h2>
+        <p>The <strong><-input type="checkbox"></strong> defines a checkbox.</p>
+        <p>Checkboxes let a user select ZERO or MORE options of a limited number of choices.</p>
+            <h2>Checkboxes</h2>
+            <p>The <b>input type="checkbox"</b> defines a checkbox:</p>
+            
+            <form action="/action_page.php">
+                <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                <label for="vehicle1"> I have a bike</label><br>
+                <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                <label for="vehicle2"> I have a car</label><br>
+                <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                <label for="vehicle3"> I have a boat</label><br><br>
+                <input type="submit" value="Submit">
+            </form>
+
+    <hr>
+
+    <h2>The Submit Button</h2>
+        <p>The <strong><-input type="submit"></strong> defines a button for submitting the form data to a form-handler.</p>
+        <p>The form-handler is typically a file on the server with a script for processing input data.</p>
+        <p>The form-handler is specified in the form's <strong>action</strong> attribute.</p>
+            <h2>HTML Forms</h2>
+
+            <form action="/action_page.php">
+                <label for="fname">First name:</label><br>
+                <input type="text" id="fname" name="fname" value="John"><br>
+                <label for="lname">Last name:</label><br>
+                <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                <input type="submit" value="Submit">
+            </form> 
+            
+            <p>If you click the "Submit" button, the form-data will be sent to a page called "/action_page.php".</p>
+
+    <hr>
+
+    <h2>The Name Attribute for <-input></h2>
+        <p>Notice that each input field must have a <strong>name</strong> attribute to be submitted.</p>
+        <p>If the <strong>name</strong> attribute is omitted, the value of the input field will not be sent at all.</p>
+    
+</body>
+</html>
