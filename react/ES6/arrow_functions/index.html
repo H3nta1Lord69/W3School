@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Arrow Functions</title>
+</head>
+<body>
+
+    <h1>React ES6 Arrow Functions</h1>
+    <hr>
+
+        <h2>Arrow Functions</h2>
+            <p>Arrow functions allow us to wirte shorter function syntax.</p>
+                <code><pre>
+                    hello = () => 
+                    {
+                        return "Hello World!";
+                    }
+                </pre><code>
+            <p id="fDemo"></p>
+
+    <hr>
+
+            <p>It gets shorter! If the function has only one statement, and the statement returns a value, you can remove the brackets and the <strong>return</strong> keyword.</p>
+                <code><pre>
+                    hello = () => "Hello World!";
+                </pre></code>
+                    <h2>Implicit Return</h2>
+
+                        <p>The arrow function expects a return value, and returns the value by default, without the <strong>return</strong> keyword.</p>
+
+                        <p id="sDemo"></p>
+                    
+                    <p><em><b>Note:</b> This works only if the function has only one statement.</em></p>
+
+    <hr>
+
+            <p>If you have parameters, you pass them inside the parentheses.</p>
+                <code><pre>
+                    hello = (val) => "Hello " + val;
+                </pre></code>
+                    <p id="tDemo"></p>
+
+            <p>In fact, if you have only one parameter, you can skip the parentheses as well:</p>
+                <code><pre>
+                    hello = val => "Hello " + val;
+                </pre></code>
+                    <p id="fDemo"></p>
+
+    <hr>
+
+        <h2>What about <strong>this</strong>?</h2>
+            <p>The handling of <strong>this</strong> is also different in arrow funcions compared to regular functions.</p>
+            <p>In short, with arrow functions there are no binding of <strong>this</strong>.</p>
+            <p>In regular functions the <strong>this</strong> keyword represented the object that called the function, which could be the window, the document, a button or whatever.</p>
+            <p>With arrow functions, the <strong>this</strong> keyword always represents the object that defined the arrow function.</p>
+            <p>Let us take a look at two examples to understand the difference.</p>
+            <p>Both examples call a method twice, first when the page loads, and once again when the user clicks a button.</p>
+            <p>The first example uses a regular function, and the second example uses an arrow function.</p>
+            <p>The result shows that the first example returns two different objects (window and button), and the second example returns the Header object twice.</p>
+                <p><b>With a regular function.</b></p>
+                <code><pre>
+                    class Header {
+                        constructor() {
+                          this.color = "Red";
+                        }
+                      
+                      //Regular function:
+                        changeColor = function() {
+                          document.getElementById("demo").innerHTML += this;
+                        }
+                      }
+                      
+                      myheader = new Header();
+                      
+                      //The window object calls the function:
+                      window.addEventListener("load", myheader.changeColor);
+                      
+                      //A button object calls the function:
+                      document.getElementById("btn").addEventListener("click", myheader.changeColor);                      
+                </pre></code>
+
+                <h1>Regular Function</h1>
+
+                    <p>The <strong>this</strong> keyword represents different objects depending on how the function was called.</p>
+
+                    <button id="btn">Click Me!</button>
+
+                    <p><strong>this</strong> represents:</p>
+
+                    <p id="aDemo"></p>
+
+                    <p>See the difference before and after the button is clicked.</p>
+
+                <p><b>With an arrow function</b></p>
+                <code><pre>
+                    class Header {
+                        constructor() {
+                          this.color = "Red";
+                        }
+                      
+                      //Arrow function:
+                        changeColor = () => {
+                          document.getElementById("demo").innerHTML += this;
+                        }
+                      }
+                      
+                      myheader = new Header();
+                      
+                      
+                      //The window object calls the function:
+                      window.addEventListener("load", myheader.changeColor);
+                      
+                      //A button object calls the function:
+                      document.getElementById("btn").addEventListener("click", myheader.changeColor);
+                </pre></code>
+
+                    <h1>Arrow Function</h1>
+
+                    <p>The <strong>this</strong> keyword represents the Header object.</p>
+                    
+                    <button id="abtn">Click Me!</button>
+                    
+                    <p><strong>this</strong> represents:</p>
+                    
+                    <p id="bdemo"></p>
+
+    <hr>
+
+    <p><em><b>Remember these differences when you are working with functions. Sometimes the behavior of regular functions is what you want, if not, use arrow functions.</b></em></p>
+
+    <script src="./js/index.js"></script>
+    <noscript>Please enable JavaScript on your browser.</noscript>
+    
+</body>
+</html>
