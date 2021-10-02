@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>ES6 Classes</title>
+</head>
+<body>
+
+    <h1>React ES6 Classes</h1>
+    <hr>
+
+        <h2>Classes</h2>
+            <p>ES6 introduced classes.</p>
+            <p>A class is a type, but instead of using the keyword <code><strong>function</strong></code> to initiate it, we use the keyword <code><strong>class</strong></code>, and the properties are assigned inside a <code><strong>constructor()</strong></code> method.</p>
+            <code><pre>
+                class Car
+                {
+                    constructor(name)
+                    {
+                        this.brand = name;
+                    }
+                }
+            </pre></code>
+            <p><em>Notice the case of the class name. We have begun the name, "Car", with an uppercase character. This is a standard naming convetion for classes.</em></p>
+            <p>Now you can creater objects using the Car Class.</p>
+            <code><pre>
+                mycar = new Car("Ford");
+            </pre></code>
+
+            <p><em><b>Note:</b> The constructor function is called automatically when the object is initialized.</em></p>
+
+    <hr>
+
+        <h2>Method in Classes</h2>
+            <p>You can add your own methods in a class.</p>
+                <code><pre>
+                    class Car {
+                        constructor(name) {
+                        this.brand = name;
+                        }
+                        
+                        present() {
+                        return 'I have a ' + this.brand;
+                        }
+                    }
+                    
+                    mycar = new Car("Ford");
+                    mycar.present();
+                </pre></code>
+            <p>As you can see in the example above, you call the method by referring to the object's method name followed by parentheses (parameters would go inside the parentheses).</p>
+
+    <hr>
+        <h2>Class Inheritance</h2>
+            <p>To create a class inheritance, use the <strong>extends</strong> keyword.</p>
+            <p>A class created with a class inheritance inherits all the methods from another class.</p>
+                <code><pre>
+                    class Car {
+                        constructor(name) {
+                          this.brand = name;
+                        }
+                      
+                        present() {
+                          return 'I have a ' + this.brand;
+                        }
+                      }
+                      
+                      class Model extends Car {
+                        constructor(name, mod) {
+                          super(name);
+                          this.model = mod;
+                        }  
+                        show() {
+                            return this.present() + ', it is a ' + this.model
+                        }
+                      }
+                      mycar = new Model("Ford", "Mustang");
+                      mycar.show();
+                </pre></code>
+            <p>The <strong>super()</strong> method refers to the parent class.</p>
+            <p>By calling the <strong>super()</strong> method in the constructor method, we call the parent's constructor method and gets access to the parent's properties and methods.</p>
+
+    <script src="./js/index.js"></script>
+    
+</body>
+</html>
