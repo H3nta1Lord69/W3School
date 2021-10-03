@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Variables</title>
+</head>
+<body>
+
+    <h1>React ES6 Variables</h1>
+    <hr>
+
+        <h2>Variables</h2>
+            <p>Before ES6 there were only one way of defining your variables: with the <strong>var</strong> keyword. If you did not define them, they would be assigned to the global object. Unless you were in strict mode, then you would get an error if your variables were undefined.</p>
+            <p>Now, with ES6, there are three ways of defining your variables: <strong>var</strong>, <strong>let</strong>, and <strong>const</strong>.</p>
+
+        <h3>var</h3>
+        <code>var x = 5.6;</code>
+
+            <p>If you use <strong>var</strong> outside of a function, it belongs to the global scope.</p>
+            <p>If you use <strong>var</strong> inside of a function, it belongs to that function.</p>
+            <p>If you use <strong>var</strong> inside of a block, i.e. a for loop, the variable is still available outside of that block.</p>
+            <p><em><b><strong>var</strong> has a function scope, not a block scope.</b></em></p>
+
+        <h3>let</h3>
+        <code>let x = 5.6;</code>
+
+            <p><strong>let</strong> is the block scoped version of var, and is limited to the block (or expression) where it is defined.</p>
+            <p>If you use <strong>let</strong> inside of a block, i.e. a for loop, the variable is only available inside of that loop.</p>
+            <p><em><b><strong>let</strong> has a block scope.</b></em></p>
+
+        <h3>const</h3>
+        <code>const x = 5.6;</code>
+
+            <p><strong>const</strong> is a variable that once it has been created, its value can never change.</p>
+            <p><em><b><strong>const</strong> has a block scope.</b></em></p>
+
+    <script src="./js/index.js"></script>
+    <noscript>Please enable JavaScript on your browser.</noscript>
+    
+</body>
+</html>
