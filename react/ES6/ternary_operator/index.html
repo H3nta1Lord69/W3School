@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Ternary Operator</title>
+</head>
+<body>
+
+    <h1>React ES6 Ternary Operator</h1>
+    <hr>
+
+        <h2>Ternary Operator</h2>
+            <p>The ternary operator is a simplified conditional operator like <strong>if</strong> / <strong>else</strong>.</p>
+            <p>Syntax: <strong>condition ? <-expresion if true> : <-expresion if false></strong></p>
+            <p>Here is an example using <strong>if</strong> / <strong>else</strong>.</p>
+                <code><pre>
+                    if (authenticated) 
+                    {
+                        renderApp();
+                    } else 
+                    {
+                        renderLogin();
+                    }
+                </pre></code>
+                <h1 id="demo"></h1>
+                <p>Try changing the "authenticated" variable in <a href="./js/index.js">this file</a> to false, and run the code to see what happens.</p>
+
+            <p>Here is the same example using a ternary operator:</p>
+                <code><pre>
+                    authenticated ? renderApp() : renderLogin();
+                </pre></code>
+                <h1 id="ademo"></h1>
+                <p>Try changing the "authenticated" variable in <a href="./js/index.js">this file</a> to false, and run the code to see what happens.</p>
+
+    <script src="./js/index.js"></script>
+    <noscript>Please enable JavaScript on your web browser.</noscript>
+    
+</body>
+</html>
