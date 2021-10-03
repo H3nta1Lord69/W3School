@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Modules</title>
+</head>
+<body>
+
+    <h1>React ES6 Modules</h1>
+    <hr>
+
+        <h2>Modules</h2>
+            <p>JavaScript modules allow you to break up your code into separate files.</p>
+            <p>This makes it easier to maintain the code-base.</p>
+            <p>ES Modules rely on the <strong>import</strong> and <strong>export</strong> statements.</p>
+
+    <hr>
+
+        <h2>Export</h2>
+            <p>You can export a function or variable from any file.</p>
+            <p>Let us create a file named <strong>person.js</strong>, and fill it with the things we want to export.</p>
+            <p>There are two types of exports: Named and Default.</p>
+
+    <hr>
+
+        <h2>Named Exports</h2>
+            <p>You can create named exports two ways. In-line individually, or all at once at the bottom.</p>
+            <h3>In-line individually</h3>
+                <code><pre>
+                    export const name = "Jesse"
+                    export const age = "40"
+                </pre></code>
+            <h3>All at once at the bottom</h3>
+                <code><pre>
+                    const name = "Jesse"
+                    const age = "40"
+
+                    export { name, age }
+                </pre></code>
+
+    <hr>
+
+        <h2>Default Exports</h2>
+            <p>Let us create another file, named <strong>message.js</strong>, and use it for demonstrating default export.</p>
+            <p>You can only have one default export in a file.</p>
+                <code><pre>
+                    const message = () =>
+                    {
+                        const name = "Jesse";
+                        const age = "40";
+                        return name + ' is ' + age + 'years old.';
+                    };
+                        
+                    export default message;
+                </pre></code>
+
+    <hr>
+
+        <h2>Import</h2>
+            <p>You can import modules into a file in two ways, based on if they are named exports or default exports.</p>
+            <p>Named exports must be destructured using curly braces. Default exports do not.</p>
+            <h3>Import from named exports</h3>
+                <code><pre>
+                    import { name, age } from "./person.js";
+                </pre></code>
+            <h3>Import from default exports</h3>
+                <code><pre>
+                    import message from "./message.js";
+                </pre></code>
+
+    <script src="./js/index.js"></script>
+    <noscript>Please enable JavaScript on your web browser.</noscript>
+    
+</body>
+</html>
