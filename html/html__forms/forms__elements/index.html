@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Form Elements</title>
+</head>
+<body>
+
+    <h1>HTML Form ELements</h1>
+    <hr>
+        <p>This chapter describes all the different HTML form elements.</p>
+
+    <hr>
+
+        <h2>The HTML <-form> Elements</h2>
+            <p>The HTML <strong><-form></strong> element can contain one or more of the following form elements:</p>
+                <ul>
+                    <li>input</li>
+                    <li>label</li>
+                    <li>select</li>
+                    <li>textarea</li>
+                    <li>button</li>
+                    <li>fieldset</li>
+                    <li>legend</li>
+                    <li>datalist</li>
+                    <li>output</li>
+                    <li>option</li>
+                    <li>optgroup</li>
+                </ul>
+
+    <hr>
+
+        <h2>The <-input> Element</h2>
+            <p>One of the most used form element is the <strong><-input></strong> element.</p>
+            <p>The <strong><-input></strong> element can be displayed in several ways, depending on the type attribute.</p>
+
+    <hr>
+
+        <h2>The <-label> Element</h2>
+            <p>The <strong><-label></strong> element defines a label for several form elements.</p>
+            <p>The <strong><-label></strong> element is useful for screen-reader users, because the screen-reader will read out loud the label when the user focus on the input element.</p>
+            <p>The <strong><-label></strong> element also help users who have difficulty clicking on very small regions (such as radio buttons or checkboxes) - because when the user clicks the text within the <strong><-label></strong> element, it toggles the radio button/checkbox.</p>
+            <p>The <strong>for</strong> attribute of the <strong><-label></strong> tag should be equal to the id attribute of the <strong><-input></strong> element to bind them together.</p>
+
+    <hr>
+
+        <h2>The <-select> Element</h2>
+            <p>The <strong><-select></strong> element defines a drop-down list:</p>
+                <code><pre>
+                    <-label for="cars">Choose a car:<-/label>
+                    <-select id="cars" name="cars">
+                        <-option value="volvo">Volvo<-/option>
+                        <-option value="saab">Saab<-/option>
+                        <-option value="fiat">Fiat<-/option>
+                        <-option value="audi">Audi<-/option>
+                    <-/select>
+                </pre></code>
+            <p>The <strong><-option></strong> elements defines an option that can be selected.</p>
+            <p>By default, the first item in the drop-down list is selected.</p>
+            <p>To define a pre-selected option, add the <strong>selected</strong> attribute to the option:</p>
+                <code><pre>
+                    <-option value="fiat" selected>Fiat</option>
+                </pre></code>
+            <p>Use the <strong>size</strong> attribute to specify the number of visible values:</p>
+                <code><pre>
+                    <-label for="cars">Choose a car:<-/label>
+                    <-select id="cars" name="cars" size="3">
+                        <-option value="volvo">Volvo<-/option>
+                        <-option value="saab">Saab<-/option>
+                        <-option value="fiat">Fiat<-/option>
+                        <-option value="audi">Audi<-/option>
+                    <-/select>
+                </pre></code>
+            <p>Use the <strong>multiple</strong> attribute to allow the user to select more than one value:</p>
+                <code><pre>
+                    <-label for="cars">Choose a car:<-/label>
+                    <-select id="cars" name="cars" size="4" multiple>
+                        <-option value="volvo">Volvo<-/option>
+                        <-option value="saab">Saab<-/option>
+                        <-option value="fiat">Fiat<-/option>
+                        <-option value="audi">Audi<-/option>
+                    <-/select>
+                </pre></code>
+
+    <hr>
+
+        <h2>The <-textarea> Element</h2>
+            <p>The <strong><-textarea></strong> element defines a multi-line input field (a text area):</p>
+                <code><pre>
+                    <-textarea name="message" rows="10" cols="30">
+                        The cat was playing in the garden.
+                    <-/textarea>
+                </pre></code>
+            <p>The <strong>rows</strong> attribute specifies the visible number of lines in a text area.</p>
+            <p>The <strong>cols</strong> attribute specifies the visible width of a text area.</p>
+            <p>You can also define the size of the text area by using CSS:</p>
+                <code><pre>
+                    <-textarea name="message" style="width:200px; height:600px;">
+                        The cat was playing in the garden.
+                    <-/textarea>
+                </pre></code>
+
+    <hr>
+
+        <h2>The <-button> Element</h2>
+            <p>The <strong><-button></strong> element defines a clickable button:</p>
+                <code><pre>
+                    <-button type="button" onclick="alert('Hello World!')">Click Me!<-/button>
+                </pre></code>
+            <p>This is how the HTML code above will be displayed in a browser:</p>
+                <button type="button" onclick="alert('Hello World!')">Click Me!</button>
+            <p><em><b>Note:</b> Always specify the <strong>type</strong> attribute for the button element. Different browsers may use different default types for the button element.</em></p>
+
+    <hr>
+
+        <h2>The <-fieldset> and <-legend> Elements</h2>
+            <p>The <-fieldset> element is used to group related data in a form.</p>
+            <p>The <-legend> element defines a caption for the <-fieldset> element.</p>
+                <code><pre>
+                    <-form action="/action_page.php">
+                        <-fieldset>
+                            <-legend>Personalia:<-/legend>
+                            <-label for="fname">First name:<-/label><-br>
+                            <-input type="text" id="fname" name="fname" value="John"><-br>
+                            <-label for="lname">Last name:<-/label><-br>
+                            <-input type="text" id="lname" name="lname" value="Doe"><-br><-br>
+                            <-input type="submit" value="Submit">
+                        <-/fieldset>
+                    <-/form>
+                </pre></code>
+            <p>This is how the HTML code above will be displayed in a browser:</p>
+                <form action="/action_page.php">
+                    <fieldset>
+                        <legend>Personalia:</legend>
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname" value="John"><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                        <input type="submit" value="Submit">
+                    </fieldset>
+                </form>
+
+    <hr>
+
+        <h2>The <-datalist> Element</h2>
+            <p>The <-datalist> element specifies a list of pre-defined options for an <-input> element.</p>
+            <p>Users will see a drop-down list of the pre-defined options as they input data.</p>
+            <p>The list attribute of the <-input> element, must refer to the id attribute of the <-datalist> element.</p>
+                <code><pre>
+                    <-form action="/action_page.php">
+                        <-input list="browsers">
+                        <-datalist id="browsers">
+                            <-option value="Internet Explorer">
+                            <-option value="Firefox">
+                            <-option value="Chrome">
+                            <-option value="Opera">
+                            <-option value="Safari">
+                        <-/datalist>
+                    <-/form>
+                </pre></code>
+                    <form action="/action_page.php">
+                        <input list="browsers">
+                        <datalist id="browsers">
+                            <option value="Internet Explorer">
+                            <option value="Firefox">
+                            <option value="Chrome">
+                            <option value="Opera">
+                            <option value="Safari">
+                        </datalist>
+                    </form>
+
+    <hr>
+
+        <h2>The <-output> Element</h2>
+            <p>The <-output> element represents the result of a calculation (like one performed by a script).</p>
+                <code><pre>
+                    <-form action="/action_page.php"
+                        oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                        0
+                        <-input type="range"  id="a" name="a" value="50">
+                        100 +
+                        <-input type="number" id="b" name="b" value="50">
+                        =
+                        <-output name="x" for="a b"><-/output>
+                        <-br><-br>
+                        <-input type="submit">
+                    <-/form>
+                </pre></code>
+            <p>Perform a calculation and show the result in an <-output> element:</p>
+                    <form action="/action_page.php"
+                        oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+                        0
+                        <input type="range"  id="a" name="a" value="50">
+                        100 +
+                        <input type="number" id="b" name="b" value="50">
+                        =
+                        <output name="x" for="a b"></output>
+                        <br><br>
+                        <input type="submit">
+                    </form>
+
+    <hr>
+
+        <h2>HTML Form Elements</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><a href="/tags/tag_form.asp">&lt;form&gt;</a></td>
+                        <td> Defines an HTML form for user input</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/tags/tag_input.asp">&lt;input&gt;</a></td>
+                        <td>Defines an input control</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/tags/tag_textarea.asp">&lt;textarea&gt;</a></td>
+                        <td>Defines a multiline input control (text area)</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/tags/tag_label.asp">&lt;label&gt;</a></td>
+                        <td>Defines a label for an &lt;input&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/tags/tag_fieldset.asp">&lt;fieldset&gt;</a></td>
+                        <td>Groups related elements in a form</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/tags/tag_legend.asp">&lt;legend&gt;</a></td>
+                        <td>Defines a caption for a &lt;fieldset&gt; element</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/tags/tag_select.asp">&lt;select&gt;</a></td>
+                        <td>Defines a drop-down list</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/tags/tag_optgroup.asp">&lt;optgroup&gt;</a></td>
+                        <td>Defines a group of related options in a drop-down list</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/tags/tag_option.asp">&lt;option&gt;</a></td>
+                        <td>Defines an option in a drop-down list</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/tags/tag_button.asp">&lt;button&gt;</a></td>
+                        <td>Defines a clickable button</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/tags/tag_datalist.asp">&lt;datalist&gt;</a></td>
+                        <td>Specifies a list of pre-defined options for input controls</td>
+                    </tr>
+                    <tr>
+                        <td><a href="/tags/tag_output.asp">&lt;output&gt;</a></td>
+                        <td>Defines the result of a calculation</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+</body>
+</html>
