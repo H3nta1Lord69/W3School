@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Form Input Types</title>
+</head>
+<body>
+
+    <h1>HTML Form Input Types</h1>
+    <hr>
+        <p>This chapter describes the different types for the HTML <strong><-input></strong> element.</p>
+
+    <hr>
+
+        <h2>HTML Input Types</h2>
+            <p>Here are the different input types you can use in HTML</p>
+            <ul>
+                <li><-input type="button"></li>
+                <li><-input type="checkbox"></li>
+                <li><-input type="color"></li>
+                <li><-input type="date"></li>
+                <li><-input type="datetime-local"></li>
+                <li><-input type="email"></li>
+                <li><-input type="file"></li>
+                <li><-input type="hidden"></li>
+                <li><-input type="image"></li>
+                <li><-input type="month"></li>
+                <li><-input type="number"></li>
+                <li><-input type="password"></li>
+                <li><-input type="radio"></li>
+                <li><-input type="range"></li>
+                <li><-input type="reset"></li>
+                <li><-input type="search"></li>
+                <li><-input type="submit"></li>
+                <li><-input type="tel"></li>
+                <li><-input type="text"></li>
+                <li><-input type="time"></li>
+                <li><-input type="url"></li>
+                <li><-input type="week"></li>
+            </ul>
+            <p><em><b>Tip:</b> The default value of the <strong>type</strong> attribute is "text".</em></p>
+
+    <hr>
+
+        <h2>Input Type Text</h2>
+            <p><strong><-input type="text"></strong> defines a single-line text input field:</p>
+                <code><pre>
+                    <-form>
+                        <-label for="fname">First name:<-/label><-br>
+                        <-input type="text" id="fname" name="fname"><-br>
+                        <-label for="lname">Last name:<-/label><-br>
+                        <-input type="text" id="lname" name="lname">
+                    <-/form>                      
+                </pre></code>
+            <p>This is how the HTML code above will be displayed in a browser.</p>
+                    <form>
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname"><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname">
+                    </form>
+
+    <hr>
+
+        <h2>Input Type Password</h2>
+            <p><strong><-input type="password"></strong> defines a password field:</p>
+                <code><pre>
+                    <-form>
+                        <-label for="username">Username:<-/label><-br>
+                        <-input type="text" id="username" name="username"><-br>
+                        <-label for="pwd">Password:<-/label><-br>
+                        <-input type="password" id="pwd" name="pwd">
+                    <-/form>
+                </pre></code>
+            <p>This is how the HTML code above will be displayed in a browser:</p>
+                    <form>
+                        <label for="username">Username:</label><br>
+                        <input type="text" id="username" name="username"><br>
+                        <label for="pwd">Password:</label><br>
+                        <input type="password" id="pwd" name="pwd">
+                    </form>
+            <p><em><b>The characters in a password field are masked (shown as asterisks or circles).</b></em></p>
+
+    <hr>
+
+        <h2>Input Type Submit</h2>
+            <p><strong><-input type="submit"></strong> defines a button for <b>submitting</b> form data to a <b>form-handler</b>.</p>
+            <p>The form-handler is typically a server page with a script for processing input data.</p>
+            <p>The form-handler is specified in the form's action attribute.</p>
+                <code><pre>
+                    <-form action="#">
+                        <-label for="fname">First name:<-/label><-br>
+                        <-input type="text" id="fname" name="fname" value="John"><-br>
+                        <-label for="lname">Last name:<-/label><-br>
+                        <-input type="text" id="lname" name="lname" value="Doe"><-br><-br>
+                        <-input type="submit" value="Submit">
+                    <-/form>
+                </pre></code>
+            <p>This is how the HTML code above will be displayed in a browser:</p>
+                    <form action="/action_page.php">
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname" value="John"><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+            <p><em><b>If you omit the submit button's value attribute, the button will get a default text.</b></em></p>
+                <code><pre>
+                    <-form action="#">
+                        <-label for="fname">First name:<-/label><-br>
+                        <-input type="text" id="fname" name="fname" value="John"><-br>
+                        <-label for="lname">Last name:<-/label><-br>
+                        <-input type="text" id="lname" name="lname" value="Doe"><-br><-br>
+                        <-input type="submit">
+                    <-/form>
+                </pre></code>
+
+    <hr>
+
+        <h2>Input Type Reset</h2>
+            <p><strong><-input type="reset"></strong> defines a <b>reset button</b> that will reset all form values to their default values.</p>
+                <code><pre>
+                    <-form action="/action_page.php">
+                        <-label for="fname">First name:<-/label><-br>
+                        <-input type="text" id="fname" name="fname" value="John"><-br>
+                        <-label for="lname">Last name:<-/label><-br>
+                        <-input type="text" id="lname" name="lname" value="Doe"><-br><-br>
+                        <-input type="submit" value="Submit">
+                        <-input type="reset">
+                    <-/form>
+                </pre></code>
+            <p>This is how the HTML code above will be displayed in a browser:</p>
+                    <form action="/action_page.php">
+                        <label for="fname">First name:</label><br>
+                        <input type="text" id="fname" name="fname" value="John"><br>
+                        <label for="lname">Last name:</label><br>
+                        <input type="text" id="lname" name="lname" value="Doe"><br><br>
+                        <input type="submit" value="Submit">
+                        <input type="reset">
+                    </form>
+
+    <hr>
+    
+        <h2>Input Type Radio</h2>
+            <p><strong><-input type="radio"></strong> defines a <b>radio button</b>.</p>
+            <p>Radio buttons let a user select ONLY ONE of a limited number of choices:</p>
+                <code><pre>
+                    <-p>Choose your favorite Web language:<-/p>
+
+                    <-form>
+                        <-input type="radio" id="html" name="fav_language" value="HTML">
+                        <-label for="html">HTML<-/label><-br>
+                        <-input type="radio" id="css" name="fav_language" value="CSS">
+                        <-label for="css">CSS<-/label><-br>
+                        <-input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                        <-label for="javascript">JavaScript<-/label>
+                    <-/form>
+                </pre></code>
+
+                <p>Choose your favorite Web language:</p>
+
+                <form>
+                    <input type="radio" id="html" name="fav_language" value="HTML">
+                    <label for="html">HTML</label><br>
+                    <input type="radio" id="css" name="fav_language" value="CSS">
+                    <label for="css">CSS</label><br>
+                    <input type="radio" id="javascript" name="fav_language" value="JavaScript">
+                    <label for="javascript">JavaScript</label>
+                </form>
+
+    <hr>
+                
+        <h2>Input Type Checkbox</h2>
+            <p><strong><-input type="checkbox"></strong> defines a <b>checkbox</b>.</p>
+            <p>Checkboxes let a user select ZERO or MORE options of a limited number of choices.</p>
+                <code><pre>
+                    <-form>
+                        <-input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <-label for="vehicle1"> I have a bike<-/label><-br>
+                        <-input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                        <-label for="vehicle2"> I have a car<-/label><-br>
+                        <-input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                        <-label for="vehicle3"> I have a boat<-/label>
+                    <-/form>
+                </pre></code>
+                    <form>
+                        <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike">
+                        <label for="vehicle1"> I have a bike</label><br>
+                        <input type="checkbox" id="vehicle2" name="vehicle2" value="Car">
+                        <label for="vehicle2"> I have a car</label><br>
+                        <input type="checkbox" id="vehicle3" name="vehicle3" value="Boat">
+                        <label for="vehicle3"> I have a boat</label>
+                    </form>
+
+    <hr>
+    
+        <h2>Input Type Button</h2>
+            <p><strong><-input type="button"></strong> defines a button:</p>
+                <code><pre>
+                    <-input type="button" onclick="alert('Hello World!')" value="Click Me!">
+                </pre></code>
+                    <input type="button" onclick="alert('Hello World!')" value="Click Me!">
+
+    <hr>
+    
+        <h2>Input Type Color</h2>
+            <p>The <strong><-input type="color"></strong> is used for input fields that should contain a color.</p>
+            <p>Depending on browser support, a color picker can show up in the input field.</p>
+                <code><pre>
+                    <-form>
+                        <-label for="favcolor">Select your favorite color:<-/label>
+                        <-input type="color" id="favcolor" name="favcolor">
+                    <-/form>
+                </pre></code>
+                    <form>
+                        <label for="favcolor">Select your favorite color:</label>
+                        <input type="color" id="favcolor" name="favcolor">
+                    </form>
+
+    <hr>
+
+        <h2>Input Type Date</h2>
+            <p>The <strong><-input type="date"></strong> is used for input fields that should contain a date.</p>
+            <p>Depending on browser support, a date picker can show up in the input field.</p>
+                <code><pre>
+                    <-form>
+                        <-label for="birthday">Birthday:<-/label>
+                        <-input type="date" id="birthday" name="birthday">
+                    <-/form>
+                </pre></code>
+                    <form>
+                        <label for="birthday">Birthday:</label>
+                        <input type="date" id="birthday" name="birthday">
+                    </form>
+            <p>You can also use the <strong>min</strong> and <strong>max</strong> attributes to add restrictions to dates:</p>
+                <code><pre>
+                    <-form>
+                        <-label for="datemax">Enter a date before 1980-01-01:<-/label>
+                        <-input type="date" id="datemax" name="datemax" max="1979-12-31"><-br><-br>
+                        <-label for="datemin">Enter a date after 2000-01-01:<-/label>
+                        <-input type="date" id="datemin" name="datemin" min="2000-01-02">
+                    <-/form>
+                </pre></code>
+                    <form>
+                        <label for="datemax">Enter a date before 1980-01-01:</label>
+                        <input type="date" id="datemax" name="datemax" max="1979-12-31"><br><br>
+                        <label for="datemin">Enter a date after 2000-01-01:</label>
+                        <input type="date" id="datemin" name="datemin" min="2000-01-02">
+                    </form>
+
+    <hr>
+    
+        <h2>Input Type Datetime-local</h2>
+            <p>The <strong><-input type="datetime-local"></strong> specifies a date and time input field, with no time zone.</p>
+            <p>Depending on browser support, a date picker can show up in the input field.</p>
+                <code><pre>
+                    <-form>
+                        <-label for="birthdaytime">Birthday (date and time):<-/label>
+                        <-input type="datetime-local" id="birthdaytime" name="birthdaytime">
+                    <-/form>
+                </pre></code>
+                    <form>
+                        <label for="birthdaytime">Birthday (date and time):</label>
+                        <input type="datetime-local" id="birthdaytime" name="birthdaytime">
+                    </form>
+
+    <hr>
+    
+        <h2>Input Type Email</h2>
+            <p>The <strong><-input type="email"></strong> is used for input fields that should contain an e-mail address.</p>
+            <p>Depending on browser support, the e-mail address can be automatically validated when submitted.</p>
+            <p>Some smartphones recognize the email type, and add ".com" to the keyboard to match email input.</p>
+                <code><pre>
+                    <-form>
+                        <-label for="email">Enter your email:<-/label>
+                        <-input type="email" id="email" name="email">
+                    <-/form>
+                </pre></code>
+
+    <hr>
+
+        <h2>Input Type File</h2>
+            <p>The <strong><-input type="file"></strong> defines a file-select field and a "Browse" button for file uploads.</p>
+                <code><pre>
+                    <-form>
+                        <-label for="myfile">Select a file:<-/label>
+                        <-input type="file" id="myfile" name="myfile">
+                    <-/form>
+                </pre></code>
+                    <form>
+                        <label for="myfile">Select a file:</label>
+                        <input type="file" id="myfile" name="myfile">
+                    </form>
+
+    <hr>
+    
+        <h2>Input Type Hidden</h2>
+            <p>The <strong><-input type="hidden"></strong> defines a hidden input field (not visible to a user).</p>
+            <p>A hidden field let web developers include data that cannot be seen or modified by users when a form is submitted.</p>
+            <p>A hidden field often stores what database record that needs to be updated when the form is submitted.</p>
+            <p><b>Note:</b> While the value is not displayed to the user in the page's content, it is visible (and can be edited) using any browser's developer tools or "View Source" functionality. Do not use hidden inputs as a form of security!</p>
+                <code><pre>
+                    <-form>
+                        <-label for="fname">First name:<-/label>
+                        <-input type="text" id="fname" name="fname"><-br><-br>
+                        <-input type="hidden" id="custId" name="custId" value="3487">
+                        <-input type="submit" value="Submit">
+                    <-/form>
+                </pre></code>
+                    <form>
+                        <label for="fname">First name:</label>
+                        <input type="text" id="fname" name="fname"><br><br>
+                        <input type="hidden" id="custId" name="custId" value="3487">
+                        <input type="submit" value="Submit">
+                    </form>
+
+    <hr>
+    
+        <h2>Input Type Month</h2>
+            <p>The <strong><-input type="month"></strong> allows the user to select a month and year.</p>
+            <p>Depending on browser support, a date picker can show up in the input field.</p>
+                <code><pre>
+                    <-form>
+                        <-label for="bdaymonth">Birthday (month and year):<-/label>
+                        <-input type="month" id="bdaymonth" name="bdaymonth">
+                    <-/form>
+                </pre></code>
+                    <form>
+                        <label for="bdaymonth">Birthday (month and year):</label>
+                        <input type="month" id="bdaymonth" name="bdaymonth">
+                    </form>
+
+    <hr>
+    
+        <h2>Input Type Number</h2>
+            <p>The <strong><-input type="number"></strong> defines a numeric input field.</p>
+            <p>You can also set restrictions on what numbers are accepted.</p>
+            <p>The following example displays a numeric input field, where you can enter a value from 1 to 5:</p>
+                <code><pre>
+                    <-form>
+                        <-label for="quantity">Quantity (between 1 and 5):<-/label>
+                        <-input type="number" id="quantity" name="quantity" min="1" max="5">
+                    <-/form>
+                </pre></code>
+                    <form>
+                        <label for="quantity">Quantity (between 1 and 5):</label>
+                        <input type="number" id="quantity" name="quantity" min="1" max="5">
+                    </form>
+
+    <hr>
+
+        <h2>Input Restrictions</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <th style="width:20%">Attribute</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>checked</td>
+                        <td>Specifies that an input field should be pre-selected when the page loads (for type="checkbox" or type="radio")</td>
+                    </tr>
+                    <tr>
+                        <td>disabled</td>
+                        <td>Specifies that an input field should be disabled</td>
+                    </tr>
+                    <tr>
+                        <td>max</td>
+                        <td>Specifies the maximum value for an input field</td>
+                    </tr>
+                    <tr>
+                        <td>maxlength</td>
+                        <td>Specifies the maximum number of character for an input field</td>
+                    </tr>
+                    <tr>
+                        <td>min</td>
+                        <td>Specifies the minimum value for an input field</td>
+                    </tr>
+                    <tr>
+                        <td>pattern</td>
+                        <td>Specifies a regular expression to check the input value against</td>
+                    </tr>
+                    <tr>
+                        <td>readonly</td>
+                        <td>Specifies that an input field is read only (cannot be changed)</td>
+                    </tr>
+                    <tr>
+                        <td>required</td>
+                        <td>Specifies that an input field is required (must be filled out)</td>
+                    </tr>
+                    <tr>
+                        <td>size</td>
+                        <td>Specifies the width (in characters) of an input field</td>
+                    </tr>
+                    <tr>
+                        <td>step</td>
+                        <td>Specifies the legal number intervals for an input field</td>
+                    </tr>
+                    <tr>
+                        <td>value</td>
+                        <td>Specifies the default value for an input field</td>
+                    </tr>
+                </tbody>
+            </table>
+
+        <p>The following example displays a numeric input field, where you can enter a value from 0 to 100, in steps of 10. The default value is 30:</p>
+            <code><pre>
+                <-form>
+                    <-label for="quantity">Quantity:<-/label>
+                    <-input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="30">
+                <-/form>
+            </pre></code>
+                <form>
+                    <label for="quantity">Quantity:</label>
+                    <input type="number" id="quantity" name="quantity" min="0" max="100" step="10" value="30">
+                </form>
+
+    <hr>
+    
+        <h2>Input Type Range</h2>
+            <p>The <strong><-input type="range"></strong> defines a control for entering a number whose exact value is not important (like a slider control). Default range is 0 to 100. However, you can set restrictions on what numbers are accepted with the <strong>min</strong>, <strong>max</strong>, and <strong>step</strong> attributes:</p>
+                <code><pre>
+                    <-form>
+                        <-label for="vol">Volume (between 0 and 50):<-/label>
+                        <-input type="range" id="vol" name="vol" min="0" max="50">
+                    <-/form>
+                </pre></code>
+                    <form>
+                        <label for="vol">Volume (between 0 and 50):</label>
+                        <input type="range" id="vol" name="vol" min="0" max="50">
+                    </form>
+
+    <hr>
+
+        <h2>Input Type Search</h2>
+            <p>The <strong><-input type="search"></strong> is used for search fields (a search field behaves like a regular text field).</p>
+                <code><pre>
+                    <-form>
+                        <-label for="gsearch">Search Google:<-/label>
+                        <-input type="search" id="gsearch" name="gsearch">
+                    <-/form>
+                </pre></code>
+                    <form>
+                        <label for="gsearch">Search Google:</label>
+                        <input type="search" id="gsearch" name="gsearch">
+                    </form>
+
+    <hr>
+    
+        <h2>Input Type Tel</h2>
+            <p>The <strong><-input type="tel></strong> is used for unput fields that should contain a telephone number.</p>
+                <code><pre>
+                    <-form>
+                        <-label for="phone">Enter your phone number:<-/label>
+                        <-input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    <-/form>
+                </pre></code>
+                    <form>
+                        <label for="phone">Enter your phone number:</label>
+                        <input type="tel" id="phone" name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}">
+                    </form>
+
+    <hr>
+
+        <h2>Input Type Time</h2>
+            <p>The <strong><-input type="time"></strong> allows the user to select a time (no time zone).</p>
+            <p>Depending on browser support, a time picker can show up in the input field.</p>
+                <code><pre>
+                    <-form>
+                        <-label for="appt">Select a time:<-/label>
+                        <-input type="time" id="appt" name="appt">
+                    <-/form>
+                </pre></code>
+
+    <hr>
+
+        <h2>Input Type URL</h2>
+            <p>The <strong><-input type="url"></strong> is used for input fields that should contain a URL address.</p>
+            <p>Depending on browser support, the url field can be automatically validated when submitted.</p>
+            <p>Some smartphones recognize the url type, and adds ".com" to the keyboard to match url input.</p>
+                <code><pre>
+                    <-form>
+                        <-label for="homepage">Add your homepage:<-/label>
+                        <-input type="url" id="homepage" name="homepage">
+                    <-/form>
+                </pre></code>
+                    <form>
+                        <label for="homepage">Add your homepage:</label>
+                        <input type="url" id="homepage" name="homepage">
+                    </form>
+
+    <hr>
+
+        <h2>Input Type Week</h2>
+            <p>The <strong><-input type="week"></strong> allows the user to select a week and year.</p>
+            <p>Depending on browser support, a date picker can show up in the input field.</p>
+                <code><pre>
+                    <-form>
+                        <-label for="week">Select a week:<-/label>
+                        <-input type="week" id="week" name="week">
+                    <-/form>
+                </pre></code>
+
+    <hr>
+            
+</body>
+</html>
