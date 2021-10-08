@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Input form* Attributes</title>
+</head>
+<body>
+
+    <h1>HTML Input form* Attributes</h1>
+    <hr>
+        <p>This chapter describes the different <strong>form*</strong> attributes for the HTML <-input> element.</p>
+
+    <hr>
+
+        <h2>The form Attribute</h2>
+            <p>The input <strong>form</strong> attribute specifies the form the <-input> element belongs to.</p>
+            <p>The value of this attribute must be equal to the id attribute of the <-form> element it belongs to.</p>
+                <code><pre>
+                    <-form action="/action_page.php" id="form1">
+                        <-label for="fname">First name:<-/label>
+                        <-input type="text" id="fname" name="fname"><-br><-br>
+                        <-input type="submit" value="Submit">
+                    <-/form>
+                        
+                    <-label for="lname">Last name:<-/label>
+                    <-input type="text" id="lname" name="lname" form="form1">
+                </pre></code>
+                    <form action="/action_page.php" id="form1">
+                        <label for="fname">First name:</label>
+                        <input type="text" id="fname" name="fname"><br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+                    
+                    <label for="lname">Last name:</label>
+                    <input type="text" id="lname" name="lname" form="form1">
+
+    <hr>
+
+        <h2>The formaction Attribute</h2>
+            <p>The input <strong>formaction</strong> attribute specifies the URL of the file that will process the input when the form is submitted.</p>
+            <p><b>Note:</b> This attribute overrides the <strong>action</strong> attribute of the <-form> element.</p>
+            <p>The <strong>formaction</strong> attribute works with the following input types: submit and image.</p>
+                <code><pre>
+                    <-form action="/action_page.php">
+                        <-label for="fname">First name:<-/label>
+                        <-input type="text" id="fname" name="fname"><-br><-br>
+                        <-label for="lname">Last name:<-/label>
+                        <-input type="text" id="lname" name="lname"><-br><-br>
+                        <-input type="submit" value="Submit">
+                        <-input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+                    <-/form>
+                </pre></code>
+                    <form action="/action_page.php">
+                        <label for="fname">First name:</label>
+                        <input type="text" id="fname" name="fname"><br><br>
+                        <label for="lname">Last name:</label>
+                        <input type="text" id="lname" name="lname"><br><br>
+                        <input type="submit" value="Submit">
+                        <input type="submit" formaction="/action_page2.php" value="Submit as Admin">
+                    </form>
+
+    <hr>
+    
+        <h2>The formenctype Attribute</h2>
+            <p>The input <strong>formenctype</strong> attribute specifies how the form-data should be encoded when submitted (only for forms with method="post").</p>
+            <p><b>Note:</b> This attribute overrides the enctype attribute of the <-form> element.</p>
+            <p>The <strong>formenctype</strong> attribute works with the following input types: submit and image.</p>
+                <code><pre>
+                    <-form action="/action_page_binary.asp" method="post">
+                        <-label for="fname">First name:<-/label>
+                        <-input type="text" id="fname" name="fname"><-br><-br>
+                        <-input type="submit" value="Submit">
+                        <-input type="submit" formenctype="multipart/form-data"
+                        value="Submit as Multipart/form-data">
+                    <-/form>
+                </pre></code>
+                    <form action="/action_page_binary.asp" method="post">
+                        <label for="fname">First name:</label>
+                        <input type="text" id="fname" name="fname"><br><br>
+                        <input type="submit" value="Submit">
+                        <input type="submit" formenctype="multipart/form-data"
+                        value="Submit as Multipart/form-data">
+                    </form>
+
+    <hr>
+    
+        <h2>The formmethod Attribute</h2>
+            <p>The input <strong>formmethod</strong> attribute defines the HTTP method for sending form-data to the action URL.</p>
+            <p><b>Note:</b> This attribute overrides the method attribute of the <-form> element.</p>
+            <p>The <strong>formmethod</strong> attribute works with the following input types: submit and image.</p>
+            <p>The form-data can be sent as URL variables (method="get") or as an HTTP post transaction (method="post").</p>
+                <h3>Notes on the "get" method:</h3>
+                    <ul>
+                        <li>This method appends the form-data to the URL in name/value pairs</li>
+                        <li>This method is useful for form submissions where a user want to bookmark the result</li>
+                        <li>There is a limit to how much data you can place in a URL (varies between browsers), therefore, you cannot be sure that all of the form-data will be correctly transferred</li>
+                        <li>Never use the "get" method to pass sensitive information! (password or other sensitive information will be visible in the browser's address bar)</li>
+                    </ul>
+                <h3>Notes on the "post" method:</h3>
+                    <ul>
+                        <li>This method sends the form-data as an HTTP post transaction</li>
+                        <li>Form submissions with the "post" method cannot be bookmarked</li>
+                        <li>The "post" method is more robust and secure than "get", and "post" does not have size limitations</li>
+                    </ul>
+                <code><pre>
+                    <-form action="/action_page.php" method="get">
+                        <-label for="fname">First name:<-/label>
+                        <-input type="text" id="fname" name="fname"><-br><-br>
+                        <-label for="lname">Last name:<-/label>
+                        <-input type="text" id="lname" name="lname"><-br><-br>
+                        <-input type="submit" value="Submit using GET">
+                        <-input type="submit" formmethod="post" value="Submit using POST">
+                    <-/form>
+                </pre></code>
+                    <form action="/action_page.php" method="get">
+                        <label for="fname">First name:</label>
+                        <input type="text" id="fname" name="fname"><br><br>
+                        <label for="lname">Last name:</label>
+                        <input type="text" id="lname" name="lname"><br><br>
+                        <input type="submit" value="Submit using GET">
+                        <input type="submit" formmethod="post" value="Submit using POST">
+                    </form>
+
+    <hr>
+
+        <h2>The formtarget Attribute</h2>
+            <p>The input <strong>formtarget</strong> attribute specifies a name or a keyword that indicates where to display the response that is received after submitting the form.</p>
+            <p><b>Note:</b> This attribute overrides the target attribute of the <-form> element.</p>
+            <p>The <strong>formtarget</strong> attribute works with the following input types: submit and image.</p>
+                <code><pre>
+                    <-form action="/action_page.php">
+                        <-label for="fname">First name:<-/label>
+                        <-input type="text" id="fname" name="fname"><-br><-br>
+                        <-label for="lname">Last name:<-/label>
+                        <-input type="text" id="lname" name="lname"><-br><-br>
+                        <-input type="submit" value="Submit">
+                        <-input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+                    <-/form>
+                </pre></code>
+                    <form action="/action_page.php">
+                        <label for="fname">First name:</label>
+                        <input type="text" id="fname" name="fname"><br><br>
+                        <label for="lname">Last name:</label>
+                        <input type="text" id="lname" name="lname"><br><br>
+                        <input type="submit" value="Submit">
+                        <input type="submit" formtarget="_blank" value="Submit to a new window/tab">
+                    </form>
+
+    <hr>
+    
+        <h2>The formnovalidate Attribute</h2>
+            <p>The input <strong>formnovalidate</strong> attribute specifies that an <-input> element should not be validated when submitted.</p>
+            <p><b>Note:</b> This attribute overrides the novalidate attribute of the <-form> element.</p>
+            <p>The <strong>formnovalidate</strong> attribute works with the following input types: submit.</p>
+                <code><pre>
+                    <-form action="/action_page.php">
+                        <-label for="email">Enter your email:<-/label>
+                        <-input type="email" id="email" name="email"><-br><-br>
+                        <-input type="submit" value="Submit">
+                        <-input type="submit" formnovalidate="formnovalidate"
+                        value="Submit without validation">
+                    <-/form>
+                </pre></code>
+                    <form action="/action_page.php">
+                        <label for="email">Enter your email:</label>
+                        <input type="email" id="email" name="email"><br><br>
+                        <input type="submit" value="Submit">
+                        <input type="submit" formnovalidate="formnovalidate"
+                        value="Submit without validation">
+                    </form>
+
+    <hr>
+    
+        <h2>The novalidate Attribute</h2>
+            <p>The <strong>novalidate</strong> attribute is a <-form> attribute.</p>
+            <p>When present, novalidate specifies that all of the form-data should not be validated when submitted.</p>
+                <code><pre>
+                    <-form action="/action_page.php" novalidate>
+                        <-label for="email">Enter your email:<-/label>
+                        <-input type="email" id="email" name="email"><-br><-br>
+                        <-input type="submit" value="Submit">
+                    <-/form>
+                </pre></code>
+                    <form action="/action_page.php" novalidate>
+                        <label for="email">Enter your email:</label>
+                        <input type="email" id="email" name="email"><br><br>
+                        <input type="submit" value="Submit">
+                    </form>
+    
+</body>
+</html>
