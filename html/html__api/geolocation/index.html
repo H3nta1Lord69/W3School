@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Geolocation</title>
+</head>
+<body>
+
+    <h1>HTML Geolocation API</h1>
+    <hr>
+        <p>The HTML Geolocation API is used to locate a user's position.</p>
+
+    <hr>
+
+        <h2>Locate the User's Position</h2>
+            <p>The HTML Geolocation API is used to get the geographical position of a user.</p>
+            <p>Since this can compromise privacy, the position is not available unless the user approves it.</p>
+            <p><em><b>Note:</b> Geolocation is most accurate for devices with GPS, like smartphones.</em></p>
+
+    <hr>
+
+        <h2>Using HTML Geolocation</h2>
+            <p>The <strong>getCurrentPosition()</strong> method is used to return the user's position.</p>
+            <p>The example below returns the latitude and longitude of the user's position:</p>
+                <code><pre>
+                    var x = document.getElementById("demo");
+                    function getLocation() {
+                        if (navigator.geolocation) {
+                            navigator.geolocation.getCurrentPosition(showPosition);
+                        } else {
+                            x.innerHTML = "Geolocation is not supported by this browser.";
+                        }
+                    }
+
+                    function showPosition(position) {
+                        x.innerHTML = "Latitude: " + position.coords.latitude +
+                        "<br>Longitude: " + position.coords.longitude;
+                    }
+                </pre></code>
+
+        <h3>Example Explained</h3>
+            <ul>
+                <li>Check if Geolocation is supported</li>
+                <li>If supported, run the getCurrentPosition() method. If not, display a message to the user</li>
+                <li>If the getCurrentPosition() method is successful, it returns a coordinates object to the function specified in the parameter (showPosition)</li>
+                <li>The showPosition() function outputs the Latitude and Longitude</li>
+            </ul>
+
+    <hr>
+        
+        <h2>Handling Errors and Rejections</h2>
+            <p>The second parameter of the <strong>getCurrentPosition()</strong> method is used to handle errors. It specifies a function to run if it fails to get the user's location:</p>
+                <code><pre>
+                    function showError(error) {
+                        switch(error.code) {
+                            case error.PERMISSION_DENIED:
+                                x.innerHTML = "User denied the request for Geolocation."
+                            break;
+                            case error.POSITION_UNAVAILABLE:
+                                x.innerHTML = "Location information is unavailable."
+                            break;
+                            case error.TIMEOUT:
+                                x.innerHTML = "The request to get user location timed out."
+                            break;
+                            case error.UNKNOWN_ERROR:
+                                x.innerHTML = "An unknown error occurred."
+                            break;
+                        }
+                    }
+                </pre></code>
+
+    <hr>
+
+        <h2>Displaying the Result in a Map</h2>
+            <p>To display the result in a map, you need access to a map service, like Google Maps.</p>
+            <p>In the example below, the returned latitude and longitude is used to show the location in a Google Map (using a static image):</p>
+                <code><pre>
+                    function showPosition(position) {
+                        var latlon = position.coords.latitude + "," + position.coords.longitude;
+                        
+                        var img_url = "https://maps.googleapis.com/maps/api/staticmap?center=
+                        "+latlon+"&zoom=14&size=400x300&sensor=false&key=YOUR_KEY";
+                        
+                        document.getElementById("mapholder").innerHTML = "<-img src='"+img_url+"'>";
+                    }
+                </pre></code>
+
+    <hr>
+
+        <h2>Location-specific Information</h2>
+            <p>This page has demonstrated how to show a user's position on a map.</p>
+            <p>Geolocation is also very useful for location-specific information, like.</p>
+                <ul>
+                    <li>Up-to-date local information</li>
+                    <li>Showing Points-of-interest near the user</li>
+                    <li>Turn-by-turn navigation (GPS)</li>
+                </ul>
+
+    <hr>
+
+        <h2>The getCurrentPosition() Method - Return Data</h2>
+            <p>The <strong>getCurrentPosition()</strong> method returns an object on success. The latitude, longitude and accuracy properties are always returned. The other properties are returned if available:</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th style="width:150px">Property</th>
+                        <th>Returns</th>
+                    </tr>
+                    <tr>
+                        <td>coords.latitude</td>
+                        <td>The latitude as a decimal number (always returned)</td>
+                    </tr>
+                    <tr>
+                        <td>coords.longitude</td>
+                        <td>The longitude as a decimal number (always returned)</td>
+                    </tr>
+                    <tr>
+                        <td>coords.accuracy</td>
+                        <td>The accuracy of position (always returned)</td>
+                    </tr>
+                    <tr>
+                        <td>coords.altitude</td>
+                        <td>The altitude in meters above the mean sea level (returned if available)</td>
+                    </tr>
+                    <tr>
+                        <td>coords.altitudeAccuracy</td>
+                        <td>The altitude accuracy of position (returned if available)</td>
+                    </tr>
+                    <tr>
+                        <td>coords.heading</td>
+                        <td>The heading as degrees clockwise from North (returned if available)</td>
+                    </tr>
+                    <tr>
+                        <td>coords.speed</td>
+                        <td>The speed in meters per second (returned if available)</td>
+                    </tr>
+                    <tr>
+                        <td>timestamp</td>
+                        <td>The date/time of the response (returned if available)</td>
+                    </tr>
+                </tbody>
+            </table>
+
+    <hr>
+
+        <h2>Geolocation Object - Other interesting Methods</h2>
+            <p>The Geolocation object also has other interesting methods:</p>
+                <ul>
+                    <li>watchPosition() - Returns the current position of the user and continues to return updated position as the user moves (like the GPS in a car).</li>
+                    <li>clearWatch() - Stops the watchPosition() method.</li>
+                </ul>
+            <p>The example below shows the watchPosition() method. You need an accurate GPS device to test this (like smartphone):</p>
+                <code><pre>
+                    var x = document.getElementById("demo");
+                    function getLocation() {
+                            if (navigator.geolocation) {
+                                navigator.geolocation.watchPosition(showPosition);
+                            } else {
+                                x.innerHTML = "Geolocation is not supported by this browser.";
+                            }
+                        }
+                    function showPosition(position) {
+                        x.innerHTML = "Latitude: " + position.coords.latitude +
+                        "<br>Longitude: " + position.coords.longitude;
+                    }
+                </pre></code>
+    
+</body>
+</html>
