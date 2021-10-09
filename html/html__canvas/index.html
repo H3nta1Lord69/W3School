@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Canvas</title>
+</head>
+<body>
+
+    <h1>HTML Canvas Graphics</h1>
+    <hr>
+        <p>The HTML <-canvas> element is used to draw graphics on a web page.</p>
+
+    <hr>
+
+        <h2>What is HTML Canvas?</h2>
+            <p>The HTML <-canvas> element is used to draw graphics, on the fly, via JavaScript.</p>
+            <p>The <-canvas> element is only a container for graphics. You must use JavaScript to actually draw the graphics.</p>
+            <p>Canvas has several methods for drawing paths, boxes, circles, text, and adding images.</p>
+
+    <hr>
+
+        <h2>Canvas Examples</h2>
+            <p>A canvas is a rectangular area on an HTML page. By default, a canvas has no border and no content.</p>
+            <p>The markup looks like this:</p>
+                <code><pre>
+                    <-canvas id="myCanvas" width="200" height="100"><-/canvas>
+                </pre></code>
+            <p><em><b>Note:</b> Always specify an <strong>id</strong> attribute (to be referred to in a script), and a <strong>width</strong> and <strong>height</strong> attribute to define the size of the canvas. To add a border, use the <strong>style</strong> attribute.</em></p>
+                <code><pre>
+                    <-canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+                    <-/canvas>
+                </pre></code>
+                    <canvas id="myCanvas" width="200" height="100" style="border:1px solid #000000;">
+                    </canvas>
+
+    <hr>
+    
+        <h2>Add a JavaScript</h2>
+            <p>After creating the rectangular canvas area, you must add a JavaScript to do the drawing.</p>
+                <h3>Draw a Line</h3>
+                    <code><pre>
+                        var c = document.getElementById("myCanvas");
+                        var ctx = c.getContext("2d");
+                        ctx.moveTo(0, 0);
+                        ctx.lineTo(200, 100);
+                        ctx.stroke();
+                    </pre></code>
+
+    <hr>
+
+        <h3>Draw a Circle</h3>
+            <code><pre>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.beginPath();
+                ctx.arc(95, 50, 40, 0, 2 * Math.PI);
+                ctx.stroke();
+            </pre></code>
+
+    <hr>
+
+        <h3>Draw a Text</h3>
+            <code><pre>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.font = "30px Arial";
+                ctx.fillText("Hello World", 10, 50);
+            </pre></code>
+
+    <hr>
+
+        <h3>Stroke Text</h3>
+            <code><pre>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                ctx.font = "30px Arial";
+                ctx.strokeText("Hello World", 10, 50);
+            </pre></code>
+
+    <hr>
+
+        <h3>Draw Linear Gradient</h3>
+            <code><pre>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+
+                // Create gradient
+                var grd = ctx.createLinearGradient(0, 0, 200, 0);
+                grd.addColorStop(0, "red");
+                grd.addColorStop(1, "white");
+
+                // Fill with gradient
+                ctx.fillStyle = grd;
+                ctx.fillRect(10, 10, 150, 80);
+            </pre></code>
+
+    <hr>
+
+        <h3>Draw Circular Gradient</h3>
+            <code><pre>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+
+                // Create gradient
+                var grd = ctx.createRadialGradient(75, 50, 5, 90, 60, 100);
+                grd.addColorStop(0, "red");
+                grd.addColorStop(1, "white");
+
+                // Fill with gradient
+                ctx.fillStyle = grd;
+                ctx.fillRect(10, 10, 150, 80);
+            </pre></code>
+
+    <hr>
+
+        <h3>Draw Image</h3>
+            <code><pre>
+                var c = document.getElementById("myCanvas");
+                var ctx = c.getContext("2d");
+                var img = document.getElementById("scream");
+                ctx.drawImage(img, 10, 10);
+            </pre></code>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.moveTo(0, 0);
+        ctx.lineTo(200, 100);
+        ctx.stroke();
+    </script>                    
+    
+</body>
+</html>
