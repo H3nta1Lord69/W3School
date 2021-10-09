@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>Audio</title>
+</head>
+<body>
+
+    <h1>HTML Audio</h1>
+    <hr>
+        <p>The HTML <-audio> element is used to play an audio file on a web page.</p>
+
+    <hr>
+
+        <h2>The HTML <-audio> Element</h2>
+            <p>To play an audio file in HTML, use the <-audio> element:</p>
+                <code><pre>
+                    <-audio controls>
+                        <-source src="horse.ogg" type="audio/ogg">
+                        <-source src="horse.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                    <-/audio>
+                </pre></code>
+
+    <hr>
+    
+        <h2>HTML Audio - How It Works?</h2>
+            <p>The <strong>controls</strong> attribute adds audio controls, like play, pause, and volume.</p>
+            <p>The <-source> element allows you to specify alternative audio files which the browser may choose from. The browser will use the first recognized format.</p>
+            <p>The text between the <-audio> and <-/audio> tags will only be displayed in browsers that do not support the <-audio> element.</p>
+
+    <hr>
+
+        <h2>HTML <-audio> Autoplay</h2>
+            <p>To start an audio file automatically, use the <strong>autoplay</strong> attribute:</p>
+                <code><pre>
+                    <-audio controls autoplay>
+                        <-source src="horse.ogg" type="audio/ogg">
+                        <-source src="horse.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                    <-/audio>
+                </pre></code>
+            <p><em><b>Note:</b> Chromium browsers do not allow autoplay in most cases. However, muted autoplay is always allowed.</em></p>
+            <p>Add <strong>muted</strong> after <strong>autoplay</strong> to let your audio file start playing automatically (but muted):</p>
+                <code><pre>
+                    <-audio controls autoplay muted>
+                        <-source src="horse.ogg" type="audio/ogg">
+                        <-source src="horse.mp3" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                    <-/audio>
+                </pre></code>
+
+    <hr>
+
+        <h2>HTML Audio Formats</h2>
+            <p>There are three supported audio formats: MP3, WAV, and OGG. The browser support for the different formats is:</p>
+                <table>
+                    <tbody>
+                        <tr>
+                            <th style="width:25%">Browser</th>
+                            <th style="width:25%">MP3</th>
+                            <th style="width:25%">WAV</th>
+                            <th style="width:25%">OGG</th>
+                        </tr>
+                        <tr>
+                            <td>Edge/IE</td>
+                            <td>YES</td>
+                            <td>YES*</td>
+                            <td>YES*</td>
+                        </tr>
+                        <tr>
+                            <td>Chrome</td>
+                            <td>YES</td>
+                            <td>YES</td>
+                            <td>YES</td>
+                        </tr>
+                        <tr>
+                            <td>Firefox</td>
+                            <td>YES</td>
+                            <td>YES</td>
+                            <td>YES</td>
+                        </tr>
+                        <tr>
+                            <td>Safari</td>
+                            <td>YES</td>
+                            <td>YES</td>
+                            <td>NO</td>
+                        </tr>
+                        <tr>
+                            <td>Opera</td>
+                            <td>YES</td>
+                            <td>YES</td>
+                            <td>YES</td>
+                        </tr>
+                    </tbody>
+                </table>
+            <p><em>*From Edge 79</em></p>
+
+    <hr>
+
+        <h2>HTML Audio - Media Types</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <th style="width:50%">File Format</th>
+                        <th style="width:50%">Media Type</th>
+                    </tr>
+                    <tr>
+                        <td>MP3</td>
+                        <td>audio/mpeg</td>
+                    </tr>
+                    <tr>
+                        <td>OGG</td>
+                        <td>audio/ogg</td>
+                    </tr>
+                    <tr>
+                        <td>WAV</td>
+                        <td>audio/wav</td>
+                    </tr>
+                </tbody>
+            </table>
+
+    <hr>
+    
+        <h2>HTML Audio - Methods, Properties, and Events</h2>
+            <p>The HTML DOM defines methods, properties, and events for the <-audio> element.</p>
+            <p>This allows you to load, play, and pause audios, as well as set duration and volume.</p>
+            <p>There are also DOM events that can notify you when an audio begins to play, is paused, etc.</p>
+                
+</body>
+</html>
