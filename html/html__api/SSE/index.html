@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>SSE</title>
+</head>
+<body>
+
+    <h1>HTML SSE API</h1>
+    <hr>
+        <p>Server-Sent Events (SSE) allow a web page to get updates from a server.</p>
+
+    <hr>
+
+        <h2>Server-Sent Events - One Way Messaging</h2>
+            <p>A server-sent event is when a web page automatically gets updates from a server.</p>
+            <p>This was also possible before, but the web page would have to ask if any updates were available. With server-sent events, the updates come automatically.</p>
+            <p>Examples: Facebook/Twitter updates, stock price updates, news feeds, sport results, etc.</p>
+
+    <hr>
+
+        <h2>Receive Server-Sent Event Notifications</h2>
+            <p>The EventSource object is used to receive server-sent event notifications:</p>
+            <code><pre>
+                var source = new EventSource("demo_sse.php");
+                source.onmessage = function(event) {
+                    document.getElementById("result").innerHTML += event.data + "<br>";
+                };
+            </pre></code>
+            <h3>Example explained</h3>
+                <ul>
+                    <li>Create a new EventSource object, and specify the URL of the page sending the updates (in this example "demo_sse.php")</li>
+                    <li>Each time an update is received, the onmessage event occurs</li>
+                    <li>When an onmessage event occurs, put the received data into the element with id="result"</li>
+                </ul>
+
+    <hr>
+
+        <h2>Check Server-Sent Events Support</h2>
+            <code><pre>
+                if(typeof(EventSource) !== "undefined") {
+                    // Yes! Server-sent events support!
+                    // Some code.....
+                } else {
+                    // Sorry! No server-sent events support..
+                }
+            </pre></code>
+
+    <hr>
+    
+        <h2>Server-Side Code Example</h2>
+            <p>For the example above to work, you need a server capable of sending data updates (like PHP or ASP).</p>
+            <p>The server-side event stream syntax is simple. Set the "Content-Type" header to "text/event-stream". Now you can start sending event streams.</p>
+            <p>Code in PHP (demo_sse.php):</p>
+            <code><pre>
+                header('Content-Type: text/event-stream');
+                header('Cache-Control: no-cache');
+
+                $time = date('r');
+                echo "data: The server time is: {$time}\n\n";
+                flush();
+            </pre></code>
+            <p>Code in ASP (VB) (demo_sse.asp):</p>
+            <code><pre>
+                Response.ContentType = "text/event-stream"
+                Response.Expires = -1
+                Response.Write("data: The server time is: " & now())
+                Response.Flush()
+            </pre></code>
+            <h3>Code explained</h3>
+                <ul>
+                    <li>Set the "Content-Type" header to "text/event-stream"</li>
+                    <li>Specify that the page should not cache</li>
+                    <li>Output the data to send (<b>Always</b> start with "data: ")</li>
+                    <li>Flush the output data back to the web page</li>
+                </ul>
+
+    <hr>
+
+        <h2>The EventSource Object</h2>
+            <p>In the examples above we used the onmessage event to get messages. But other events are also available:</p>
+            <table>
+                <tbody>
+                    <tr>
+                        <th style="width:20%">Events</th>
+                        <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td>onopen</td>
+                        <td>When a connection to the server is opened</td>
+                    </tr>
+                    <tr>
+                        <td>onmessage</td>
+                        <td>When a message is received</td>
+                    </tr>
+                    <tr>
+                        <td>onerror</td>
+                        <td>When an error occurs</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+</body>
+</html>
