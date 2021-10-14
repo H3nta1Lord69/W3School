@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Backgrounds</title>
+</head>
+<body>
+
+    <h1>CSS Backgrounds</h1>
+    <hr>
+
+        <p>The CSS background properties are used to add background effects for elements.</p>
+        <div 
+        style="width:100%;border:1px solid gray;padding:8px;background:#e1efbb url('../assets/img/402a4830bd8b4efc25158ff8f7059e3a.jpg')">
+            <p>In these chapters, you will learn about the following CSS background properties:</p>
+            <ul>
+                <li>
+                    <code><strong>background-color</strong></code>
+                </li>
+                <li>
+                    <code><strong>background-image</strong></code>
+                </li>
+                <li>
+                    <code><strong>background-repeat</strong></code>
+                </li>
+                <li>
+                    <code><strong>background-attachment</strong></code>
+                </li>
+                <li>
+                    <code><strong>background-position</strong></code>
+                </li>
+                <li>
+                    <code><strong>background</strong></code> (shorthand property)
+                </li>
+            </ul>
+        </div>
+
+    <hr>
+    
+        <h2>CSS background-color</h2>
+            <p>The <strong>background-color</strong> property specifies the background color of an element.</p>
+            <p>The background color of a page is set like this:</p>
+            <code><pre>
+                body 
+                {
+                    background-color: lightblue;
+                }
+            </pre></code>
+            <p>With CSS, a color is most often specified by:</p>
+            <ul>
+                <li>a valid color name - like "red"</li>
+                <li>a HEX value - like "#ff0000"</li>
+                <li>an RGB value - like "rgb(255,0,0)"</li>
+            </ul>
+
+    <hr>
+    
+        <h2>Other Elements</h2>
+            <p>You can set the background color for any HTML elements:</p>
+            <p>Here, the <-h1>, <-p>, and <-div> elements will have different background colors:</p>
+            <code><pre>
+                h1 
+                {
+                    background-color: green;
+                }
+                  
+                  div 
+                {
+                    background-color: lightblue;
+                }
+                  
+                  p 
+                {
+                    background-color: yellow;
+                }
+            </pre></code>
+
+    <hr>
+    
+        <h2>Opacity / Transparency</h2>
+            <p>The <strong>opacity</strong> property specifies the opacity/transparency of an element. It can take a value from 0.0 - 1.0. The lower value, the more transparent:</p>
+            <code><pre>
+                div 
+                {
+                    background-color: green;
+                    opacity: 0.3;
+                }
+            </pre></code>
+            <p><em><b>Note:</b>
+                When using the opacity property to add transparency to the background of an element, all of its child elements inherit the same transparency.
+                This can make the text inside a fully transparent element hard to read.
+            </em></p>
+
+    <hr>
+    
+        <h2>Transparency using RGBA</h2>
+            <p>
+                If you do not want to apply opacity to child elements, like in our example above, use RGBA color values.
+                The following example sets the opacity for the background color and not the text:
+            </p>
+            <p>An RGBA color value is specified with: rgba(red, green, blue, alpha). The alpha parameter is a number between 0.0 (fully transparent) and 1.0 (fully opaque).</p>
+            <code><pre>
+                div 
+                {
+                    background: rgba(0, 128, 0, 0.3) /* Green background with 30% opacity */
+                }
+            </pre></code>
+    
+</body>
+</html>
