@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS HEX Colors</title>
+</head>
+<body>
+
+    <h1>CSS HEX Colors</h1>
+    <hr>
+
+        <p>
+            A hexadecimal color is specified with: #RRGGBB,
+            where the RR(red), GG(green) and BB(blue) hexadecimal integers specify the components of the color.
+        </p>
+
+    <hr>
+
+        <h2>HEX Value</h2>
+            <p>In CSS, a color can be specified using a hexadecimal value in the form:</p>
+            <b>#rrggbb</b>
+            <p>Where rr (red), gg (green) and bb (blue) are hexadecimal values between 00 and ff (same as decimal 0-255).</p>
+            <p>For example, #ff0000 is displayed as red, because red is set to its highest value (ff) and the others are set to the lowest value (00).</p>
+            <p>To display black, set all values to 00, like this: #000000.</p>
+            <p>To display white, set all values to ff, like this: #ffffff.</p>
+
+            <h1>Specify colors using HEX values</h1>
+
+                <h2 style="background-color:#ff0000;">#ff0000</h2>
+                <h2 style="background-color:#0000ff;">#0000ff</h2>
+                <h2 style="background-color:#3cb371;">#3cb371</h2>
+                <h2 style="background-color:#ee82ee;">#ee82ee</h2>
+                <h2 style="background-color:#ffa500;">#ffa500</h2>
+                <h2 style="background-color:#6a5acd;">#6a5acd</h2>
+
+            <p>Shades of gray are often defined using equal values for all the 3 light sources:</p>
+
+            <h1>Shades of gray</h1>
+
+                <p>By using equal values for red, green, and blue, you will get different shades of gray:</p>
+
+                <h2 style="background-color:#3c3c3c;">#3c3c3c</h2>
+                <h2 style="background-color:#616161;">#616161</h2>
+                <h2 style="background-color:#787878;">#787878</h2>
+                <h2 style="background-color:#b4b4b4;">#b4b4b4</h2>
+                <h2 style="background-color:#f0f0f0;">#f0f0f0</h2>
+                <h2 style="background-color:#f9f9f9;">#f9f9f9</h2>
+
+    <hr>
+    
+        <h2>3 Digit HEX Value</h2>
+            <p>Sometimes you will see a 3-digit hex code in the CSS source.</p>
+            <p>The 3-digit hex code is a shorthand for some 6-digit hex codes.</p>
+            <p>The 3-digit hex code has the following form:</p>
+            <b>#rgb</b>
+            <p>Where r, g, and b represents the red, green, and blue components with values between 0 and f.</p>
+            <p>The 3-digit hex code can only be used when both the values (RR, GG, and BB) are the same for each components. So, if we have #ff00cc, it can be written like this: #f0c.</p>
+            <code><pre>
+                body 
+                {
+                    background-color: #fc9; /* same as #ffcc99 */
+                }
+                
+                h1 
+                {
+                    color: #f0f; /* same as #ff00ff */
+                }
+                
+                p 
+                {
+                    color: #b58; /* same as #bb5588 */
+                }
+            </pre></code>
+
+</body>
+</html>
