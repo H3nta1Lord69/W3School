@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Background Shorthand</title>
+</head>
+<body>
+
+    <h1>CSS Background Shorthand</h1>
+    <hr>
+
+        <h2>CSS background - Shorthand property</h2>
+            <p>To shorten the code, it is also possible to specify all the background properties in one single property. This is called a shorthand property.</p>
+            <p>Instead of writing:</p>
+            <code><pre>
+                body 
+                {
+                    background-color: #ffffff;
+                    background-image: url("img_tree.png");
+                    background-repeat: no-repeat;
+                    background-position: right top;
+                }
+            </pre></code>
+            <p>You can use the shorthand property <strong>background</strong>:</p>
+            <p>Use the shorthand property to set the background properties in one declaration:</p>
+            <code><pre>
+                body 
+                {
+                    background: #ffffff url("img_tree.png") no-repeat right top;
+                }
+            </pre></code>
+            <p>When using the shorthand property the order of the property values is:</p>
+            <ul>
+                <li><strong>background-color</strong></li>
+                <li><strong>background-image</strong></li>
+                <li><strong>background-repeat</strong></li>
+                <li><strong>background-attachment</strong></li>
+                <li><strong>background-position</strong></li>
+            </ul>
+            <p>
+                It does not matter if one of the property values is missing, as long as the other ones are in this order. 
+                Note that we do not use the background-attachment property in the examples above, as it does not have a value.
+            </p>
+    
+</body>
+</html>
