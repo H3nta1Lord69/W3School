@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Background Attachment</title>
+</head>
+<body>
+
+    <h1>CSS Background Attachment</h1>
+    <hr>
+
+        <h2>CSS background-attachment</h2>
+            <p>
+                The <strong>background-attachment</strong> property specifies whether the background 
+                image should scroll or be fixed (will not scroll with the rest of the page):
+            </p>
+            <p><b>Specify that the background image should be fixed:Specify that the background image should be fixed:</b></p>
+            <code><pre>
+                body 
+                {
+                    background-image: url("img_tree.png");
+                    background-repeat: no-repeat;
+                    background-position: right top;
+                    background-attachment: fixed;
+                }
+            </pre></code>
+            <p>Specify that the background image should scroll with the rest of the page:</p>
+            <code><pre>
+                body 
+                {
+                    background-image: url("img_tree.png");
+                    background-repeat: no-repeat;
+                    background-position: right top;
+                    background-attachment: scroll;
+                }
+            </pre></code>
+
+    
+</body>
+</html>
