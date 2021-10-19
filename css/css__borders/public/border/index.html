@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Borders</title>
+</head>
+<body>
+
+    <h1>CSS Borders</h1>
+    <hr>
+
+        <p>The CSS border properties allow you to specify the style, width, and color of an element's border.</p>
+
+    <hr>
+    
+        <h2>CSS Border Style</h2>
+            <p>The <strong>border-style</strong> property specifies what kind of border to display.</p>
+            <p>The following values are allowed</p>
+                <ul>
+                    <li><strong>dotted</strong> - Defines a dotted border</li>
+                    <li><strong>dashed</strong> - Defines a dashed border</li>
+                    <li><strong>solid</strong> - Defines a solid border</li>
+                    <li><strong>double</strong> - Defines a double border</li>
+                    <li><strong>groove</strong> - Defines a 3D grooved border. The effect depends on the border-color value</li>
+                    <li><strong>ridge</strong> - Defines a 3D ridged border. The effect depends on the border-color value</li>
+                    <li><strong>inset</strong> - Defines a 3D inset border. The effect depends on the border-color value</li>
+                    <li><strong>outset</strong> - Defines a 3D outset border. The effect depends on the border-color value</li>
+                    <li><strong>none</strong> - Defines no border</li>
+                    <li><strong>hidden</strong> - Defines a hidden border</li>
+                </ul>
+            <p>
+                The <strong>border-style</strong> property can have from one to four values 
+                (for the top border, right border, bottom border, and the left border).
+            </p>
+            <code><pre>
+                p.dotted {border-style: dotted;}
+                p.dashed {border-style: dashed;}
+                p.solid {border-style: solid;}
+                p.double {border-style: double;}
+                p.groove {border-style: groove;}
+                p.ridge {border-style: ridge;}
+                p.inset {border-style: inset;}
+                p.outset {border-style: outset;}
+                p.none {border-style: none;}
+                p.hidden {border-style: hidden;}
+                p.mix {border-style: dotted dashed solid double;}
+            </pre></code>
+            <p>Result:</p>
+            <p class="dotted">A dotted border.</p>
+            <p class="dashed">A dashed border.</p>
+            <p class="solid">A solid border.</p>
+            <p class="double">A double border.</p>
+            <p class="groove">A groove border.</p>
+            <p class="ridge">A ridge border.</p>
+            <p class="inset">An inset border.</p>
+            <p class="outset">An outset border.</p>
+            <p class="none">No border.</p>
+            <p class="hidden">A hidden border.</p>
+            <p class="mix">A mixed border.</p>
+            <p><em><b>Note:</b>
+                None of the OTHER CSS border properties (which you will learn more about in the next chapters) 
+                will have ANY effect unless the border-style property is set!
+            </em></p>
+    
+</body>
+</html>
