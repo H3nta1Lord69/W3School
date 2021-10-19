@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Border Color</title>
+</head>
+<body>
+
+    <h1>CSS Border Color</h1>
+    <hr>
+
+        <h2>CSS Border Color</h2>
+            <p>The <strong>border-color</strong> property is used to set the color of the four borders.</p>
+            <p>The color can be set by:</p>
+            <ul>
+                <li>name - specify a color name, like "red"</li>
+                <li>HEX - specify a HEX value, like "#ff0000"</li>
+                <li>RGB - specify a RGB value, like "rgb(255,0,0)"</li>
+                <li>HSL - specify a HSL value, like "hsl(0, 100%, 50%)"</li>
+                <li>transparent</li>
+            </ul>
+            <p><em><b>Note:</b>
+                If <strong>border-color</strong> is not set,
+                it inherits the color of the element.
+            </em></p>
+            <code><pre>
+                p.one 
+                {
+                    border-style: solid;
+                    border-color: red;
+                }
+                
+                p.two 
+                {
+                    border-style: solid;
+                    border-color: green;
+                }
+                
+                p.three 
+                {
+                    border-style: dotted;
+                    border-color: blue;
+                }
+            </pre></code>
+            <p class="one">A solid red border</p>
+            <p class="two">A solid green border</p>
+            <p class="three">A dotted blue border</p>
+
+            <p><b>Note:</b> The "border-color" property does not work if it is used alone. Use the "border-style" property to set the borders first.</p>
+
+    <hr>
+    
+        <h2>Specific Side Colors</h2>
+            <p>
+                The border-color property can have from one to four values 
+                (for the top border, right border, bottom border, and the left border).
+            </p>
+            <code><pre>
+                p.specific 
+                {
+                    border-style: solid;
+                    border-color: red green blue yellow; /* red top, green right, blue bottom and yellow left */
+                }
+            </pre></code>
+            <p class="specific">A solid multicolor border</p>
+
+    <hr>
+    
+        <h2>HEX Values</h2>
+            <p>The color of the border can also be specified using a hexadecimal value (HEX):</p>
+            <code><pre>
+                p.one 
+                {
+                    border-style: solid;
+                    border-color: #ff0000; /* red */
+                }
+            </pre></code>
+
+    <hr>
+    
+        <h2>RGB Values</h2>
+            <p>Or by using RGB values:</p>
+            <code><pre>
+                p.one 
+                {
+                    border-style: solid;
+                    border-color: rgb(255, 0, 0); /* red */
+                }
+            </pre></code>
+
+    <hr>
+    
+        <h2>HSL Values</h2>
+            <p>You can also use HSL values:</p>
+            <code><pre>
+                p.one 
+                {
+                    border-style: solid;
+                    border-color: hsl(0, 100%, 50%); /* red */
+                }
+            </pre></code>
+    
+</body>
+</html>
