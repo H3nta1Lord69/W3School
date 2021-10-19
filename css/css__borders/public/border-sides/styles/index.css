@@ -1,0 +1,36 @@
+strong
+{
+    color: red;
+}
+
+p.different 
+{
+    border-top-style: dotted;
+    border-right-style: solid;
+    border-bottom-style: dotted;
+    border-left-style: solid;
+}
+
+/* Four values */
+p.four 
+{
+    border-style: dotted solid double dashed;
+}
+
+/* Three values */
+p.three 
+{
+    border-style: dotted solid double;
+}
+
+/* Two values */
+p.two 
+{
+    border-style: dotted solid;
+}
+
+/* One value */
+p.one 
+{
+    border-style: dotted;
+}

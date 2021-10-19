@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Border Sides</title>
+</head>
+<body>
+
+    <h1>CSS Border Sides</h1>
+    <hr>
+
+        <h2>CSS Border - Individual Sides</h2>
+            <p>From the examples on the previous pages, you have seen that it is possible to specify a different border for each side.</p>
+            <p>In CSS, there are also properties for specifying each of the borders (top, right, bottom, and left):</p>
+            <code><pre>
+                p.different 
+                {
+                    border-top-style: dotted;
+                    border-right-style: solid;
+                    border-bottom-style: dotted;
+                    border-left-style: solid;
+                }
+            </pre></code>
+            <p class="different">2 different border styles.</p>
+            <p>The example above gives the same result as this.</p>
+            <code><pre>
+                p.different 
+                {
+                    border-style: dotted solid;
+                }
+            </pre></code>
+            <p>So, here is how it works:</p>
+                <p>If the <strong>border-style</strong> property has four values:</p>
+                <ul>
+                    <li><b>border-style: dotted solid double dashed;</b></li>
+                    <li>top border is dotted</li>
+                    <li>right border is solid</li>
+                    <li>bottom border is double</li>
+                    <li>left border is dashed</li>
+                </ul>
+                <p>If the <strong>border-style</strong> property has three values:</p>
+                <ul>
+                    <li><b>border-style: dotted solid double;</b></li>
+                    <li>top border is dotted</li>
+                    <li>right and left borders are solid</li>
+                    <li>bottom border is double</li>
+                </ul>
+                <p>If the <strong>border-style</strong> property has two values:</p>
+                <ul>
+                    <li><b>border-style: dotted solid;</b></li>
+                    <li>top and bottom borders are dotted</li>
+                    <li>right and left borders are solid</li>
+                </ul>
+                <p>If the <strong>border-style</strong> property has one values:</p>
+                <ul>
+                    <li><b>border-style: dotted;</b></li>
+                    <li>all four borders are dotted</li>
+                </ul>
+
+                <code><pre>
+                    body 
+                    {
+                        text-align: center;
+                    }
+                    /* Four values */
+                    p.four 
+                    {
+                        border-style: dotted solid double dashed;
+                    }
+                    
+                    /* Three values */
+                    p.three 
+                    {
+                        border-style: dotted solid double;
+                    }
+                    
+                    /* Two values */
+                    p.two 
+                    {
+                        border-style: dotted solid;
+                    }
+                    
+                    /* One value */
+                    p.one 
+                    {
+                        border-style: dotted;
+                    }
+                </pre></code>
+                <p class="four">4 different border styles.</p>
+                <p class="three">3 different border styles.</p>
+                <p class="two">2 different border styles.</p>
+                <p class="one">1 border style.</p>
+
+            <p><em>
+                The <strong>border-style</strong> property is used in the example above. However, it also works with <strong>border-width</strong> and <strong>border-color</strong>.
+            </em></p>
+            
+</body>
+</html>
