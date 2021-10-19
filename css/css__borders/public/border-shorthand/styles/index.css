@@ -1,0 +1,15 @@
+strong
+{
+    color: red;
+}
+
+p.example
+{
+    border: 5px solid red;
+}
+
+p.left
+{
+    border-left: 6px solid red;
+    background-color: lightgrey;
+}
