@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Background Image Repeat</title>
+</head>
+<body>
+
+    <h1>CSS Background Image Repeat</h1>
+    <hr>
+
+        <h2>CSS background-repeat</h2>
+            <p>By default, the <strong>background-image</strong> property repeats an image both horizontally and vertically.</p>
+            <p>Some images should be repeated only horizontally or vertically, or they will look strange.</p>
+            <code><pre>
+                body 
+                {
+                    background-image: url("gradient_bg.png");
+                }
+            </pre></code>
+            <p>If the image above is repeated only horizontally (<strong>background-repeat: repeat-x;</strong>), the background will look better.</p>
+            <code><pre>
+                body 
+                {
+                    background-image: url("gradient_bg.png");
+                    background-repeat: repeat-x;
+                }
+            </pre></code>
+            <p><em><b>Tip:</b> To repeat an image vertically, set <strong>background-repeat: repeat-y;</strong></em></p>
+
+    <hr>
+    
+        <h2>CSS background-repeat: no-repeat</h2>
+            <p>Showing the background image only once is also specified by the <strong>background-repeat</strong> property:</p>
+            <code><pre>
+                body 
+                {
+                    background-image: url("img_tree.png");
+                    background-repeat: no-repeat;
+                }
+            </pre></code>
+            <p>
+                In the example above, the background image is placed in the same place as the text. 
+                We want to change the position of the image, so that it does not disturb the text too much.
+            </p>
+
+    <hr>
+    
+        <h2>CSS background-position</h2>
+            <p>The <strong>background-position</strong> property is used to specify the position of the background image.</p>
+            <code><pre>
+                body 
+                {
+                    background-image: url("img_tree.png");
+                    background-repeat: no-repeat;
+                    background-position: right top;
+                }
+            </pre></code>
+    
+</body>
+</html>
