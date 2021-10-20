@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Margins</title>
+</head>
+<body>
+
+    <h1>CSS Margins</h1>
+    <hr>
+
+        <p>Margins are used to create space around elements, outside of any defined borders.</p>
+
+    <hr>
+
+        <h2>CSS Margins</h2>
+            <p>The CSS <strong>margin</strong> properties are used to create space around elements, outside of any defined borders.</p>
+            <p>
+                With CSS, you have full control over the margins. 
+                There are properties for setting the margin for each side of an element (top, right, bottom, and left).
+            </p>
+    <hr>
+    
+        <h2>Margin - Individual Sides</h2>
+            <p>CSS has properties for specifying the margin for each side of an element:</p>
+            <ul>
+                <li><strong>margin-top</strong></li>
+                <li><strong>margin-right</strong></li>
+                <li><strong>margin-bottom</strong></li>
+                <li><strong>margin-left</strong></li>
+            </ul>
+            <p>All the margin properties can have the following values:</p>
+            <ul>
+                <li>auto - the browser calculates the margin</li>
+                <li>length - specifies a margin in px, pt, cm, etc.</li>
+                <li>% - specifies a margin in % of the width of the containing element</li>
+                <li>inherit - specifies that the margin should be inherited from the parent element</li>
+            </ul>
+            <code><pre>
+                p 
+                {
+                    margin-top: 100px;
+                    margin-bottom: 100px;
+                    margin-right: 150px;
+                    margin-left: 80px;
+                }
+            </pre></code>
+
+    <hr>
+    
+        <h2>Margin - Shorthand Porperty</h2>
+            <p>To shorten the code, it is possible to specify all the margin properties in one property.</p>
+            <p>The <strong>margin</strong> property is a shorthand property for the following individual margin properties:</p>
+            <ul>
+                <li><strong>margin-top</strong></li>
+                <li><strong>margin-right</strong></li>
+                <li><strong>margin-bottom</strong></li>
+                <li><strong>margin-left</strong></li>
+            </ul>
+            <p>So, here is how it works</p>
+            <p>If the <strong>margin</strong> property has <b>four</b> values.</p>
+            <ul>
+                <li><b>margin: 25px 50px 75px 100px;</b></li>
+                <li>top margin is 25px</li>
+                <li>right margin is 50px</li>
+                <li>bottom margin is 75px</li>
+                <li>left margin is 100px</li>
+            </ul>
+            <code><pre>
+                p 
+                {
+                    margin: 25px 50px 75px 100px;
+                }
+            </pre></code>
+            <p>If the <strong>margin</strong> property has three values:</p>
+            <ul>
+                <li><b>margin: 25px 50px 75px;</b></li>
+                <li>top margin is 25px</li>
+                <li>right and left margins are 50px</li>
+                <li>bottom margin is 75px</li>
+            </ul>
+            <code><pre>
+                p 
+                {
+                    margin: 25px 50px 75px;
+                }
+            </pre></code>
+            <p>If the <strong>margin</strong> property has two values:</p>
+            <ul>
+                <li><b>margin: 25px 50px;</b></li>
+                <li>top and bottom margins are 25px</li>
+                <li>right and left margins are 50px</li>
+            </ul>
+            <code><pre>
+                p 
+                {
+                    margin: 25px 50px;
+                }
+            </pre></code>
+            <p>If the <strong>margin</strong> property has one values:</p>
+            <ul>
+                <li><b>margin: 25px;</b></li>
+                <li>all four margins are 25px</li>
+            </ul>
+            <code><pre>
+                p 
+                {
+                    margin: 25px;
+                }
+            </pre></code>
+
+    <hr>
+    
+        <h2>The auto Value</h2>
+        <p>You can set the margin property to <strong>auto</strong> to horizontally center the element within its container.</p>
+        <p>The element will then take up the specified width, and the remaining space will be split equally between the left and right margins.</p>
+        <code><pre>
+            div 
+            {
+                width: 300px;
+                margin: auto;
+                border: 1px solid red;
+            }
+        </pre></code>
+
+    <hr>
+
+        <h2>The inherit Value</h2>
+            <p>This example lets the left margin of the <-p class="ex1"> element be inherited from the parent element (<-div>)</p>
+            <code><pre>
+                div 
+                {
+                    border: 1px solid red;
+                    margin-left: 100px;
+                }
+                  
+                p.ex1 
+                {
+                    margin-left: inherit;
+                }
+            </pre></code>
+    
+</body>
+</html>
