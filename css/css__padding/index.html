@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Padding</title>
+</head>
+<body>
+
+    <h1>CSS Padding</h1>
+    <hr>
+
+        <p>Pagging is used to create space arond an element's content, inside of any defined borders.</p>
+
+    <hr>
+
+        <h2>CSS Padding</h2>
+            <p>The CSS <strong>padding</strong> properties are used to generate space around an element's content, inside of any defined borders.</p>
+            <p>With CSS, you have full control over the padding. There are properties for setting the padding for each side of an element (top, right, bottom, and left).</p>
+
+    <hr>
+    
+        <h2>Padding - Individual Sides</h2>
+            <p>CSS has properties for specifying the padding for each side of an element.</p>
+            <ul>
+                <li>padding-top</li>
+                <li>padding-right</li>
+                <li>padding-bottom</li>
+                <li>padding-left</li>
+            </ul>
+            <p>All the padding properties can have the following values:</p>
+            <ul>
+                <li>length - specifies a padding in px, pt, cm, etc.</li>
+                <li>% - specifies a padding in % of the width of the containing element</li>
+                <li>inherit - specifies that the padding should be inherited from the parent element</li>
+            </ul>
+            <p><em><b>Note:</b>
+                Negative values are not allowed.
+            </em></p>
+            <code><pre>
+                div 
+                {
+                    padding-top: 50px;
+                    padding-right: 30px;
+                    padding-bottom: 50px;
+                    padding-left: 80px;
+                }
+            </pre></code>
+
+    <hr>
+    
+        <h2>Padding - Shorthand Property</h2>
+            <p>To shorten the code, it is possible to specify all the padding properties in one property.</p>
+            <p>The <strong>padding</strong> property is a shorthand property for the following individual padding properties:</p>
+            <ul>
+                <li>padding-top</li>
+                <li>padding-right</li>
+                <li>padding-bottom</li>
+                <li>padding-left</li>
+            </ul>
+            <p>So, here is how it works:</p>
+            <p>If the <strong>padding</strong> property has <b>four</b> values.</p>
+            <ul>
+                <li><b>padding: 25px 50px 75px 100px;</b></li>
+                <li>top padding is 25px</li>
+                <li>right padding is 50px</li>
+                <li>bottom padding is 75px</li>
+                <li>left padding is 100px</li>
+            </ul>
+            <code><pre>
+                p 
+                {
+                    padding: 25px 50px 75px 100px;
+                }
+            </pre></code>
+            <p>If the <strong>padding</strong> property has three values:</p>
+            <ul>
+                <li><b>padding: 25px 50px 75px;</b></li>
+                <li>top padding is 25px</li>
+                <li>right and left paddings are 50px</li>
+                <li>bottom padding is 75px</li>
+            </ul>
+            <code><pre>
+                p 
+                {
+                    padding: 25px 50px 75px;
+                }
+            </pre></code>
+            <p>If the <strong>padding</strong> property has two values:</p>
+            <ul>
+                <li><b>padding: 25px 50px;</b></li>
+                <li>top and bottom paddings are 25px</li>
+                <li>right and left paddings are 50px</li>
+            </ul>
+            <code><pre>
+                p 
+                {
+                    padding: 25px 50px;
+                }
+            </pre></code>
+            <p>If the <strong>padding</strong> property has one values:</p>
+            <ul>
+                <li><b>padding: 25px;</b></li>
+                <li>all four paddings are 25px</li>
+            </ul>
+            <code><pre>
+                p 
+                {
+                    padding: 25px;
+                }
+            </pre></code>
+
+    <hr>
+    
+        <h2>Padding and Element Width</h2>
+            <p>
+                The CSS width property specifies the width of the element's content area. 
+                The content area is the portion inside the padding, border, and margin of an element (the box model).
+            </p>
+            <p>
+                So, if an element has a specified width, the padding added to that element 
+                will be added to the total width of the element. This is often an undesirable result.
+            </p>
+            <p>Here, the <-div> element is given a width of 300px. However, the actual width of the <-div> element will be 350px (300px + 25px of left padding + 25px of right padding):</p>
+            <code><pre>
+                div 
+                {
+                    width: 300px;
+                    padding: 25px;
+                }
+            </pre></code>
+            <p>
+                To keep the width at 300px, no matter the amount of padding, you can use the box-sizing property. 
+                This causes the element to maintain its actual width; 
+                if you increase the padding, the available content space will decrease.
+            </p>
+            <p>Use the box-sizing property to keep the width at 300px, no matter the amount of padding:</p>
+            <code><pre>
+                div 
+                {
+                    width: 300px;
+                    padding: 25px;
+                    box-sizing: border-box;
+                }
+            </pre></code>
+    
+</body>
+</html>
