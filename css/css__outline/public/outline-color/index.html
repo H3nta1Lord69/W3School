@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Outline Color</title>
+</head>
+<body>
+
+    <h1>CSS Outline Color</h1>
+    <hr>
+
+        <h2>CSS Outline Color</h2>
+            <p>The outline-color property is used to set the color of the outline.</p>
+            <p>The color can be set by:</p>
+            <ul>
+                <li>name - specify a color name, like "red"</li>
+                <li>HEX - specify a hex value, like "#ff0000"</li>
+                <li>RGB - specify a RGB value, like "rgb(255,0,0)"</li>
+                <li>HSL - specify a HSL value, like "hsl(0, 100%, 50%)"</li>
+                <li>invert - performs a color inversion (which ensures that the outline is visible, regardless of color background)</li>
+            </ul>
+            <p>
+                The following example shows some different outlines with different colors. 
+                Also notice that these elements also have a thin black border inside the outline:
+            </p>
+            <iframe src="../../examples/outline_color_eg.html" style="height: 220px; width: 500px;" frameborder="0"></iframe>
+            <code><pre>
+                p.ex1 
+                {
+                    border: 2px solid black;
+                    outline-style: solid;
+                    outline-color: red;
+                }
+                  
+                p.ex2 
+                {
+                    border: 2px solid black;
+                    outline-style: dotted;
+                    outline-color: blue;
+                }
+                  
+                p.ex3 
+                {
+                    border: 2px solid black;
+                    outline-style: outset;
+                    outline-color: grey;
+                }
+            </pre></code>
+
+    <hr>
+        
+        <h2>HEX Values</h2>
+        <p>The outline color can also be specified using a hexadecimal value (HEX):</p>
+        <code><pre>
+            p.ex1 
+            {
+                outline-style: solid;
+                outline-color: #ff0000; /* red */
+            }
+        </pre></code>
+
+    <hr>
+
+        <h2>RGB Values</h2>
+        <p>Or by using RGB values:</p>
+        <code><pre>
+            p.ex1 
+            {
+                outline-style: solid;
+                outline-color: rgb(255, 0, 0); /* red */
+            }
+        </pre></code>
+
+    <hr>
+
+        <h2>HSL Values</h2>
+        <p>You can also use HSL values:</p>
+        <code><pre>
+            p.ex1 
+            {
+                outline-style: solid;
+                outline-color: hsl(0, 100%, 50%); /* red */
+            }
+        </pre></code>
+    
+</body>
+</html>
