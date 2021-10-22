@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Outline</title>
+</head>
+<body>
+
+    <h1>CSS Outline</h1>
+    <hr>
+
+        <p>An outline is a line drawn outside the element's border.</p>
+
+    <hr>
+
+        <iframe src="../examples/first_example.html" style="height: 500px; width: 500px;" frameborder="0"></iframe>
+
+    <hr>
+
+        <h2>CSS Outline</h2>
+            <p>An outline is a line that is drawn around elements, OUTSIDE the borders, to make the element "stand out".</p>
+            <p>CSS has the following outline properties:</p>
+            <ul>
+                <li><strong>outline-style</strong></li>
+                <li><strong>outline-color</strong></li>
+                <li><strong>outline-width</strong></li>
+                <li><strong>outline-offset</strong></li>
+                <li><strong>outline</strong></li>
+            </ul>
+            <p><em><b>Note:</b>
+                Outline differs from borders! Unlike border, the outline is drawn outside the element's border, and may overlap other content. 
+                Also, the outline is NOT a part of the element's dimensions; the element's total width and height is not affected by the width of the outline.
+            </em></p>
+
+    <hr>
+
+        <h2>CSS Outline Style</h2>
+            <p>The <strong>outline-style</strong> property specifies the style of the outline, and can have one of the following values:</p>
+            <ul>
+                <li><strong>dotted</strong> - Defines a dotted outline</li>
+                <li><strong>dashed</strong> - Defines a dashed outline</li>
+                <li><strong>solid</strong> - Defines a solid outline</li>
+                <li><strong>double</strong> - Defines a double outline</li>
+                <li><strong>groove</strong> - Defines a 3D grooved outline</li>
+                <li><strong>ridge</strong> - Defines a 3D ridged outline</li>
+                <li><strong>inset</strong> - Defines a 3D inset outline</li>
+                <li><strong>outset</strong> - Defines a 3D outset outline</li>
+                <li><strong>none</strong> - Defines no outline</li>
+                <li><strong>hidden</strong> - Defines a hidden outline</li>
+            </ul>
+            <p>The following example shows the different outline-style values:</p>
+            <code><pre>
+                p.dotted {outline-style: dotted;}
+                p.dashed {outline-style: dashed;}
+                p.solid {outline-style: solid;}
+                p.double {outline-style: double;}
+                p.groove {outline-style: groove;}
+                p.ridge {outline-style: ridge;}
+                p.inset {outline-style: inset;}
+                p.outset {outline-style: outset;}
+            </pre></code>
+            <iframe src="../examples/second_example.html" style="height: 500px; width: 500px;" frameborder="0"></iframe>
+            <p><em><b>Note:</b>
+                None of the other outline properties (which you will learn more about in the next chapters) 
+                will have ANY effect unless the outline-style property is set!
+            </em></p>
+    
+</body>
+</html>
