@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Outline Offset</title>
+</head>
+<body>
+
+    <h1>CSS Outline Offset</h1>
+    <hr>
+
+        <h2>CSS Outline Offset</h2>
+            <p>
+                The <strong>outline-offset</strong> property adds space between 
+                an outline and the edge/border of an element. 
+                The space between an element and its outline is transparent.
+            </p>
+            <p>
+                The following example specifies an outline 15px outside the border edge:
+            </p>
+            <iframe src="../../examples/first_outline_offset_eg.html" style="height: 130px; width: 500px;" frameborder="0"></iframe>
+            <code><pre>
+                p 
+                {
+                    margin: 30px;
+                    border: 1px solid black;
+                    outline: 1px solid red;
+                    outline-offset: 15px;
+                }
+            </pre></code>
+            <p>
+                The following example shows that the space between an element and its outline is transparent:
+            </p>
+            <iframe src="../../examples/second_outline_offset_eg.html" style="height: 130px; width: 500px;" frameborder="0"></iframe>
+            <code><pre>
+                p 
+                {
+                    margin: 30px;
+                    background: yellow;
+                    border: 1px solid black;
+                    outline: 1px solid red;
+                    outline-offset: 15px;
+                }
+            </pre></code>
+    
+</body>
+</html>
