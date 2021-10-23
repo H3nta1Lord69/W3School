@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Text Alignment</title>
+</head>
+<body>
+
+    <h1>CSS Text Alignment</h1>
+    <hr>
+
+        <h2>Text Alignment</h2>
+            <p>The <strong>text-align</strong> property is used to set the horizontal alignment of a text.</p>
+            <p>A text can be left or right aligned, centered, or justified.</p>
+            <p>
+                The following example shows center aligned, and left and right aligned text 
+                (left alignment is default if text direction is left-to-right, and right alignment is default if text direction is right-to-left):
+            </p>
+            <iframe src="../../examples/alignment/first_example.html" style="width: 100%; height: 220px;" frameborder="0"></iframe>
+            <code><pre>
+                h1 
+                {
+                    text-align: center;
+                }
+                  
+                h2 
+                {
+                    text-align: left;
+                }
+                  
+                h3 
+                {
+                    text-align: right;
+                }
+            </pre></code>
+            <p>
+                When the <strong>text-align</strong> property is set to "justify", 
+                each line is stretched so that every line has equal width, and the left and right margins are straight 
+                (like in magazines and newspapers):
+            </p>
+            <iframe src="../../examples/alignment/second_example.html" style="width: 100%; height: 350px;" frameborder="0"></iframe>
+            <code><pre>
+                div 
+                {
+                    text-align: justify;
+                }
+            </pre></code>
+
+    <hr>
+    
+        <h2>Text Direction</h2>
+            <p>The <strong>direction</strong> and <strong>unicode-bidi</strong> properties can be used to change the text direction of an element:</p>
+            <iframe src="../../examples/alignment/third_example.html" style="width: 50%; height: 100px;" frameborder="0"></iframe>
+            <code><pre>
+                p 
+                {
+                    direction: rtl;
+                    unicode-bidi: bidi-override;
+                }
+            </pre></code>
+
+    <hr>
+    
+        <h2>Vertical Alignment</h2>
+            <p>The <strong>vertical-align</strong> property sets the vertical alignment of an element.</p>
+            <iframe src="../../examples/alignment/fourth_example.html" style="width: 100%; height: 510px;" frameborder="0"></iframe>
+            <code><pre>
+                img.a 
+                {
+                    vertical-align: baseline;
+                }
+                  
+                img.b 
+                {
+                    vertical-align: text-top;
+                }
+                  
+                img.c 
+                {
+                    vertical-align: text-bottom;
+                }
+                  
+                img.d 
+                {
+                    vertical-align: sub;
+                }
+                  
+                img.e 
+                {
+                    vertical-align: super;
+                }
+            </pre></code>
+    
+</body>
+</html>
