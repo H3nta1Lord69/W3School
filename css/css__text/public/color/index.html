@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Text</title>
+</head>
+<body>
+
+    <h1>CSS Text</h1>
+    <hr>
+
+        <p>CSS has a lot of properties for formatting text.</p>
+
+    <hr>
+
+        <iframe src="../../examples/color/first_example.html" style="width: 100%; height: 17vh;" frameborder="0"></iframe>
+
+    <hr>
+    
+        <h2>Text Color</h2>
+            <p>The <strong>color</strong> property is used to set the color of the text. The color is specified by:</p>
+            <ul>
+                <li>a color name - like "red"</li>
+                <li>a HEX value - like "#ff0000"</li>
+                <li>an RGB value - like "rgb(255,0,0)"</li>
+            </ul>
+            <p>The default text color for a page is defined in the body selector.</p>
+            <iframe src="../../examples/color/second_example.html" style="width: 100%; height: 10vh;" frameborder="0"></iframe>
+            <code><pre>
+                body 
+                {
+                    color: blue;
+                }
+                  
+                h1 
+                {
+                    color: green;
+                }
+            </pre></code>
+
+    <hr>
+    
+        <h2>Text Color and Background Color</h2>
+            <p>
+                In this example, we define both the <strong>background-color</strong> 
+                property and the <strong>color</strong> property:
+            </p>
+            <iframe src="../../examples/color/third_example.html" style="width: 100%; height: 15vh;" frameborder="0"></iframe>
+            <code><pre>
+                body 
+                {
+                    background-color: lightgrey;
+                    color: blue;
+                }
+                  
+                h1 
+                {
+                    background-color: black;
+                    color: white;
+                }
+                  
+                div 
+                {
+                    background-color: blue;
+                    color: white;
+                }
+            </pre></code>
+            <p><em><b>Important:</b>
+                High contrast is very important for people with vision problems. 
+                So, always ensure that the contrast between the text color and the background color (or background image) is good!
+            </em></p>
+    
+</body>
+</html>
