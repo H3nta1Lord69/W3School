@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <style>
+        .first
+        {
+            text-shadow: 2px 2px;
+        }
+
+        .second
+        {
+            text-shadow: 2px 2px red;
+        }
+
+        .third
+        {
+            text-shadow: 2px 2px 5px red;
+        }
+    </style>
+    <title>CSS Text Shadow</title>
+</head>
+<body>
+
+    <h1>CSS Text Shadow</h1>
+    <hr>
+
+        <h2>Text Shadow</h2>
+            <p>The <strong>text-shadow</strong> property adds shadow to text.</p>
+            <p>In its simplest use, you only specify the horizontal shadow (2px) and the vertical shadow (2px):</p>
+                <h1 class="first">Text shadow effect!</h1>
+                <code><pre>
+                    .h1
+                    {
+                        text-shadow: 2px 2px;
+                    }
+                </pre></code>
+            <p>Next, add a color (red) to the shadow:</p>
+                <h1 class="second">Text shadow effect!</h1>
+                <code><pre>
+                    .h1
+                    {
+                        text-shadow: 2px 2px red;
+                    }
+                </pre></code>
+            <p>Then, add a blur effect (5px) to the shadow:</p>
+                <h1 class="third">Text shadow effect!</h1>
+                <code><pre>
+                    .h1
+                    {
+                        text-shadow: 2px 2px 5px red;
+                    }
+                </pre></code>
+
+    <hr>
+    
+        <h2>More Text Shadow Examples</h2>
+            <iframe src="../../examples/shadow/first_example.html" style="width: 100%; height: 100px;" frameborder="0"></iframe>
+            <code><pre>
+                h1 
+                {
+                    color: white;
+                    text-shadow: 2px 2px 4px #000000;
+                }
+            </pre></code>
+
+            <iframe src="../../examples/shadow/second_example.html" style="width: 100%; height: 100px;" frameborder="0"></iframe>
+            <code><pre>
+                h1 
+                {
+                    text-shadow: 0 0 3px #ff0000;
+                }
+            </pre></code>
+
+            <iframe src="../../examples/shadow/third_example.html" style="width: 100%; height: 100px;" frameborder="0"></iframe>
+            <code><pre>
+                h1 
+                {
+                    text-shadow: 0 0 3px #ff0000, 0 0 5px #0000ff;
+                }
+            </pre></code>
+
+            <iframe src="../../examples/shadow/fourth_example.html" style="width: 100%; height: 100px;" frameborder="0"></iframe>
+            <code><pre>
+                h1 
+                {
+                    color: white;
+                    text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue;
+                }
+            </pre></code>
+    
+</body>
+</html>
