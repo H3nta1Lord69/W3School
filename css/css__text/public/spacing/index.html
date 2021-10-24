@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Text Spacing</title>
+</head>
+<body>
+
+    <h1>CSS Text Spacing</h1>
+    <hr>
+
+        <h2>Text Spacing</h2>
+            <p>The <strong>text-indent</strong> property is used to specify the indentatios of the first line of a text.</p>
+            <iframe src="../../examples/spacing/first_example.html" style="width: 50%; height: 180px;" frameborder="0"></iframe>
+            <code><pre>
+                p
+                {
+                    text-indent: 50px;
+                }
+            </pre></code>
+
+    <hr>
+
+        <h2>Letter Spacing</h2>
+            <p>The <strong>letter-spacing</strong> property is used to specify the space between the characters in a text.</p>
+            <p>The following example demonstrates how to increase or decrease the space between characters:</p>
+            <iframe src="../../examples/spacing/second_example.html" style="width: 50%; height: 180px;" frameborder="0"></iframe>
+            <code><pre>
+                h1 
+                {
+                    letter-spacing: 5px;
+                }
+                  
+                h2 
+                {
+                    letter-spacing: -2px;
+                }
+            </pre></code>
+
+    <hr>
+    
+        <h2>Line Height</h2>
+            <p>The <strong>line-height</strong> property is used to specify the space between lines:</p>
+            <iframe src="../../examples/spacing/third_example.html" style="width: 50%; height: 245px;" frameborder="0"></iframe>
+            <code><pre>
+                p.small 
+                {
+                    line-height: 0.8;
+                }
+                  
+                p.big 
+                {
+                    line-height: 1.8;
+                }
+            </pre></code>
+
+    <hr>
+        
+        <h2>Word Spacing</h2>
+            <p>The <strong>word-spacing</strong> property is used to specify the space between the words in a text.</p>
+            <p>The following example demonstrates how to increase or decrease the space between words:</p>
+            <iframe src="../../examples/spacing/fourth_example.html" style="width: 50%; height: 190px;" frameborder="0"></iframe>
+            <code><pre>
+                p.one 
+                {
+                    word-spacing: 10px;
+                }
+                  
+                p.two 
+                {
+                    word-spacing: -2px;
+                }
+            </pre></code>
+            
+    <hr>
+
+        <h2>White Space</h2>
+            <p>The <strong>white-space</strong> property specifies how white-space inside an element is handled.</p>
+            <p>This example demonstrates how to disable text wrapping inside an element:</p>
+            <iframe src="../../examples/spacing/fifth_example.html" style="width: 100%; height: 180px;" frameborder="0"></iframe>
+            <code><pre>
+                p 
+                {
+                    white-space: nowrap;
+                }
+            </pre></code>
+    
+</body>
+</html>
