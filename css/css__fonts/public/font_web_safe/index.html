@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Web Safe Fonts</title>
+</head>
+<body>
+
+    <h1>CSS Web Safe Fonts</h1>
+    <hr>
+
+        <h2>What are Web Safe Fonts?</h2>
+            <p>Web safe fonts are fonts that are universally installed across all browsers and devices.</p>
+
+    <hr>
+    
+        <h2>Fallback Fonts</h2>
+            <p>
+                However, there are no 100% completely web safe fonts. 
+                There is always a chance that a font is not found or is not installed properly.
+            </p>
+            <p>
+                Therefore, it is very important to always use fallback fonts.
+            </p>
+            <p>
+                This means that you should add a list of similar "backup fonts" in the font-family property. 
+                If the first font does not work, the browser will try the next one, and the next one, and so on. 
+                Always end the list with a generic font family name.
+            </p>
+            <p>
+                Here, there are three font types: Tahoma, Verdana, and sans-serif. 
+                The second and third fonts are backups, in case the first one is not found.
+            </p>
+            <iframe src="../../examples/font_web_safe/first_example.html" style="width: 50%; height: 160px;" frameborder="0"></iframe>
+            <code><pre>
+                p 
+                {
+                    font-family: Tahoma, Verdana, sans-serif;
+                }
+            </pre></code>
+
+    <hr>
+    
+        <h2>Best Web Safe Fonts for HTML and CSS</h2>
+            <p>The following list are the best web safe fonts for HTML and CSS:</p>
+            <ul>
+                <li>Arial (sans-serif)</li>
+                <li>Verdana (sans-serif)</li>
+                <li>Helvetica (sans-serif)</li>
+                <li>Tahoma (sans-serif)</li>
+                <li>Trebuchet MS (sans-serif)</li>
+                <li>Times New Roman (serif)</li>
+                <li>Georgia (serif)</li>
+                <li>Garamond (serif)</li>
+                <li>Courier New (monospace)</li>
+                <li>Brush Script MT (cursive)</li>
+            </ul>
+            <p><em><b>Note:</b>
+                Before you publish your website, 
+                always check how your fonts appear on different browsers and devices, and always use fallback fonts!
+            </em></p>
+
+    <hr>
+    
+        <h2>Arial (sans-serif)</h2>
+            <p>Arial is the most widely used font for both online and printed media. Arial is also the default font in Google Docs.</p>
+            <p>Arial is one of the safest web fonts, and it is available on all major operating systems.</p>
+            <iframe src="../../examples/font_web_safe/arial.html" style="width: 50%; height: 160px;" frameborder="0"></iframe>
+
+    <hr>
+
+        <h2>Verdana (sans-serif)</h2>
+            <p>
+                Verdana is a very popular font. 
+                Verdana is easily readable even for small font sizes.
+            </p>
+            <iframe src="../../examples/font_web_safe/verdana.html" style="width: 50%; height: 160px;" frameborder="0"></iframe>
+
+    <hr>
+        
+        <h2>Helvetica (sans-serif)</h2>
+            <p>
+                The Helvetica font is loved by designers. 
+                It is suitable for many types of business.
+            </p>
+            <iframe src="../../examples/font_web_safe/helvetica.html" style="width: 50%; height: 160px;" frameborder="0"></iframe>
+            
+    <hr>
+        
+        <h2>Tahoma (sans-serif)</h2>
+            <p>
+                The Tahoma font has less space between the characters.
+            </p>
+            <iframe src="../../examples/font_web_safe/tahoma.html" style="width: 50%; height: 160px;" frameborder="0"></iframe>
+            
+    <hr>
+        
+        <h2>Trebuchet MS (sans-serif)</h2>
+            <p>
+                Trebuchet MS was designed by Microsoft in 1996. 
+                Use this font carefully. 
+                Not supported by all mobile operating systems.
+            </p>
+            <iframe src="../../examples/font_web_safe/trebuchet.html" style="width: 50%; height: 160px;" frameborder="0"></iframe>
+            
+    <hr>
+        
+        <h2>Times New Roman (sans-serif)</h2>
+            <p>
+                Times New Roman is one of the most recognizable fonts in the world. 
+                It looks professional and is used in many newspapers and "news" websites. 
+                It is also the primary font for Windows devices and applications.
+            </p>
+            <iframe src="../../examples/font_web_safe/times.html" style="width: 50%; height: 160px;" frameborder="0"></iframe>
+            
+    <hr>
+        
+        <h2>Georgia (serif)</h2>
+            <p>
+                Georgia is an elegant serif font. 
+                It is very readable at different font sizes, 
+                so it is a good candidate for mobile-responsive design.
+            </p>
+            <iframe src="../../examples/font_web_safe/georgia.html" style="width: 50%; height: 160px;" frameborder="0"></iframe>
+            
+    <hr>
+        
+        <h2>Garamond (serif)</h2>
+            <p>
+                Garamond is a classical font used for many printed books. 
+                It has a timeless look and good readability.
+            </p>
+            <iframe src="../../examples/font_web_safe/garamond.html" style="width: 50%; height: 160px;" frameborder="0"></iframe>
+            
+    <hr>
+        
+        <h2>Courier New (monospace)</h2>
+            <p>
+                Courier New is the most widely used monospace serif font. 
+                Courier New is often used with coding displays, 
+                and many email providers use it as their default font.
+            </p>
+            <p>
+                Courier New is also the standard font for movie screenplays.
+            </p>
+            <iframe src="../../examples/font_web_safe/courier_new.html" style="width: 50%; height: 160px;" frameborder="0"></iframe>
+            
+    <hr>
+        
+        <h2>Brush Script MT (cursive)</h2>
+            <p>
+                The Brush Script MT font was designed to mimic handwriting. 
+                It is elegant and sophisticated, 
+                but can be hard to read. Use it carefully.
+            </p>
+            <iframe src="../../examples/font_web_safe/brush_script.html" style="width: 50%; height: 170px;" frameborder="0"></iframe>            
+    
+</body>
+</html>
