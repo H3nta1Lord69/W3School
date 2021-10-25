@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Fonts</title>
+</head>
+<body>
+
+    <h1>CSS Fonts</h1>
+    <hr>
+
+        <p>Choosing the right font for your website is important!</p>
+
+    <hr>
+
+        <h2>Font Selection is Important</h2>
+            <p>Choosing the right font has a huge impact on how the readers experience a website.</p>
+            <p>The right font can create a strong identity for your brand.</p>
+            <p>Using a font that is easy to read is important. The font adds value to your text. It is also important to choose the correct color and text size for the font.</p>
+
+    <hr>
+    
+        <h2>Generic Font Families</h2>
+            <p>In CSS there are five generic font families:</p>
+            <ol>
+                <li><b>Serif</b> fonts have a small stroke at the edges of each letter. They create a sense of formality and elegance.</li>
+                <li><b>Sans-serif</b> fonts have clean lines (no small strokes attached). They create a modern and minimalistic look.</li>
+                <li><b>Monospace</b> fonts - here all the letters have the same fixed width. They create a mechanical look. </li>
+                <li><b>Cursive</b> fonts imitate human handwriting.</li>
+                <li><b>Fantasy</b> fonts are decorative/playful fonts.</li>
+            </ol>
+            <p>All the different font names belong to one of the generic families.</p>
+
+    <hr>
+    
+        <h2>Difference Between Serif and Sans-serif Fonts</h2>
+            <img src="../../assets/serif.gif" alt="Serif and Sans-serif Difference">
+            <p><em><b>Note:</b>
+                On computer screens, sans-serif fonts are considered easier to read than serif fonts.
+            </em></p>
+
+    <hr>
+    
+        <h2>Some Font Examples</h2>
+            <table>
+                <tbody>
+                    <tr>
+                        <th style="width:20%">Generic Font Family</th>
+                        <th style="width:30%">Examples of Font Names</th>
+                    </tr>
+                    <tr>
+                        <td>Serif</td>
+                        <td><span style="font-size:150%;font-family:'Times New Roman',serif">Times New Roman</span><br>
+                        <span style="font-size:150%;font-family:Georgia,serif">Georgia</span><br>
+                        <span style="font-size:150%;font-family:Garamond,serif">Garamond</span><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Sans-serif</td>
+                        <td><span style="font-size:150%;font-family:Arial,sans-serif">Arial</span><br>
+                        <span style="font-size:150%;font-family:Verdana,sans-serif">Verdana</span><br>
+                        <span style="font-size:150%;font-family:Helvetica,sans-serif">Helvetica</span><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Monospace</td>
+                        <td><span style="font-size:150%;font-family:'Courier New',monospace">Courier New</span><br>
+                        <span style="font-size:150%;font-family:'Lucida Console',monospace">Lucida Console</span><br>
+                        <span style="font-size:150%;font-family:Monaco,monospace">Monaco</span>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Cursive</td>
+                        <td><span style="font-size:150%;font-family:'Brush Script MT',cursive">Brush Script MT</span><br>
+                        <span style="font-size:150%;font-family:'Lucida Handwriting',cursive">Lucida Handwriting</span><br>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Fantasy</td>
+                        <td><span style="font-size:150%;font-family:Copperplate,fantasy">Copperplate</span><br>
+                        <span style="font-size:150%;font-family:Papyrus,fantasy">Papyrus</span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+    <hr>
+    
+        <h2>The CSS font-family Property</h2>
+            <p>In CSS, we use the <strong>font-family</strong> property to specify the font of a text.</p>
+            <p>
+                The font-family property should hold several font names as a "fallback" system, 
+                to ensure maximum compatibility between browsers/operating systems. 
+                Start with the font you want, and end with a generic family 
+                (to let the browser pick a similar font in the generic family, if no other fonts are available). 
+                The font names should be separated with comma.
+            </p>
+            <p><em><b>Note:</b>
+                If the font name is more than one word, 
+                it must be in quotation marks, like: "Times New Roman".
+            </em></p>
+            <p>Specify some different fonts for three paragraphs:</p>
+            <iframe src="../../examples/font_family/first_example.html" style="width: 50%; height: 200px;" frameborder="0"></iframe>
+            <code><pre>
+                .p1 
+                {
+                    font-family: "Times New Roman", Times, serif;
+                }
+                  
+                .p2 
+                {
+                    font-family: Arial, Helvetica, sans-serif;
+                }
+                  
+                .p3 
+                {
+                    font-family: "Lucida Console", "Courier New", monospace;
+                }
+            </pre></code>
+    
+</body>
+</html>
