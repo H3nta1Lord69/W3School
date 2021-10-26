@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Font Size</title>
+</head>
+<body>
+
+    <h1>CSS Font Size</h1>
+    <hr>
+
+        <h2>Font Size</h2>
+            <p>
+                The <strong>font-size</strong> property sets the size of the text.
+            </p>
+            <p>
+                Being able to manage the text size is important in web design. 
+                However, you should not use font size adjustments to make paragraphs look like headings, or headings look like paragraphs.
+            </p>
+            <p>
+                Always use the proper HTML tags, 
+                like <-h1> - <-h6> for headings and <-p> for paragraphs.
+            </p>
+            <p>
+                The font-size value can be an absolute, or relative size.
+            </p>
+            <p>
+                Absolute size:
+            </p>
+            <ul>
+                <li>Sets the text to a specified size</li>
+                <li>Does not allow a user to change the text size in all browsers (bad for accessibility reasons)</li>
+                <li>Absolute size is useful when the physical size of the output is known</li>
+            </ul>
+            <p>
+                Relative size:
+            </p>
+            <ul>
+                <li>Sets the size relative to surrounding elements</li>
+                <li>Allows a user to change the text size in browsers</li>
+            </ul>
+
+            <p><em><b>Note:</b>
+                If you do not specify a font size, 
+                the default size for normal text, like paragraphs, is 16px (16px=1em).
+            </em></p>            
+
+    <hr>
+    
+        <h2>Set Font Size With Pixels</h2>
+            <p>Setting the text size with pixels gives you full control over the text size.</p>
+            <iframe src="../../examples/font_size/pixels.html" style="width: 50%; height: 220px;" frameborder="0"></iframe>
+            <code><pre>
+                h1 
+                {
+                    font-size: 40px;
+                }
+                  
+                h2 
+                {
+                    font-size: 30px;
+                }
+                  
+                p 
+                {
+                    font-size: 14px;
+                }
+            </pre></code>
+            <p><em><b>Tip:</b>
+                If you use pixels, you can still use the zoom tool to resize the entire page.
+            </em></p>
+
+    <hr>
+    
+        <h2>Set Font Size With Em</h2>
+            <p>To allow users to resize the text (in the browser menu), many developers use em instead of pixels.</p>
+            <p>1em is equal to the current font size. The default text size in browsers is 16px. So, the default size of 1em is 16px.</p>
+            <p>The size can be calculated from pixels to em using this formula: pixels/16=em</p>
+            <iframe src="../../examples/font_size/em.html" style="width: 50%; height: 240px;" frameborder="0"></iframe>
+            <code><pre>
+                h1 
+                {
+                    font-size: 2.5em; /* 40px/16=2.5em */
+                }
+                  
+                h2 
+                {
+                    font-size: 1.875em; /* 30px/16=1.875em */
+                }
+                  
+                p 
+                {
+                    font-size: 0.875em; /* 14px/16=0.875em */
+                }
+            </pre></code>
+            <p>
+                In the example above, the text size in em is the same as the previous example in pixels. 
+                However, with the em size, it is possible to adjust the text size in all browsers.
+            </p>
+            <p>
+                Unfortunately, there is still a problem with older versions of Internet Explorer. 
+                The text becomes larger than it should when made larger, and smaller than it should when made smaller.
+            </p>
+
+    <hr>
+    
+        <h2>Use a Combination of Percent and Em</h2>
+            <p>
+                The solution that works in all browsers,
+                is to set a default font-size in percent for the <-body> element:
+            </p>
+            <iframe src="../../examples/font_size/percent_em.html" style="width: 50%; height: 240px;" frameborder="0"></iframe>
+            <code><pre>
+                body 
+                {
+                    font-size: 100%;
+                }
+                  
+                h1 
+                {
+                    font-size: 2.5em;
+                }
+                  
+                h2 
+                {
+                    font-size: 1.875em;
+                }
+                  
+                p 
+                {
+                    font-size: 0.875em;
+                }
+            </pre></code>
+            <p>
+                Our code now works great!
+                It shows the same text size in all browsers, 
+                and allows all browsers to zoom or resize the text!
+            </p>
+
+    <hr>
+    
+        <h2>Responsive Font Size</h2>
+            <p>The text size can be set with a <strong>vw</strong> unit, which means the "viewport width".</p>
+            <p>That way the text size will follow the size of the browser window.</p>
+            <iframe src="../../examples/font_size/vw.html" style="width: 50%; height: 300px;" frameborder="0"></iframe>
+            <code><pre>
+                <-h1 style="font-size:10vw">Hello World<-/h1>
+            </pre></code>
+            <p><em>
+                Viewport is the browser window size. 1vw = 1% of viewport width. If the viewport is 50cm wide, 1vw is 0.5cm.
+            </em></p>
+
+</body>
+</html>
