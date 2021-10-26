@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Font Property</title>
+</head>
+<body>
+
+    <h1>CSS Font Property</h1>
+    <hr>
+
+        <h2>The CSS Font Property</h2>
+            <p>To shorten the code, it is also possible to specify all the individual font properties in one property.</p>
+            <p>The <strong>font</strong> property is a shorthand property for:</p>
+            <ul>
+                <li>font-style</li>
+                <li>font-variant</li>
+                <li>font-weight</li>
+                <li>font-size/line-height</li>
+                <li>font-family</li>
+            </ul>
+            <p><em><b>Note:</b>
+                The <strong>font-size</strong> and <strong>font-family</strong> values are required. 
+                If one of the other values is missing, their default value are used.
+            </em></p>
+            <iframe src="../../examples/font_shorthand/font_example.html" style="width: 50%; height: 200px;" frameborder="0"></iframe>
+            <code><pre>
+                p.a 
+                {
+                    font: 20px Arial, sans-serif;
+                }
+                  
+                p.b 
+                {
+                    font: italic small-caps bold 12px/30px Georgia, serif;
+                }
+            </pre></code>
+    
+</body>
+</html>
