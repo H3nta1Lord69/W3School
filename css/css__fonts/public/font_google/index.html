@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Google Fonts</title>
+</head>
+<body>
+
+    <h1>CSS Google Fonts</h1>
+    <hr>
+
+        <h2>Google Fonts</h2>
+            <p>If you do not want to use any of the standard fonts in HTML, you can use Google Fonts.</p>
+            <p>Google Fonts are free to use, and have more than 1000 fonts to choose from.</p>
+
+    <hr>
+    
+        <h2>How to Use Google Fonts</h2>
+            <p>Just add a special style sheet link in the <-head> section and then refer to the font in the CSS.</p>
+            <p>Here, we want to use a font named "Sofia" from Google Fonts:</p>
+            <code><pre>
+                <-head>
+                    <-link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+                    <-style>
+                        body {
+                        font-family: "Sofia", sans-serif;
+                        }
+                    <-/style>
+                <-/head>    
+            </pre></code>
+            <p>Result:</p>
+            <iframe src="../../examples/font_google/sofia.html" style="width: 50%; height: 180px;" frameborder="0"></iframe>
+            <p><em><b>Note:</b>
+                When specifying a font in CSS, 
+                always list at minimum one fallback font (to avoid unexpected behaviors). 
+                So, also here you should add a generic font family (like serif or sans-serif) to the end of the list.
+            </em></p>
+
+    <hr>
+    
+        <h2>use Multiple Google Fonts</h2>
+            <p>
+                To use multiple Google fonts, 
+                just separate the font names with a pipe character (<strong>|</strong>), like this:
+            </p>
+            <p>Request multiple fonts:</p>
+            <code><pre>
+                <-head>
+                    <-link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong">
+                    <-style>
+                        h1.a {font-family: "Audiowide", sans-serif;}
+                        h1.b {font-family: "Sofia", sans-serif;}
+                        h1.c {font-family: "Trirong", serif;}
+                    <-/style>
+                <-/head>
+            </pre></code>
+            <p>Result:</p>
+            <iframe src="../../examples/font_google/multiple.html" style="width: 50%; height: 235px;" frameborder="0"></iframe>
+            <p><em><b>Note:</b>
+                Requesting multiple fonts may slow down your web pages! So be careful about that.
+            </em></p>
+
+    <hr>
+    
+        <h2>Styling Google Fonts</h2>
+            <p>Of course you can style Google Fonts as you like, with CSS!</p>
+            <p>Style the "Sofia" font:</p>
+            <code><pre>
+                <-head>
+                    <-link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+                    <-style>
+                        body {
+                        font-family: "Sofia", sans-serif;
+                        font-size: 30px;
+                        text-shadow: 3px 3px 3px #ababab;
+                        }
+                    <-/style>
+                <-/head>
+            </pre></code>
+            <iframe src="../../examples/font_google/sofia_styling.html" style="width: 50%; height: 335px;" frameborder="0"></iframe>
+
+    <hr>
+    
+        <h2>Enabling Font Effects</h2>
+            <p>
+                Google have also enabled different font effects that you can use.
+            </p>
+            <p>
+                First add effect=effectname to the Google API, 
+                then add a special class name to the element that is going to use the special effect. 
+                The class name always starts with font-effect- and ends with the effectname.
+            </p>
+            <p>Add multiple effects to the "Sofia" font:</p>
+            <code><pre>
+                <-head>
+                    <-link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia&effect=neon|outline|emboss|shadow-multiple|fire">
+                    <-style>
+                        body {
+                        font-family: "Sofia", sans-serif;
+                        font-size: 30px;
+                        }
+                    <-/style>
+                <-/head>
+                    <-body>
+                        
+                        <-h1 class="font-effect-neon">Neon Effect<-/h1>
+                        <-h1 class="font-effect-outline">Outline Effect<-/h1>
+                        <-h1 class="font-effect-emboss">Emboss Effect<-/h1>
+                        <-h1 class="font-effect-shadow-multiple">Multiple Shadow Effect<-/h1>
+                        <-h1 class="font-effect-fire">Sofia on Fire<-/h1>                    
+                    <-/body>
+            </pre></code>
+            <iframe src="../../examples/font_google/sofia_effects.html" style="width: 50%; height: 715px;" frameborder="0"></iframe>
+    
+</body>
+</html>
