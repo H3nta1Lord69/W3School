@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Links</title>
+</head>
+<body>
+
+    <h1>CSS Links</h1>
+    <hr>
+
+        <p>With CSS, links can be styled in many different ways.</p>
+
+    <hr>
+    
+        <h2>Styling Links</h2>
+            <p>
+                Links can be styled with any CSS property 
+                (e.g. <strong>color</strong>, <strong>font-family</strong>, <strong>background</strong>, etc.).
+            </p>
+            <code><pre>
+                a 
+                {
+                    color: hotpink;
+                }
+            </pre></code>
+            <iframe src="../examples/link_style.html" style="height: 110px;" frameborder="0"></iframe>
+            <p>In addition, links can be styled differently depending on what <b>state</b> they are in.</p>
+            <p>The four links states are:</p>
+            <ul>
+                <li><strong>a:link</strong> - a normal, unvisited link</li>
+                <li><strong>a:visited</strong> - a link the user has visited</li>
+                <li><strong>a:hover</strong> - a link when the user mouses over it</li>
+                <li><strong>a:active</strong> - a link the moment it is clicked</li>
+            </ul>
+            <code><pre>
+                /* unvisited link */
+                a:link 
+                {
+                    color: red;
+                }
+
+                /* visited link */
+                a:visited 
+                {
+                    color: green;
+                }
+
+                /* mouse over link */
+                a:hover 
+                {
+                    color: hotpink;
+                }
+
+                /* selected link */
+                a:active 
+                {
+                    color: blue;
+                }
+            </pre></code>
+            <iframe src="../examples/link_states.html" style="height: 190px;" frameborder="0"></iframe>
+            <p>When setting the style for several link states, there are some order rules:</p>
+            <ul>
+                <li>a:hover MUST come after a:link and a:visited</li>
+                <li>a:active MUST come after a:hover</li>
+            </ul>
+
+    <hr>
+    
+        <h2>Text Decoration</h2>
+            <p>The <strong>text-decoration</strong> property is mostly used to remove underlines from links:</p>
+            <code><pre>
+                a:link 
+                {
+                    text-decoration: none;
+                }
+                  
+                a:visited 
+                {
+                    text-decoration: none;
+                }
+                  
+                a:hover 
+                {
+                    text-decoration: underline;
+                }
+                  
+                a:active 
+                {
+                    text-decoration: underline;
+                }
+            </pre></code>
+            <iframe src="../examples/text_decoration.html" style="height: 190px;" frameborder="0"></iframe>
+
+    <hr>
+    
+        <h2>Background Color</h2>
+            <p>The <strong>background-color</strong> property can be used to specify a background color for links:</p>
+            <code><pre>
+                a:link 
+                {
+                    background-color: yellow;
+                }
+                  
+                a:visited 
+                {
+                    background-color: cyan;
+                }
+                  
+                a:hover 
+                {
+                    background-color: lightgreen;
+                }
+                  
+                a:active 
+                {
+                    background-color: hotpink;
+                }
+            </pre></code>
+            <iframe src="../examples/bg_color.html" style="height: 190px;" frameborder="0"></iframe>
+
+    <hr>
+    
+        <h2>Link Buttons</h2>
+            <p>
+                This example demonstrates a more advanced example 
+                where we combine several CSS properties to display links as boxes/buttons:
+            </p>
+            <code><pre>
+                a:link, a:visited 
+                {
+                    background-color: #f44336;
+                    color: white;
+                    padding: 14px 25px;
+                    text-align: center;
+                    text-decoration: none;
+                    display: inline-block;
+                }
+                  
+                a:hover, a:active 
+                {
+                    background-color: red;
+                }
+            </pre></code>
+            <iframe src="../examples/link_buttons.html" style="height: 160px;" frameborder="0"></iframe>
+
+    <hr>
+    
+        <h2>More Examples</h2>
+        <p>This example demonstrates how to add other styles to hyperlinks:</p>
+        <code><pre>
+            a.one:link
+            {
+                color: #ff0000;
+            }
+            a.one:visited
+            {
+                color: #0000ff;
+            }
+            a.one:hover
+            {
+                color: #ffcc00;
+            }
+
+            a.two:link
+            {
+                color: #ff0000;
+            }
+            a.two:visited
+            {
+                color: #0000ff;
+            }
+            a.two:hover
+            {
+                font-size: 150%;
+            }
+
+            a.three:link
+            {
+                color: #ff0000;
+            }
+            a.three:visited
+            {
+                color: #0000ff;
+            }
+            a.three:hover
+            {
+                background: #66ff66;
+            }
+
+            a.four:link
+            {
+                color: #ff0000;
+            }
+            a.four:visited
+            {
+                color: #0000ff;
+            }
+            a.four:hover
+            {
+                font-family: monospace;
+            }
+
+            a.five:link
+            {
+                color: #ff0000; text-decoration: none;
+            }
+            a.five:visited
+            {
+                color: #0000ff; text-decoration: none;
+            }
+            a.five:hover
+            {
+                text-decoration: underline;
+            }
+        </pre></code>
+        <iframe src="../examples/other_style.html" style="height: 280px;" frameborder="0"></iframe>
+
+    <hr>
+    
+        <p>Another example of how to create link boxes/buttons:</p>
+        <code><pre>
+            a:link, a:visited 
+            {
+                background-color: white;
+                color: black;
+                border: 2px solid green;
+                padding: 10px 20px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+              
+            a:hover, a:active 
+            {
+                background-color: green;
+                color: white;
+            }
+        </pre></code>
+        <iframe src="../examples/other_button.html" style="height: 120px;" frameborder="0"></iframe>
+
+    <hr>
+        
+        <p>This example demonstrates the different types of cursors (can be useful for links):</p>
+        <code><pre>
+            <-span style="cursor: auto">auto<-/span><-br>
+            <-span style="cursor: crosshair">crosshair<-/span><-br>
+            <-span style="cursor: default">default<-/span><-br>
+            <-span style="cursor: e-resize">e-resize<-/span><-br>
+            <-span style="cursor: help">help<-/span><-br>
+            <-span style="cursor: move">move<-/span><-br>
+            <-span style="cursor: n-resize">n-resize<-/span><-br>
+            <-span style="cursor: ne-resize">ne-resize<-/span><-br>
+            <-span style="cursor: nw-resize">nw-resize<-/span><-br>
+            <-span style="cursor: pointer">pointer<-/span><-br>
+            <-span style="cursor: progress">progress<-/span><-br>
+            <-span style="cursor: s-resize">s-resize<-/span><-br>
+            <-span style="cursor: se-resize">se-resize<-/span><-br>
+            <-span style="cursor: sw-resize">sw-resize<-/span><-br>
+            <-span style="cursor: text">text<-/span><-br>
+            <-span style="cursor: w-resize">w-resize<-/span><-br>
+            <-span style="cursor: wait">wait<-/span>
+        </pre></code>
+        <iframe src="../examples/cursors.html" style="height: 460px;" frameborder="0"></iframe>
+
+</body>
+</html>
