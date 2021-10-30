@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Lists</title>
+</head>
+<body>
+
+    <h1>CSS Lists</h1>
+    <hr>
+
+        <h2>HTML Lists and CSS List Properties</h2>
+        <p>In HTML, there are two main types of lists:</p>
+        <ul>
+            <li>unordered lists (<-ul>) - the list items are marked with bullets</li>
+            <li>ordered lists (<-ol>) - the list items are marked with numbers or letters</li>
+        </ul>
+        <p>The CSS list properties allow you to:</p>
+        <ul>
+            <li>Set different list item markers for ordered lists</li>
+            <li>Set different list item markers for unordered lists</li>
+            <li>Set an image as the list item marker</li>
+            <li>Add background colors to lists and list items</li>
+        </ul>
+
+    <hr>
+    
+        <h2>Different List Item Markers</h2>
+            <p>The <strong>list-style-type</strong> property specifies the type of list item marker.</p>
+            <p>The following example shows some of the available list item markers:</p>
+            <code><pre>
+                ul.a 
+                {
+                    list-style-type: circle;
+                }
+                  
+                ul.b 
+                {
+                    list-style-type: square;
+                }
+                  
+                ol.c 
+                {
+                    list-style-type: upper-roman;
+                }
+                
+                ol.d 
+                {
+                    list-style-type: lower-alpha;
+                }
+            </pre></code>
+            <iframe src="../examples/markers.html" style="height: 420px;" frameborder="0"></iframe>
+            <p>Note: Some of the values are for unordered lists, and some for ordered lists.</p>
+
+    <hr>
+    
+        <h2>An Image as The List Item Marker</h2>
+            <p>The <strong>list-style-image</strong> property specifies an image as the list item marker:</p>
+            <code><pre>
+                ul 
+                {
+                    list-style-image: url('sqpurple.gif');
+                }
+            </pre></code>
+            <iframe src="../examples/image_marker.html" style="height: 175px;" frameborder="0"></iframe>
+
+    <hr>
+    
+        <h2>Position The List Item Markers</h2>
+            <p>The <strong>list-style-position</strong> property specifies the position of the list-item markers (bullet points).</p>
+            <p>
+                "list-style-position: outside;" means that the bullet points will be outside the list item. 
+                The start of each line of a list item will be aligned vertically.
+            </p>
+            <p>
+                "list-style-position: inside;" means that the bullet points will be inside the list item. 
+                As it is part of the list item, it will be part of the text and push the text at the start:
+            </p>
+            <code><pre>
+                ul.a 
+                {
+                    list-style-position: outside;
+                }
+                  
+                ul.b 
+                {
+                    list-style-position: inside;
+                }
+            </pre></code>
+            <iframe src="../examples/positioning.html" style="height: 400px;" frameborder="0"></iframe>
+
+    <hr>
+        
+        <h2>Remove Default Settings</h2>
+            <p>
+                The list-style-type:none property can also be used to remove the markers/bullets. 
+                Note that the list also has default margin and padding. 
+                To remove this, add margin:0 and padding:0 to <-ul> or <-ol>:
+            </p>
+            <code><pre>
+                ul 
+                {
+                    list-style-type: none;
+                    margin: 0;
+                    padding: 0;
+                }
+            </pre></code>
+            <iframe src="../examples/remove_def.html" style="height: 220px;" frameborder="0"></iframe>
+
+    <hr>
+    
+        <h2>List - Shorthand property</h2>
+            <p>The <strong>list-style</strong> property is a shorthand property. It is used to set all the list properties in one declaration:</p>
+            <code><pre>
+                ul 
+                {
+                    list-style: square inside url("sqpurple.gif");
+                }
+            </pre></code>
+            <iframe src="../examples/shorthand.html" style="height: 175px;" frameborder="0"></iframe>
+            <p>When using the shorthand property, the order of the property values are:</p>
+            <ul>
+                <li>
+                    list-style-type 
+                    (if a list-style-image is specified, the value of this property will be displayed if the image for some reason cannot be displayed)
+                </li>
+                <li>
+                    list-style-position 
+                    (specifies whether the list-item markers should appear inside or outside the content flow)
+                </li>
+                <li>
+                    list-style-image 
+                    (specifies an image as the list item marker)
+                </li>
+            </ul>
+            <p>If one of the property values above are missing, the default value for the missing property will be inserted, if any.</p>
+
+    <hr>
+    
+        <h2>Styling List With Colors</h2>
+            <p>We can also style lists with colors, to make them look a little more interesting.</p>
+            <p>
+                Anything added to the <-ol> or <-ul> tag, affects the entire list, 
+                while properties added to the <-li> tag will affect the individual list items:
+            </p>
+            <code><pre>
+                ol 
+                {
+                    background: #ff9999;
+                    padding: 20px;
+                }
+                  
+                ul 
+                {
+                    background: #3399ff;
+                    padding: 20px;
+                }
+                  
+                ol li 
+                {
+                    background: #ffe5e5;
+                    padding: 5px;
+                    margin-left: 35px;
+                }
+                  
+                ul li 
+                {
+                    background: #cce5ff;
+                    margin: 5px;
+                }
+            </pre></code>
+            <h3>Result</h3>
+            <iframe src="../examples/colors.html" style="height: 350px;" frameborder="0"></iframe>
+
+    <hr>
+    
+        <h2>All CSS List Properties</h2>
+        <table>
+            <tbody>
+                <tr>
+                    <th style="width:20%">Property</th>
+                    <th>Description</th>
+                </tr>
+                <tr>
+                    <td><a href="#">list-style</a></td>
+                    <td>Sets all the properties for a list in one declaration</td>
+                </tr>
+                <tr>
+                    <td><a href="#">list-style-image</a></td>
+                    <td>Specifies an image as the list-item marker</td>
+                </tr>
+                <tr>
+                    <td><a href="#">list-style-position</a></td>
+                    <td>Specifies the position of the list-item markers (bullet points)</td>
+                </tr>
+                <tr>
+                    <td><a href="#">list-style-type</a></td>
+                    <td>Specifies the type of list-item marker</td>
+                </tr>
+            </tbody>
+        </table>
+    
+</body>
+</html>
