@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Table Style</title>
+</head>
+<body>
+
+    <h1>CSS Table Style</h1>
+    <hr>
+
+        <h2>Table Padding</h2>
+            <p>
+                To control the space between the border and the content in a table, 
+                use the padding property on <-td> and <-th> elements:
+            </p>
+            <iframe src="../../examples/style/padding_example.html" style="height: 360px;" frameborder="0"></iframe>
+            <code><pre>
+                th, td 
+                {
+                    padding: 15px;
+                    text-align: left;
+                }
+            </pre></code>
+
+    <hr>
+    
+        <h2>Horizontal Dividers</h2>
+            <iframe src="../../examples/style/horizontal_example.html" style="height: 290px;" frameborder="0"></iframe>
+            <p>
+                Add the <strong>border-bottom</strong> property to <-th> and <-td> for horizontal dividers:
+            </p>
+            <code><pre>
+                th, td 
+                {
+                    border-bottom: 1px solid #ddd;
+                }
+            </pre></code>
+
+    <hr>
+    
+        <h2>Hoverable Table</h2>
+            <p>Use the <strong>:hover</strong> selector on <-tr> to highlight table rows on mouse over:</p>
+            <iframe src="../../examples/style/hoverable_example.html" style="height: 290px;" frameborder="0"></iframe>
+            <code><pre>
+                tr:hover {background-color: yellow;}
+            </pre></code>
+
+    <hr>
+    
+        <h2>Striped Tables</h2>
+            <iframe src="../../examples/style/striped_example.html" style="height: 300px;" frameborder="0"></iframe>
+            <p>
+                For zebra-striped tables, use the <strong>nth-child()</strong> selector 
+                and add a <strong>background-color</strong> to all even (or odd) table rows:
+            </p>
+            <code><pre>
+                tr:nth-child(even) {background-color: #f2f2f2;}
+            </pre></code>
+
+    <hr>
+    
+        <h2>Table Color</h2>
+            <p>The example below specifies the background color and text color of <th> elements:</p>
+            <iframe src="../../examples/style/color_example.html" style="height: 250px;" frameborder="0"></iframe>
+            <code><pre>
+                th 
+                {
+                    background-color: #04AA6D;
+                    color: white;
+                }
+            </pre></code>
+    
+</body>
+</html>
