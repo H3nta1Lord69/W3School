@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Table Alignment</title>
+</head>
+<body>
+
+    <h1>CSS Table Alignment</h1>
+    <hr>
+
+        <h2>Horizontal Alignment</h2>
+            <p>
+                The <strong>text-align</strong> property sets the horizontal alignment 
+                (like left, right, or center) of the content in <-th> or <-td>.
+            </p>
+            <p>By default, the content of <-th> elements are center-aligned and the content of <-td> elements are left-aligned.</p>
+            <p>To center-align the content of  <-td> elements as well, use text-align: center:</p>
+            <iframe src="../../examples/alignment/text_align_example.html" style="height: 235px;" frameborder="0"></iframe>
+            <code><pre>
+                td
+                {
+                    text-align: center;
+                }
+            </pre></code>
+            <p>
+                To left-align the content, force the alignment of <th> elements to be left-aligned, with the <strong>text-align: left</strong> property:
+            </p>
+            <iframe src="../../examples/alignment/left_align_example.html" style="height: 235px;" frameborder="0"></iframe>
+            <code><pre>
+                th 
+                {
+                    text-align: left;
+                }
+            </pre></code>
+
+    <hr>
+    
+        <h2>Vertical Alignment</h2>
+            <p>The <strong>vertical-align</strong> property sets the vertical alignment (like top, bottom, or middle) of the content in <-th> or <-td>.</p>
+            <p>By default, the vertical alignment of the content in a table is middle (for both <-th> and <-td> elements).</p>
+            <p>The following example sets the vertical text alignment to bottom for <-td> elements:</p>
+            <iframe src="../../examples/alignment/vertical_alignment.html" style="height: 365px;" frameborder="0"></iframe>
+            <code><pre>
+                td
+                {
+                    height: 50px;
+                    vertical-align: bottom;
+                }
+            </pre></code>
+    
+</body>
+</html>
