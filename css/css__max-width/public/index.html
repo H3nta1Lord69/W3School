@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>CSS Layout - width and max-width</title>
+  </head>
+  <body>
+    <h1>CSS Layout - width and max-width</h1>
+    <hr />
+
+    <h2>Using width, max-width and margin: auto;</h2>
+    <p>
+      As mentioned in the previous chapter; a block-level element always takes
+      up the full width available (stretches out to the left and right as far as
+      it can).
+    </p>
+    <p>
+      Setting the <strong>width</strong> of a block-level element will prevent
+      it from stretching out to the edges of its container. Then, you can set
+      the margins to auto, to horizontally center the element within its
+      container. The element will take up the specified width, and the remaining
+      space will be split equally between the two margins.
+    </p>
+    <p>
+      Using <strong>max-width</strong> instead, in this situation, will improve
+      the browser's handling of small windows. This is important when making a
+      site usable on small devices:
+    </p>
+    <iframe
+      src="../examples/max-width_example.html"
+      style="height: 250px"
+      frameborder="0"
+    ></iframe>
+    <p>
+      <b>Tip:</b> Resize the browser window to less than 500px wide, to see the
+      difference between the two divs!
+    </p>
+    <code>
+      <pre>
+        div.ex1 
+        {
+            width: 500px;
+            margin: auto;
+            border: 3px solid #73AD21;
+        }
+          
+        div.ex2 
+        {
+            max-width: 500px;
+            margin: auto;
+            border: 3px solid #73AD21;
+        }
+    </pre
+      >
+    </code>
+  </body>
+</html>
