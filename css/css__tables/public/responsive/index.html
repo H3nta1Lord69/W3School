@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/index.css">
+    <title>CSS Responsive Table</title>
+</head>
+<body>
+
+    <h1>CSS Responsive Table</h1>
+    <hr>
+
+        <h2>Responsive Table</h2>
+            <p>
+                A responsive table will display a horizontal scroll bar 
+                if the screen is too small to display the full content:
+            </p>
+            <iframe src="../../examples/responsive/responsive_example.html" style="width: 100%; height: 280px;" frameborder="0"></iframe>
+            <p>
+                Add a container element (like <-div>) with overflow-x:auto 
+                around the <-table> element to make it responsive:
+            </p>
+            <code><pre>
+                <-div style="overflow-x:auto;">
+
+                    <-table>
+                        ... table content ...
+                    <-/table>
+                    
+                <-/div>
+            </pre></code>
+            <p><em><b>Note:</b>
+                In OS X Lion (on Mac), 
+                scrollbars are hidden by default and only shown when being used (even though "overflow:scroll" is set).
+            </em></p>
+
+    <hr>
+    
+        <h2>CSS Table Properties</h2>
+            <table>
+                <tbody>
+                    <tr>
+                    <th style="width:20%">Property</th>
+                    <th>Description</th>
+                    </tr>
+                    <tr>
+                        <td><a href="#">border</a></td>
+                        <td>Sets all the border properties in one declaration</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">border-collapse</a></td>
+                        <td>Specifies whether or not table borders should be collapsed</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">border-spacing</a></td>
+                        <td>Specifies the distance between the borders of adjacent cells</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">caption-side</a></td>
+                        <td>Specifies the placement of a table caption</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">empty-cells</a></td>
+                        <td>Specifies whether or not to display borders and background on empty cells in a table</td>
+                    </tr>
+                    <tr>
+                        <td><a href="#">table-layout</a></td>
+                        <td>Sets the layout algorithm to be used for a table</td>
+                    </tr>
+                </tbody>
+            </table>
+    
+</body>
+</html>
