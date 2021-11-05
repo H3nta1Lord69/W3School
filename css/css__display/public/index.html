@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>CSS Layout - The display Property</title>
+  </head>
+  <body>
+    <h1>CSS Layout - The display Property</h1>
+    <hr />
+
+    <p>
+      The <strong>display</strong> property is the most important CSS property
+      for controlling layout.
+    </p>
+
+    <hr />
+
+    <h2>The display Property</h2>
+    <p>
+      The <strong>display</strong> property specifies if/how an element is
+      displayed.
+    </p>
+    <p>
+      Every HTML element has a default display value depending on what type of
+      element it is. The default display value for most elements is
+      <strong>block</strong> or <strong>inline</strong>.
+    </p>
+
+    <hr />
+
+    <h2>Block-level Elements</h2>
+    <p>
+      A block-level element always starts on a new line and takes up the full
+      width available (stretches out to the left and right as far as it can).
+    </p>
+    <p>Examples of block-level elements:</p>
+    <ul>
+      <li><-div></li>
+      <li><-h1> - <-h6></li>
+      <li><-p></li>
+      <li><-form></li>
+      <li><-header></li>
+      <li><-footer></li>
+      <li><-section></li>
+    </ul>
+
+    <hr />
+
+    <h2>Inline Elements</h2>
+    <p>
+      An inline element does not start on a new line and only takes up as much
+      width as necessary.
+    </p>
+    <p>Examples of inline elements:</p>
+    <ul>
+      <li><-span></li>
+      <li><-a></li>
+      <li><-img></li>
+    </ul>
+
+    <hr />
+
+    <h2>Display: none;</h2>
+    <p>
+      <strong>display: none;</strong> is commonly used with JavaScript to hide
+      and show elements without deleting and recreating them. Take a look at our
+      last example on this page if you want to know how this can be achieved.
+    </p>
+    <p>
+      The <-script> element uses <strong>display: none;</strong> as default.
+    </p>
+
+    <hr />
+
+    <h2>Override The Default Display Value</h2>
+    <p>
+      As mentioned, every element has a default display value. However, you can
+      override this.
+    </p>
+    <p>
+      Changing an inline element to a block element, or vice versa, can be
+      useful for making the page look a specific way, and still follow the web
+      standards.
+    </p>
+    <p>
+      A common example is making inline <-li> elements for horizontal menus:
+    </p>
+    <iframe
+      src="../examples/li_example.html"
+      style="height: 90px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+                li 
+                {
+                    display: inline;
+                }
+      </pre>
+    </code>
+    <p>
+      <em>
+        <b>Note:</b> Setting the display property of an element only changes
+        <b>how the element is displayed</b>, NOT what kind of element it is. So,
+        an inline element with <strong>display: block;</strong> is not allowed
+        to have other block elements inside it.
+      </em>
+    </p>
+    <p>The following example displays <-span> elements as block elements:</p>
+    <iframe
+      src="../examples/span_example.html"
+      style="height: 190px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        span 
+        {
+            display: block;
+        }
+    </pre
+      >
+    </code>
+    <p>The following example displays <-a> elements as block elements:</p>
+    <iframe
+      src="../examples/a_example.html"
+      style="height: 150px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        a 
+        {
+            display: block;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Hide an Element - display:none or visibility:hidden?</h2>
+    <iframe
+      src="../examples/none_example.html"
+      style="height: 130px"
+      frameborder="0"
+    ></iframe>
+    <p>
+      Hiding an element can be done by setting the
+      <strong>display</strong> property to <strong>none</strong>. The element
+      will be hidden, and the page will be displayed as if the element is not
+      there:
+    </p>
+    <code>
+      <pre>
+        h1.hidden 
+        {
+            display: none;
+        }
+    </pre
+      >
+    </code>
+    <p><strong>visibility:hidden;</strong> also hides an element.</p>
+    <p>
+      However, the element will still take up the same space as before. The
+      element will be hidden, but still affect the layout:
+    </p>
+    <iframe
+      src="../examples/hidden_example.html"
+      style="height: 190px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        h1.hidden 
+        {
+            visibility: hidden;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+    <h2>CSS Display/Visibility Properties</h2>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width: 28%">Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><a href="#">display</a></td>
+          <td>Specifies how an element should be displayed</td>
+        </tr>
+        <tr>
+          <td><a href="#">visibility</a></td>
+          <td>Specifies whether or not an element should be visible</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
