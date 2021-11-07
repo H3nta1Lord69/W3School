@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>CSS Layout - The z-index Property</title>
+  </head>
+  <body>
+    <h1>CSS Layout - The z-index Property</h1>
+
+    <hr />
+
+    <p>
+      The <strong>z-index</strong> property specifies the stack order of an
+      element.
+    </p>
+
+    <hr />
+
+    <h2>The z-index Property</h2>
+    <p>When elements are positioned, they can overlap other elements.</p>
+    <p>
+      The <strong>z-index</strong> property specifies the stack order of an
+      element (which element should be placed in front of, or behind, the
+      others).
+    </p>
+    <p>An element can have a positive or negative stack order:</p>
+    <iframe
+      src="../examples/z-index_example.html"
+      style="height: 160px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        img 
+        {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -1;
+        }
+    </pre
+      >
+    </code>
+    <p>
+      <em
+        ><b>Note:</b> <strong>z-index</strong> only works on positioned elements
+        (position: absolute, position: relative, position: fixed, or position:
+        sticky) and flex items (elements that are direct children of display:
+        flex elements).</em
+      >
+    </p>
+
+    <hr />
+
+    <h2>Another z-index Example</h2>
+    <iframe
+      src="../examples/another-z-index_example.html"
+      style="height: 270px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        .container 
+        {
+            position: relative;
+        }
+          
+        .black-box 
+        {
+            position: relative;
+            z-index: 1;
+            border: 2px solid black;
+            height: 100px;
+            margin: 30px;
+        }
+          
+        .gray-box 
+        {
+            position: absolute;
+            z-index: 3;
+            background: lightgray;
+            height: 60px;
+            width: 70%;
+            left: 50px;
+            top: 50px;
+        }
+          
+        .green-box 
+        {
+            position: absolute;
+            z-index: 2;
+            background: lightgreen;
+            width: 35%;
+            left: 270px;
+            top: -15px;
+            height: 100px;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Without z-index</h2>
+    <p>
+      If two positioned elements overlap each other without a
+      <strong>z-index</strong> specified, the element defined
+      <b>last in the HTML</b> code will be shown on top.
+    </p>
+    <iframe
+      src="../examples/without-z-index_example.html"
+      height="290px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        .container 
+        {
+            position: relative;
+        }
+          
+        .black-box 
+        {
+            position: relative;
+            border: 2px solid black;
+            height: 100px;
+            margin: 30px;
+        }
+          
+        .gray-box 
+        {
+            position: absolute;
+            background: lightgray;
+            height: 60px;
+            width: 70%;
+            left: 50px;
+            top: 50px;
+        }
+          
+        .green-box 
+        {
+            position: absolute;
+            background: lightgreen;
+            width: 35%;
+            left: 270px;
+            top: -15px;
+            height: 100px;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>CSS Property</h2>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width: 20%">Property</th>
+          <th style="width: 55%">Description</th>
+        </tr>
+        <tr>
+          <td><a href="/cssref/pr_pos_z-index.asp">z-index</a></td>
+          <td>Sets the stack order of an element</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
