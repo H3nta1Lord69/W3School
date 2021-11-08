@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>CSS Layout - float and clear</title>
+  </head>
+  <body>
+    <h1>CSS Layout - float and clear</h1>
+    <hr />
+    <p>
+      The CSS <strong>float</strong> property specifies how an element should
+      float.
+    </p>
+    <p>
+      The CSS <strong>clear</strong> property specifies what elements can float
+      beside the cleared element and on which side.
+    </p>
+
+    <hr />
+
+    <h2>The float Property</h2>
+    <p>
+      The <strong>float</strong> property is used for positioning and formatting
+      content e.g. let an image float left to the text in a container.
+    </p>
+    <p>
+      The <strong>float</strong> property can have one of the following values:
+    </p>
+    <ul>
+      <li>
+        <strong>left</strong> - The element floats to the left of its container
+      </li>
+      <li>
+        <strong>right</strong> - The element floats to the right of its
+        container
+      </li>
+      <li>
+        <strong>none</strong> - The element does not float (will be displayed
+        just where it occurs in the text). This is default
+      </li>
+      <li>
+        <strong>inherit</strong> - The element inherits the float value of its
+        parent
+      </li>
+    </ul>
+    <p>
+      In its simplest use, the <strong>float</strong> property can be used to
+      wrap text around images.
+    </p>
+
+    <hr />
+
+    <h2>Example - float: right;</h2>
+    <p>
+      The following example specifies that an image should float to the
+      <b>right</b> in a text:
+    </p>
+    <iframe
+      src="../../examples/float/right_example.html"
+      height="370px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        img 
+        {
+            float: right;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Example - float: left;</h2>
+    <p>
+      The following example specifies that an image should float to the
+      <b>left</b> in a text:
+    </p>
+    <iframe
+      src="../../examples/float/left_example.html"
+      height="370px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        img 
+        {
+            float: left;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Example - No float</h2>
+    <p>
+      In the following example the image will be displayed just where it occurs
+      in the text (<b>float: none;</b>):
+    </p>
+    <iframe
+      src="../../examples/float/none_example.html"
+      height="480px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        img 
+        {
+            float: none;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Example - Float Next To Each Other</h2>
+    <p>
+      Normally div elements will be displayed on top of each other. However, if
+      we use <strong>float: left</strong> we can let elements float next to each
+      other:
+    </p>
+    <code>
+      <pre>
+        div 
+        {
+            float: left;
+            padding: 15px;
+        }
+          
+        .div1 
+        {
+            background: red;
+        }
+          
+        .div2 
+        {
+            background: yellow;
+        }
+          
+        .div3 
+        {
+            background: green;
+        }
+    </pre
+      >
+    </code>
+    <iframe
+      src="../../examples/float/next_example.html"
+      height="150px"
+      frameborder="0"
+    ></iframe>
+  </body>
+</html>

@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>CSS Layout - Float Examples</title>
+  </head>
+  <body>
+    <h1>CSS Layout - Float Examples</h1>
+    <hr />
+
+    <p>This page contains common float examples.</p>
+
+    <hr />
+
+    <h2>Grid of Boxes / Equal Width Boxes</h2>
+    <iframe
+      src="../../examples/more_float/boxes_example.html"
+      height="375px"
+      frameborder="0"
+    ></iframe>
+    <p>
+      With the <strong>float</strong> property, it is easy to float boxes of
+      content side by side:
+    </p>
+    <code>
+      <pre>
+        * 
+        {
+            box-sizing: border-box;
+        }
+          
+        .box 
+        {
+            float: left;
+            width: 33.33%; /* three boxes (use 25% for four, and 50% for two, etc) */
+            padding: 50px; /* if you want space between the images */
+        }
+    </pre
+      >
+    </code>
+    <em>
+      <h3>What is box-sizing?</h3>
+      <p>
+        You can easily create three floating boxes side by side. However, when
+        you add something that enlarges the width of each box (e.g. padding or
+        borders), the box will break. The <strong>box-sizing</strong> property
+        allows us to include the padding and border in the box's total width
+        (and height), making sure that the padding stays inside of the box and
+        that it does not break.
+      </p>
+    </em>
+
+    <hr />
+
+    <h2>Images Side By Side</h2>
+    <iframe
+      src="../../examples/more_float/images_example.html"
+      style="width: 100%; height: 410px"
+      frameborder="0"
+    ></iframe>
+    <p>The grid of boxes can also be used to display images side by side:</p>
+    <code>
+      <pre>
+        .img-container 
+        {
+            float: left;
+            width: 33.33%; /* three containers (use 25% for four, and 50% for two, etc) */
+            padding: 5px; /* if you want space between the images */
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Equal Height Boxes</h2>
+    <p>
+      In the previous example, you learned how to float boxes side by side with
+      an equal width. However, it is not easy to create floating boxes with
+      equal heights. A quick fix however, is to set a fixed height, like in the
+      example below:
+    </p>
+    <iframe
+      src="../../examples/more_float/equal_example.html"
+      style="width: 100%; height: 580px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        .box 
+        {
+            height: 500px;
+        }
+    </pre
+      >
+    </code>
+    <p>
+      <b>However</b>, this is not very flexible. It is ok if you can guarantee
+      that the boxes will always have the same amount of content in them. But
+      many times, the content is not the same. If you try the example above on a
+      mobile phone, you will see that the second box's content will be displayed
+      outside of the box. This is where CSS3 Flexbox comes in handy - as it can
+      automatically stretch boxes to be as long as the longest box:
+    </p>
+    <p>Using <b>Flexbox</b> to create flexible boxes:</p>
+    <iframe
+      src="../../examples/more_float/flexbox_example.html"
+      style="width: 100%; height: 490px"
+      frameborder="0"
+    ></iframe>
+
+    <hr />
+
+    <h2>Navigation Menu</h2>
+    <p>
+      You can also use <strong>float</strong> with a list of hyperlinks to
+      create a horizontal menu:
+    </p>
+    <iframe
+      src="../../examples/more_float/nav_example.html"
+      style="width: 100%; height: 70px"
+      frameborder="0"
+    ></iframe>
+
+    <hr />
+
+    <h2>Web Layout Example</h2>
+    <p>
+      It is also common to do entire web layouts using the
+      <strong>float</strong> property:
+    </p>
+    <iframe
+      src="../../examples/more_float/web_example.html"
+      style="width: 100%; height: 420px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        .header, .footer 
+        {
+            background-color: grey;
+            color: white;
+            padding: 15px;
+        }
+          
+        .column 
+        {
+            float: left;
+            padding: 15px;
+        }
+          
+        .clearfix::after 
+        {
+            content: "";
+            clear: both;
+            display: table;
+        }
+          
+        .menu 
+        {
+            width: 25%;
+        }
+          
+        .content 
+        {
+            width: 75%;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>All CSS Float Properties</h2>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width: 20%">Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><a href="#">box-sizing</a></td>
+          <td>
+            Defines how the width and height of an element are calculated:
+            should they include padding and borders, or not
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">clear</a></td>
+          <td>
+            Specifies what should happen with the element that is next to a
+            floating element
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">float</a></td>
+          <td>
+            Specifies whether an element should float to the left, right, or not
+            at all
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">overflow</a></td>
+          <td>Specifies what happens if content overflows an element's box</td>
+        </tr>
+        <tr>
+          <td><a href="#">overflow-x</a></td>
+          <td>
+            Specifies what to do with the left/right edges of the content if it
+            overflows the element's content area
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">overflow-y</a></td>
+          <td>
+            Specifies what to do with the top/bottom edges of the content if it
+            overflows the element's content area
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

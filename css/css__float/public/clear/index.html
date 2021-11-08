@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>CSS Layout - clear and clearfix</title>
+  </head>
+  <body>
+    <h1>CSS Layout - clear and clearfix</h1>
+    <hr />
+
+    <h2>The clear Property</h2>
+    <p>
+      When we use the <strong>float</strong> property, and we want the next
+      element below (not on right or left), we will have to use the
+      <strong>clear</strong> property.
+    </p>
+    <p>
+      The <strong>clear</strong> property specifies what should happen with the
+      element that is next to a floating element.
+    </p>
+    <p>
+      The <strong>clear</strong> property can have one of the following values:
+    </p>
+    <ul>
+      <li>
+        <strong>none</strong> - The element is not pushed below left or right
+        floated elements. This is default
+      </li>
+      <li>
+        <strong>left</strong> - The element is pushed below left floated
+        elements
+      </li>
+      <li>
+        <strong>right</strong> - The element is pushed below right floated
+        elements
+      </li>
+      <li>
+        <strong>both</strong> - The element is pushed below both left and right
+        floated elements
+      </li>
+      <li>
+        <strong>inherit</strong> - The element inherits the clear value from its
+        parent
+      </li>
+    </ul>
+    <p>
+      When clearing floats, you should match the clear to the float: If an
+      element is floated to the left, then you should clear to the left. Your
+      floated element will continue to float, but the cleared element will
+      appear below it on the web page.
+    </p>
+    <iframe
+      src="../../examples/clear/clear_example.html"
+      height="370px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        div1 
+        {
+            float: left;
+        }
+        
+        div2 
+        {
+            clear: left;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>The clearfix Hack</h2>
+    <p>
+      If a floated element is taller than the containing element, it will
+      "overflow" outside of its container. We can then add a clearfix hack to
+      solve this problem:
+    </p>
+    <iframe
+      src="../../examples/clear/clearfix_example.html"
+      height="600px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        .clearfix
+        {
+            overflow: auto;
+        }
+    </pre
+      >
+    </code>
+    <p>
+      The <strong>overflow: auto</strong> clearfix works well as long as you are
+      able to keep control of your margins and padding (else you might see
+      scrollbars). The <b>new, modern clearfix hack</b> however, is safer to
+      use, and the following code is used for most webpages:
+    </p>
+    <code>
+      <pre>
+        .clearfix::after 
+        {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </pre
+      >
+    </code>
+    <iframe
+      src="../../examples/clear/clearfix-hack_example.html"
+      height="590px"
+      frameborder="0"
+    ></iframe>
+  </body>
+</html>
