@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>CSS Layout - Overflow</title>
+  </head>
+  <body>
+    <h1>CSS Layout - Overflow</h1>
+    <hr />
+
+    <p>
+      The CSS <strong>overflow</strong> property controls what happens to
+      content that is too big to fit into an area.
+    </p>
+    <iframe
+      src="../examples/overflow_example.html"
+      height="260px"
+      frameborder="0"
+    ></iframe>
+
+    <hr />
+
+    <h2>CSS Overflow</h2>
+    <p>
+      The <strong>overflow</strong> property specifies whether to clip the
+      content or to add scrollbars when the content of an element is too big to
+      fit in the specified area.
+    </p>
+    <p>The <strong>overflow</strong> property has the following values:</p>
+    <ul>
+      <li>
+        <strong>visible</strong> - Default. The overflow is not clipped. The
+        content renders outside the element's box.
+      </li>
+      <li>
+        <strong>hidden</strong> - The overflow is clipped, and the rest of the
+        content will be invisible.
+      </li>
+      <li>
+        <strong>scroll</strong> - The overflow is clipped, and a scrollbar is
+        added to see the rest of the content.
+      </li>
+      <li>
+        <strong>auto</strong> - Similar to <strong>scroll</strong>, but it adds
+        scrollbars only when necessary.
+      </li>
+    </ul>
+    <p>
+      <em
+        ><b>Note:</b> The <strong>overflow</strong> property only works for
+        block elements with a specified height.</em
+      >
+    </p>
+    <p>
+      <em
+        ><b>Note:</b> In OS X Lion (on Mac), scrollbars are hidden by default
+        and only shown when being used (even though "overflow:scroll" is
+        set).</em
+      >
+    </p>
+
+    <hr />
+
+    <h2>overflow: visible</h2>
+    <p>
+      By default, the overflow is <strong>visible</strong>, meaning that it is
+      not clipped and it renders outside the element's box:
+    </p>
+    <iframe
+      src="../examples/visible_example.html"
+      height="250px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        div 
+        {
+            width: 200px;
+            height: 50px;
+            background-color: #eee;
+            overflow: visible;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>overflow: hidden</h2>
+    <p>
+      With the <strong>hidden</strong> value, the overflow is clipped, and the
+      rest of the content is hidden:
+    </p>
+    <iframe
+      src="../examples/hidden_example.html"
+      height="215px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        div 
+        {
+            overflow: hidden;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>overflow: scroll</h2>
+    <p>
+      Setting the value to <strong>scroll</strong>, the overflow is clipped and
+      a scrollbar is added to scroll inside the box. Note that this will add a
+      scrollbar both horizontally and vertically (even if you do not need it):
+    </p>
+    <iframe
+      src="../examples/scroll_example.html"
+      height="250px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        div
+        {
+            overflow: scroll;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>overflow: auto</h2>
+    <p>
+      The <strong>auto</strong> value is similar to <strong>scroll</strong>, but
+      it adds scrollbars only when necessary:
+    </p>
+    <iframe
+      src="../examples/auto_example.html"
+      height="165px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        div
+        {
+            overflow: auto;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>overflow-x and overflow-y</h2>
+    <p>
+      The <strong>overflow-x</strong> and <strong>overflow-y</strong> properties
+      specifies whether to change the overflow of content just horizontally or
+      vertically (or both):
+    </p>
+    <p>
+      <strong>overflow-x</strong> specifies what to do with the left/right edges
+      of the content.
+    </p>
+    <p>
+      <strong>overflow-y</strong> specifies what to do with the top/bottom edges
+      of the content.
+    </p>
+    <iframe
+      src="../examples/x-y_example.html"
+      height="230px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        div 
+        {
+            overflow-x: hidden; /* Hide horizontal scrollbar */
+            overflow-y: scroll; /* Add vertical scrollbar */
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>All CSS Overflow Properties</h2>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width: 20%">Property</th>
+          <th style="width: 55%">Description</th>
+        </tr>
+        <tr>
+          <td><a href="#">overflow</a></td>
+          <td>Specifies what happens if content overflows an element's box</td>
+        </tr>
+        <tr>
+          <td><a href="#">overflow-wrap</a></td>
+          <td>
+            Specifies whether or not the browser can break lines with long
+            words, if they overflow its container
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">overflow-x</a></td>
+          <td>
+            Specifies what to do with the left/right edges of the content if it
+            overflows the element's content area
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">overflow-y</a></td>
+          <td>
+            Specifies what to do with the top/bottom edges of the content if it
+            overflows the element's content area
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
