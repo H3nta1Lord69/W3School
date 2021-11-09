@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>CSS Layout - display: inline-block</title>
+  </head>
+  <body>
+    <h1>CSS Layout - display: inline-block</h1>
+    <hr />
+
+    <h2>The display: inline-block Value</h2>
+    <p>
+      Compared to <strong>display: inline</strong>, the major difference is that
+      <strong>display: inline-block</strong> allows to set a width and height on
+      the element.
+    </p>
+    <p>
+      Also, with <strong>display: inline-block</strong>, the top and bottom
+      margins/paddings are respected, but with
+      <strong>display: inline</strong> they are not.
+    </p>
+    <p>
+      Compared to <strong>display: block</strong>, the major difference is that
+      <strong>display: inline-block</strong> does not add a line-break after the
+      element, so the element can sit next to other elements.
+    </p>
+    <p>
+      The following example shows the different behavior of
+      <strong>display: inline</strong>,
+      <strong>display: inline-block</strong> and
+      <strong>display: block:</strong>
+    </p>
+    <code>
+      <pre>
+        span.a 
+        {
+            display: inline; /* the default for span */
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid blue;
+            background-color: yellow;
+        }
+          
+        span.b 
+        {
+            display: inline-block;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid blue;
+            background-color: yellow;
+        }
+          
+        span.c 
+        {
+            display: block;
+            width: 100px;
+            height: 100px;
+            padding: 5px;
+            border: 1px solid blue;
+            background-color: yellow;
+        }
+    </pre
+      >
+    </code>
+    <iframe
+      src="../examples/inline-block_example.html"
+      height="970px"
+      frameborder="0"
+    ></iframe>
+
+    <hr />
+
+    <h2>Using inline-block to create Navigation Links</h2>
+    <p>
+      One common use for <strong>display: inline-block</strong> is to display
+      list items horizontally instead of vertically. The following example
+      creates horizontal navigation links:
+    </p>
+    <code>
+      <pre>
+        .nav 
+        {
+            background-color: yellow;
+            list-style-type: none;
+            text-align: center; 
+            padding: 0;
+            margin: 0;
+        }
+          
+        .nav li 
+        {
+            display: inline-block;
+            font-size: 20px;
+            padding: 20px;
+        }
+    </pre
+      >
+    </code>
+    <iframe
+      src="../examples/nav_example.html"
+      height="240px"
+      frameborder="0"
+    ></iframe>
+  </body>
+</html>
