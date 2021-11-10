@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>CSS Combinators</title>
+  </head>
+  <body>
+    <h1>CSS Combinators</h1>
+    <hr />
+
+    <h2>CSS Combinators</h2>
+    <p>
+      <em
+        >A combinator is something that explains the relationship between the
+        selectors.</em
+      >
+    </p>
+    <p>
+      A CSS selector can contain more than one simple selector. Between the
+      simple selectors, we can include a combinator.
+    </p>
+    <p>There are four different combinators in CSS:</p>
+    <ul>
+      <li>descendant selector (space)</li>
+      <li>child selector (>)</li>
+      <li>adjacent sibling selector (+)</li>
+      <li>general sibling selector (~)</li>
+    </ul>
+
+    <hr />
+
+    <h2>
+      <a href="../examples/descendant_example.html">Descendant Selector</a>
+    </h2>
+    <p>
+      The descendant selector matches all elements that are descendants of a
+      specified element.
+    </p>
+    <p>The following example selects all p elements inside div elements:</p>
+    <code>
+      <pre>
+        div p 
+        {
+            background-color: yellow;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2><a href="../examples/child_example.html">Child Selector (>)</a></h2>
+    <p>
+      The child selector selects all elements that are the children of a
+      specified element.
+    </p>
+    <p>
+      The following example selects all p elements that are children of a div
+      element:
+    </p>
+    <code>
+      <pre>
+        div > p 
+        {
+            background-color: yellow;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>
+      <a href="../examples/adjacent_example.html"
+        >Adjacent Sibling Selector (+)</a
+      >
+    </h2>
+    <p>
+      The adjacent sibling selector is used to select an element that is
+      directly after another specific element.
+    </p>
+    <p>
+      Sibling elements must have the same parent element, and "adjacent" means
+      "immediately following".
+    </p>
+    <p>
+      The following example selects the first p element that are placed
+      immediately after div elements:
+    </p>
+    <code>
+      <pre>
+        div + p 
+        {
+            background-color: yellow;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>
+      <a href="../examples/general_example.html"
+        >General Sibling Selector (~)</a
+      >
+    </h2>
+    <p>
+      The general sibling selector selects all elements that are next siblings
+      of a specified element.
+    </p>
+    <p>
+      The following example selects all p elements that are next siblings of div
+      elements:
+    </p>
+    <code>
+      <pre>
+        div ~ p 
+        {
+            background-color: yellow;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>All CSS Combinator Selectors</h2>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width: 20%">Selector</th>
+          <th style="width: 20%">Example</th>
+          <th>Example description</th>
+        </tr>
+        <tr>
+          <td>
+            <a href="#"><i>element</i> <i>element</i></a>
+          </td>
+          <td class="notranslate">div p</td>
+          <td>Selects all &lt;p&gt; elements inside &lt;div&gt; elements</td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#"><i>element</i>&gt;<i>element</i></a>
+          </td>
+          <td class="notranslate">div &gt; p</td>
+          <td>
+            Selects all &lt;p&gt; elements where the parent is a &lt;div&gt;
+            element
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#"><i>element</i>+<i>element</i></a>
+          </td>
+          <td class="notranslate">div + p</td>
+          <td>
+            Selects the first &lt;p&gt; element that are placed immediately
+            after &lt;div&gt; elements
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="#"><i>element1</i>~<i>element2</i></a>
+          </td>
+          <td>p ~ ul</td>
+          <td>
+            Selects every &lt;ul&gt; element that are preceded by a &lt;p&gt;
+            element
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>
