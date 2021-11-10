@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>CSS Layout - Horizontal & Vertical Align</title>
+  </head>
+  <body>
+    <h1>CSS Layout - Horizontal & Vertical Align</h1>
+    <hr />
+
+    <h2>Center Align Elements</h2>
+    <p>
+      To horizontally center a block element (like <-div>), use
+      <strong>margin: auto;</strong>
+    </p>
+    <p>
+      Setting the width of the element will prevent it from stretching out to
+      the edges of its container.
+    </p>
+    <p>
+      The element will the take up the specified width, and the remaining space
+      will be split equally between the two margins.
+    </p>
+    <iframe
+      src="../examples/margin_example.html"
+      height="190px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        .center
+        {
+            margin: auto;
+            width: 50%;
+            border: 3px solid green;
+            padding: 10px;
+        }
+    </pre
+      >
+    </code>
+    <p>
+      <em
+        ><b>Note:</b> Center aligning has no effect if the
+        <strong>width</strong> property is not set (or set to 100%).</em
+      >
+    </p>
+
+    <hr />
+
+    <h2>Center Align Text</h2>
+    <p>
+      To just center the text inside an element, use
+      <strong>text-align: center;</strong>
+    </p>
+    <iframe
+      src="../examples/text-center_example.html"
+      height="140px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        .center
+        {
+            text-align: center;
+            border: 3px solid green;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Center an Image</h2>
+    <p>
+      To center an image, set left and right margin to <strong>auto</strong> and
+      make it into a <strong>block</strong> element.
+    </p>
+    <iframe
+      src="../examples/image-center_example.html"
+      height="290px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        img
+        {
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            width: 40%;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Left and Right Align - Using position</h2>
+    <p>
+      One method for aligning elements is to use
+      <strong>position: absolute;</strong>:
+    </p>
+    <iframe
+      src="../examples/position_example.html"
+      height="220px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        .right
+        {
+            position: absolute;
+            right: 0px;
+            width: 300px;
+            border: 3px solid #79AD21
+            padding: 10px;
+        }
+    </pre
+      >
+    </code>
+    <p>
+      <em
+        ><b>Note:</b> Absolute positioned elements are removed from the normal
+        flow, and can overlap elements.</em
+      >
+    </p>
+
+    <hr />
+
+    <h2>Left and Right Align - Using float</h2>
+    <p>
+      Another method for aligning elements is to use the
+      <strong>float</strong> property:
+    </p>
+    <iframe
+      src="../examples/float_example.html"
+      height="220px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        .right 
+        {
+            float: right;
+            width: 300px;
+            border: 3px solid #73AD21;
+            padding: 10px;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>The clearfix Hack</h2>
+    <p>
+      <em
+        ><b>Note:</b> If an element is taller than the element containing it,
+        and it is floated, it will overflow outside of its container. You can
+        use the "clearfix hack" to fix this (see example below).</em
+      >
+    </p>
+    <iframe
+      src="../examples/clearfix_example.html"
+      height="575px"
+      frameborder="0"
+    ></iframe>
+    <p>
+      Then we can add the clearfix hack to the containing element to fix this
+      problem:
+    </p>
+    <code>
+      <pre>
+        .clearfix::after 
+        {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Center Vertically - Using padding</h2>
+    <p>
+      There are many ways to center an element vertically in CSS. A simple
+      solution is to use top and bottom <strong>padding</strong>:
+    </p>
+    <iframe
+      src="../examples/padding_example.html"
+      height="328px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        .center 
+        {
+            padding: 70px 0;
+            border: 3px solid green;
+        }
+    </pre
+      >
+    </code>
+    <p>
+      To center both vertically and horizontally, use
+      <strong>padding</strong> and <strong>text-align: center</strong>:
+    </p>
+    <iframe
+      src="../examples/padding-text_example.html"
+      height="328px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        .center 
+        {
+            padding: 70px 0;
+            border: 3px solid green;
+            text-align: center;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Center Vertically - Using line-height</h2>
+    <p>
+      Another trick is to use the <strong>line-height</strong> property with a
+      value that is equal to the <strong>height</strong> property:
+    </p>
+    <iframe
+      src="../examples/line-height_example.html"
+      height="335px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        .center 
+        {
+            line-height: 200px;
+            height: 200px;
+            border: 3px solid green;
+            text-align: center;
+        }
+          
+        /* If the text has multiple lines, add the following: */
+        .center p 
+        {
+            line-height: 1.5;
+            display: inline-block;
+            vertical-align: middle;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Center Vertically - Using position & transform</h2>
+    <p>
+      If <strong>padding</strong> and <strong>line-height</strong> are not
+      options, another solution is to use positioning and the
+      <strong>transform</strong> property:
+    </p>
+    <iframe
+      src="../examples/transform_example.html"
+      height="335px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        .center 
+        {
+            height: 200px;
+            position: relative;
+            border: 3px solid green;
+        }
+          
+        .center p 
+        {
+            margin: 0;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Center Vertically - Using Flexbox</h2>
+    <p>
+      You can also use flexbox to center things. Just note that flexbox is not
+      supported in IE10 and earlier versions:
+    </p>
+    <iframe
+      src="../examples/flexbox_example.html"
+      height="335px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        .center 
+        {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 200px;
+            border: 3px solid green;
+        }
+    </pre
+      >
+    </code>
+  </body>
+</html>
