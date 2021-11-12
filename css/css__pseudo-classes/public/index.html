@@ -34,5 +34,466 @@
         </pre>
       </code>
     </p>
+
+    <hr />
+
+    <h2>Anchor Pseudo-classes</h2>
+    <p>Links can be displayed in different ways:</p>
+    <iframe
+      src="../examples/anchor_example.html"
+      height="210px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        /* unvisited link */
+        a:link 
+        {
+            color: #FF0000;
+        }
+
+        /* visited link */
+        a:visited 
+        {
+            color: #00FF00;
+        }
+
+        /* mouse over link */
+        a:hover 
+        {
+            color: #FF00FF;
+        }
+
+        /* selected link */
+        a:active 
+        {
+            color: #0000FF;
+        }
+    </pre
+      >
+    </code>
+    <p>
+      <em
+        ><b>Note:</b> <strong>a:hover</strong> MUST come after
+        <strong>a:link</strong> and <strong>a:visited</strong> in the CSS
+        definition in order to be effective! <strong>a:active</strong> MUST come
+        after <strong>a:hover</strong> in the CSS definition in order to be
+        effective! Pseudo-class names are not case-sensitive.</em
+      >
+    </p>
+
+    <hr />
+
+    <h2>Pseudo-classes and HTML Classes</h2>
+    <p>Pseudo-classes can be combined with HTML classes:</p>
+    <p>When you hover over the link in the example, it will chage color:</p>
+    <iframe
+      src="../examples/pseudo-html_example.html"
+      height="180px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        a.highlight :hover
+        {
+            color: #ff0000
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Hover on div</h2>
+    <p>An example of using the :hover pseudo-class on a div element:</p>
+    <iframe
+      src="../examples/pseudo-div_example.html"
+      height="130px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        div:hover 
+        {
+            background-color: blue;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Simple Tooltip Hover</h2>
+    <p>Hover over a div element to show a p element (like a tooltip):</p>
+    <iframe
+      src="../examples/tooltip_example.html"
+      height="118px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        p 
+        {
+            display: none;
+            background-color: yellow;
+            padding: 20px;
+        }
+          
+        div:hover p 
+        {
+            display: block;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>CSS - The :first-child Pseudo-class</h2>
+    <p>
+      The <strong>:first-child</strong> pseudo-class matches a specified element
+      that is the first child of another element.
+    </p>
+    <h2>Match the first p element</h2>
+    <p>In the following example, the selector matches any</p>
+    <p>element that is the first child of any element:</p>
+    <iframe
+      src="../examples/first-child_example.html"
+      height="155px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        p:first-child 
+        {
+            color: blue;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Match the first i element in all p elements</h2>
+    <p>
+      In the following example, the selector matches the first i element in all
+      p elements:
+    </p>
+    <iframe
+      src="../examples/match-first_example.html"
+      height="90px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        p i:first-child 
+        {
+            color: blue;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Match all i elements in all first child p elements</h2>
+    <p>
+      In the following example, the selector matches all i elements in p
+      elements that are the first child of another element:
+    </p>
+    <iframe
+      src="../examples/first-match_example.html"
+      height="160px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        p:first-child i 
+        {
+            color: blue;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>CSS - The :lang Pseudo-class</h2>
+    <p>
+      The <strong>:lang</strong> pseudo-class allows you to define special rules
+      for different languages.
+    </p>
+    <p>
+      In the example below, <strong>:lang</strong> defines the quotation marks
+      for q elements with lang="no":
+    </p>
+    <iframe
+      src="../examples/lang_example.html"
+      height="90px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        q:lang(no) 
+        {
+            quotes: "~" "~";
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>All CSS Pseudo Classes</h2>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width: 20%">Selector</th>
+          <th style="width: 20%">Example</th>
+          <th>Example description</th>
+        </tr>
+        <tr>
+          <td><a href="#">:active</a></td>
+          <td class="notranslate">a:active</td>
+          <td>Selects the active link</td>
+        </tr>
+        <tr>
+          <td><a href="#">:checked</a></td>
+          <td class="notranslate">input:checked</td>
+          <td>Selects every checked &lt;input&gt; element</td>
+        </tr>
+        <tr>
+          <td><a href="#">:disabled</a></td>
+          <td class="notranslate">input:disabled</td>
+          <td>Selects every disabled &lt;input&gt; element</td>
+        </tr>
+        <tr>
+          <td><a href="#">:empty</a></td>
+          <td class="notranslate">p:empty</td>
+          <td>Selects every &lt;p&gt; element that has no children</td>
+        </tr>
+        <tr>
+          <td><a href="#">:enabled</a></td>
+          <td class="notranslate">input:enabled</td>
+          <td>Selects every enabled &lt;input&gt; element</td>
+        </tr>
+        <tr>
+          <td><a href="#">:first-child</a></td>
+          <td class="notranslate">p:first-child</td>
+          <td>
+            Selects every &lt;p&gt; elements that is the first child of its
+            parent
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">:first-of-type</a></td>
+          <td class="notranslate">p:first-of-type</td>
+          <td>
+            Selects every &lt;p&gt; element that is the first &lt;p&gt; element
+            of its parent
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">:focus</a></td>
+          <td class="notranslate">input:focus</td>
+          <td>Selects the &lt;input&gt; element that has focus</td>
+        </tr>
+        <tr>
+          <td><a href="#">:hover</a></td>
+          <td class="notranslate">a:hover</td>
+          <td>Selects links on mouse over</td>
+        </tr>
+        <tr>
+          <td><a href="#">:in-range</a></td>
+          <td class="notranslate">input:in-range</td>
+          <td>
+            Selects &lt;input&gt; elements with a value within a specified range
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">:invalid</a></td>
+          <td class="notranslate">input:invalid</td>
+          <td>Selects all &lt;input&gt; elements with an invalid value</td>
+        </tr>
+        <tr>
+          <td><a href="#">:lang(<i>language</i>)</a></td>
+          <td class="notranslate">p:lang(it)</td>
+          <td>
+            Selects every &lt;p&gt; element with a lang attribute value starting
+            with "it"
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">:last-child</a></td>
+          <td class="notranslate">p:last-child</td>
+          <td>
+            Selects every &lt;p&gt; elements that is the last child of its
+            parent
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">:last-of-type</a></td>
+          <td class="notranslate">p:last-of-type</td>
+          <td>
+            Selects every &lt;p&gt; element that is the last &lt;p&gt; element
+            of its parent
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">:link</a></td>
+          <td class="notranslate">a:link</td>
+          <td>Selects all unvisited links</td>
+        </tr>
+        <tr>
+          <td><a href="#">:not(selector)</a></td>
+          <td class="notranslate">:not(p)</td>
+          <td>Selects every element that is not a &lt;p&gt; element</td>
+        </tr>
+        <tr>
+          <td><a href="#">:nth-child(n)</a></td>
+          <td class="notranslate">p:nth-child(2)</td>
+          <td>
+            Selects every &lt;p&gt; element that is the second child of its
+            parent
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="/cssref/s#">:nth-last-child(n)</a>
+          </td>
+          <td class="notranslate">p:nth-last-child(2)</td>
+          <td>
+            Selects every &lt;p&gt; element that is the second child of its
+            parent, counting from the last child
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <a href="/cssref/s#">:nth-last-of-type(n)</a>
+          </td>
+          <td class="notranslate">p:nth-last-of-type(2)</td>
+          <td>
+            Selects every &lt;p&gt; element that is the second &lt;p&gt; element
+            of its parent, counting from the last child
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">:nth-of-type(n)</a></td>
+          <td class="notranslate">p:nth-of-type(2)</td>
+          <td>
+            Selects every &lt;p&gt; element that is the second &lt;p&gt; element
+            of its parent
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">:only-of-type</a></td>
+          <td class="notranslate">p:only-of-type</td>
+          <td>
+            Selects every &lt;p&gt; element that is the only &lt;p&gt; element
+            of its parent
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">:only-child</a></td>
+          <td class="notranslate">p:only-child</td>
+          <td>
+            Selects every &lt;p&gt; element that is the only child of its parent
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">:optional</a></td>
+          <td class="notranslate">input:optional</td>
+          <td>Selects &lt;input&gt; elements with no "required" attribute</td>
+        </tr>
+        <tr>
+          <td><a href="#">:out-of-range</a></td>
+          <td class="notranslate">input:out-of-range</td>
+          <td>
+            Selects &lt;input&gt; elements with a value outside a specified
+            range
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">:read-only</a></td>
+          <td class="notranslate">input:read-only</td>
+          <td>
+            Selects &lt;input&gt; elements with a "readonly" attribute specified
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">:read-write</a></td>
+          <td class="notranslate">input:read-write</td>
+          <td>Selects &lt;input&gt; elements with no "readonly" attribute</td>
+        </tr>
+        <tr>
+          <td><a href="#">:required</a></td>
+          <td class="notranslate">input:required</td>
+          <td>
+            Selects &lt;input&gt; elements with a "required" attribute specified
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">:root</a></td>
+          <td class="notranslate">root</td>
+          <td>Selects the document's root element</td>
+        </tr>
+        <tr>
+          <td><a href="#">:target</a></td>
+          <td class="notranslate">#news:target</td>
+          <td>
+            Selects the current active #news element (clicked on a URL
+            containing that anchor name)
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">:valid</a></td>
+          <td class="notranslate">input:valid</td>
+          <td>Selects all &lt;input&gt; elements with a valid value</td>
+        </tr>
+        <tr>
+          <td><a href="#">:visited</a></td>
+          <td class="notranslate">a:visited</td>
+          <td>Selects all visited links</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <hr />
+
+    <h2>All CSS Pseudo Elements</h2>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width: 20%">Selector</th>
+          <th style="width: 20%">Example</th>
+          <th>Example description</th>
+        </tr>
+        <tr>
+          <td><a href="#">::after</a></td>
+          <td class="notranslate">p::after</td>
+          <td>Insert content after every &lt;p&gt; element</td>
+        </tr>
+        <tr>
+          <td><a href="#">::before</a></td>
+          <td class="notranslate">p::before</td>
+          <td>Insert content before every &lt;p&gt; element</td>
+        </tr>
+        <tr>
+          <td><a href="#">::first-letter</a></td>
+          <td class="notranslate">p::first-letter</td>
+          <td>Selects the first letter of every &lt;p&gt; element</td>
+        </tr>
+        <tr>
+          <td><a href="#">::first-line</a></td>
+          <td class="notranslate">p::first-line</td>
+          <td>Selects the first line of every &lt;p&gt; element</td>
+        </tr>
+        <tr>
+          <td><a href="#">::selection</a></td>
+          <td class="notranslate">p::selection</td>
+          <td>Selects the portion of an element that is selected by a user</td>
+        </tr>
+      </tbody>
+    </table>
   </body>
 </html>
