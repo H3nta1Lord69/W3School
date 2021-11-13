@@ -1,13 +1,314 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/index.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>CSS Pseudo-elements</title>
+  </head>
+  <body>
+    <h1>CSS Pseudo-elements</h1>
+    <hr />
+
+    <h2>What are Pseudo-elements?</h2>
+    <p>A CSS pseudo-element is used to style specified parts of an element.</p>
+    <p>For example, it can be used to:</p>
+    <ul>
+      <li>Style the first letter, or line, of an element</li>
+      <li>Insert content before, or after, the content of an element</li>
+    </ul>
+
+    <hr />
+
+    <h2>Syntax</h2>
+    <p>The syntax of pseudo-elements:</p>
+    <code>
+      <pre>
+        selector::pseudo-element 
+        {
+            property: value;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>The ::first-line Pseudo-element</h2>
+    <p>
+      The <strong>::first-line</strong> pseudo-element is used to add a special
+      style to the first line of a text.
+    </p>
+    <p>The following example formats the first line of the text in all</p>
+    <p>elements:</p>
+    <iframe
+      src="../examples/first-line_example.html"
+      height="110px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        p::first-line 
+        {
+            color: #ff0000;
+            font-variant: small-caps;
+        }
+    </pre
+      >
+    </code>
+    <p>
+      <em
+        ><b>Note:</b> The <strong>::first-line</strong> pseudo-element can only
+        be applied to block-level elements.</em
+      >
+    </p>
+    <p>
+      The following properties apply to the
+      <strong>::first-line</strong> pseudo-element:
+    </p>
+    <ul>
+      <li>font properties</li>
+      <li>color properties</li>
+      <li>background properties</li>
+      <li>word-spacing</li>
+      <li>letter-spacing</li>
+      <li>text-decoration</li>
+      <li>vertical-align</li>
+      <li>text-transform</li>
+      <li>line-height</li>
+      <li>clear</li>
+    </ul>
+    <em>
+      <p>
+        <b>Notice the double colon notation</b> -
+        <strong>::first-line</strong> versus <strong>:first-line</strong>
+      </p>
+      <p>
+        The double colon replaced the single-colon notation for pseudo-elements
+        in CSS3. This was an attempt from W3C to distinguish between
+        <b>pseudo-classes</b> and <b>pseudo-elements</b>.
+      </p>
+      <p>
+        The single-colon syntax was used for both pseudo-classes and
+        pseudo-elements in CSS2 and CSS1.
+      </p>
+      <p>
+        For backward compatibility, the single-colon syntax is acceptable for
+        CSS2 and CSS1 pseudo-elements.
+      </p>
+    </em>
+
+    <hr />
+
+    <h2>The ::first-letter Pseudo-element</h2>
+    <p>
+      The <strong>::first-letter</strong> pseudo-element is used to add a
+      special style to the first letter of a text.
+    </p>
+    <p>
+      The following example formats the first letter of the text in all p
+      elements:
+    </p>
+    <iframe
+      src="../examples/first-letter_example.html"
+      height="90px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        p::first-letter 
+        {
+            color: #ff0000;
+            font-size: xx-large;
+        }
+    </pre
+      >
+    </code>
+    <p>
+      <em
+        ><b>Note:</b> The <strong>::first-letter</strong> pseudo-element can
+        only be applied to block-level elements.</em
+      >
+    </p>
+    <p>The following properties apply to the ::first-letter pseudo- element:</p>
+    <ul>
+      <li>font properties</li>
+      <li>color properties</li>
+      <li>background properties</li>
+      <li>margin properties</li>
+      <li>padding properties</li>
+      <li>border properties</li>
+      <li>text-decoration</li>
+      <li>vertical-align (only if "float" is "none")</li>
+      <li>text-transform</li>
+      <li>line-height</li>
+      <li>float</li>
+      <li>clear</li>
+    </ul>
+
+    <hr />
+
+    <h2>Pseudo-elements and HTML Classes</h2>
+    <p>Pseudo-elements can be combined with HTML classes:</p>
+    <iframe
+      src="../examples/html-classes_example.html"
+      height="105px"
+      frameborder="0"
+    ></iframe>
+    <p>
+      The example above will display the first letter of paragraphs with
+      class="intro", in red and in a larger size.
+    </p>
+    <code>
+      <pre>
+        p.intro::first-letter 
+        {
+            color: #ff0000;
+            font-size: 200%;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Multiple Pseudo-elements</h2>
+    <p>Several pseudo-elements can also be combined.</p>
+    <p>
+      In the following example, the first letter of a paragraph will be red, in
+      an xx-large font size. The rest of the first line will be blue, and in
+      small-caps. The rest of the paragraph will be the default font size and
+      color:
+    </p>
+    <iframe
+      src="../examples/multiple_example.html"
+      height="90px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        p::first-letter 
+        {
+            color: #ff0000;
+            font-size: xx-large;
+        }
+          
+        p::first-line 
+        {
+            color: #0000ff;
+            font-variant: small-caps;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>CSS - The ::before Pseudo-element</h2>
+    <p>
+      The <strong>::before</strong> pseudo-element can be used to insert some
+      content before the content of an element.
+    </p>
+    <p>
+      The following example inserts an image before the content of each h1
+      element:
+    </p>
+    <iframe
+      src="../examples/before_example.html"
+      height="190px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        h1::before 
+        {
+            content: url(smiley.gif);
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>CSS - The ::after Pseudo-element</h2>
+    <p>
+      The <strong>::after</strong> pseudo-element can be used to insert some
+      content after the content of an element.
+    </p>
+    <p>
+      The following example inserts an image after the content of each h1
+      element:
+    </p>
+    <iframe
+      src="../examples/after_example.html"
+      height="190px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        h1::after 
+        {
+            content: url(smiley.gif);
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>CSS - The ::marker Pseudo-element</h2>
+    <p>
+      The <strong>::marker</strong> pseudo-element selects the markers of list
+      items.
+    </p>
+    <p>The following example styles the markers of list items:</p>
+    <iframe
+      src="../examples/marker_example.html"
+      height="200px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        ::marker 
+        {
+            color: red;
+            font-size: 23px;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>CSS - The ::selection Pseudo-element</h2>
+    <p>
+      The <strong>::selection</strong> pseudo-element matches the portion of an
+      element that is selected by a user.
+    </p>
+    <p>
+      The following CSS properties can be applied to
+      <strong>::selection</strong>: <strong>color</strong>,
+      <strong>background</strong>, <strong>cursor</strong>, and
+      <strong>outline</strong>.
+    </p>
+    <p>
+      The following example makes the selected text red on a yellow background:
+    </p>
+    <iframe
+      src="../examples/selection_example.html"
+      height="140px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        ::selection 
+        {
+            color: red;
+            background: yellow;
+        }
+    </pre
+      >
+    </code>
+  </body>
 </html>
