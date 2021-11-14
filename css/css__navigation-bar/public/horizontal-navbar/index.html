@@ -10,5 +10,337 @@
   <body>
     <h1>CSS Horizontal Navigation Bar</h1>
     <hr />
+
+    <h2>Horizontal Navigation Bar</h2>
+    <p>
+      There are two ways to create a horizontal navigation bar. Using
+      <strong>inline</strong> or <strong>floating</strong> list items.
+    </p>
+    <h3>Inline List Items</h3>
+    <p>
+      One way to build a horizontal navigation bar is to specify the li elements
+      as inline, in addition to the "standard" code from the previous page:
+    </p>
+    <iframe
+      src="../../examples/horizontal-navbar/inline-navbar_example.html"
+      height="50px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      li 
+      {
+        display: inline;
+      }
+    </pre
+      >
+    </code>
+    <h3>Example explained:</h3>
+    <ul>
+      <li>
+        <strong>display: inline;</strong> - By default, li elements are block
+        elements. Here, we remove the line breaks before and after each list
+        item, to display them on one line
+      </li>
+    </ul>
+
+    <h3>Floating List Items</h3>
+    <p>
+      Another way of creating a horizontal navigation bar is to float the li
+      elements, and specify a layout for the navigation links:
+    </p>
+    <iframe
+      src="../../examples/horizontal-navbar/floating-navbar_example.html"
+      height="220px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      li 
+      {
+        float: left;
+      }
+      
+      a 
+      {
+        display: block;
+        padding: 8px;
+        background-color: #dddddd;
+      }
+    </pre
+      >
+    </code>
+    <h3>Example explained:</h3>
+    <ul>
+      <li>
+        <strong>float: left;</strong> - Use float to get block elements to float
+        next to each other
+      </li>
+      <li>
+        <strong>display: block;</strong> - Allows us to specify padding (and
+        height, width, margins, etc. if you want)
+      </li>
+      <li>
+        <strong>padding: 8px;</strong> - Specify some padding between each a
+        element, to make them look good
+      </li>
+      <li>
+        <strong>background-color: #dddddd;</strong> - Add a gray
+        background-color to each a element
+      </li>
+    </ul>
+    <p>
+      <em
+        ><b>Tip:</b> Add the background-color to ul instead of each a element if
+        you want a full-width background color:</em
+      >
+    </p>
+    <code>
+      <pre>
+      ul 
+      {
+        background-color: #dddddd;
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Horizontal Navigation Bar Examples</h2>
+    <p>
+      Create a basic horizontal navigation bar with a dark background color and
+      change the background color of the links when the user moves the mouse
+      over them:
+    </p>
+    <iframe
+      src="../../examples/horizontal-navbar/basic-navbar_example.html"
+      height="70px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      ul 
+      {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        background-color: #333;
+      }
+      
+      li 
+      {
+        float: left;
+      }
+      
+      li a 
+      {
+        display: block;
+        color: white;
+        text-align: center;
+        padding: 14px 16px;
+        text-decoration: none;
+      }
+      
+      /* Change the link color to #111 (black) on hover */
+      li a:hover 
+      {
+        background-color: #111;
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Right-Align Links</h2>
+    <p>
+      Right-align links by floating the list items to the right
+      (<strong>float:right;</strong>):
+    </p>
+    <iframe
+      src="../../examples/horizontal-navbar/right-navbar_example.html"
+      height="70px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      &lt;ul&gt;
+        &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#news"&gt;News&lt;/a&gt;&lt;/li&gt;
+        &lt;li&gt;&lt;a href="#contact"&gt;Contact&lt;/a&gt;&lt;/li&gt;
+        &lt;li style="float:right"&gt;&lt;a class="active" href="#about"&gt;About&lt;/a&gt;&lt;/li&gt;
+      &lt;/ul&gt;
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Border Dividers</h2>
+    <p>
+      Add the <strong>border-right</strong> property to li to create link
+      dividers:
+    </p>
+    <iframe
+      src="../../examples/horizontal-navbar/border-navbar_example.html"
+      height="70px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      /* Add a gray right border to all list items, except the last item (last-child) */
+      li 
+      {
+        border-right: 1px solid #bbb;
+      }
+
+      li:last-child 
+      {
+        border-right: none;
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Fixed Navigation Bar</h2>
+    <p>
+      Make the navigation bar stay at the top or the bottom of the page, even
+      when the user scrolls the page:
+    </p>
+    <iframe
+      src="../../examples/horizontal-navbar/fixed-top-navbar_example.html"
+      height="500px"
+      frameborder="0"
+    ></iframe>
+    <iframe
+      src="../../examples/horizontal-navbar/fixed-bottom-navbar_example.html"
+      height="500px"
+      frameborder="0"
+    ></iframe>
+    <h3>Fixed Top</h3>
+    <code>
+      <pre>
+      ul 
+      {
+        position: fixed;
+        top: 0;
+        width: 100%;
+      }
+    </pre
+      >
+    </code>
+    <h3>Fixed Bottom</h3>
+    <code>
+      <pre>
+      ul 
+      {
+        position: fixed;
+        bottom: 0;
+        width: 100%;
+      }
+    </pre
+      >
+    </code>
+    <p>
+      <em
+        ><b>Note:</b> Fixed position might not work properly on mobile
+        devices.</em
+      >
+    </p>
+
+    <hr />
+
+    <h2>Gray Horizontal Navbar</h2>
+    <p>
+      An example of a gray horizontal navigation bar with a thin gray border:
+    </p>
+    <iframe
+      src="../../examples/horizontal-navbar/gray-navbar_example.html"
+      height="70px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      ul 
+      {
+        border: 1px solid #e7e7e7;
+        background-color: #f3f3f3;
+      }
+      
+      li a 
+      {
+        color: #666;
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Sticky Navbar</h2>
+    <p>
+      Add <strong>position: sticky;</strong> to ul to create a sticky navbar.
+    </p>
+    <p>
+      A sticky element toggles between relative and fixed, depending on the
+      scroll position. It is positioned relative until a given offset position
+      is met in the viewport - then it "sticks" in place (like position:fixed).
+    </p>
+    <iframe
+      src="../../examples/horizontal-navbar/sticky-navbar_example.html"
+      style="width: 100%; height: 500px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      ul 
+      {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+      }
+    </pre
+      >
+    </code>
+    <p>
+      <em
+        ><b>Note:</b> Internet Explorer do not support sticky positioning.
+        Safari requires a -webkit- prefix (see example above). You must also
+        specify at least one of <strong>top</strong>, <strong>right</strong>,
+        <strong>bottom</strong> or <strong>left</strong> for sticky positioning
+        to work.</em
+      >
+    </p>
+
+    <hr />
+
+    <h2>More Examples</h2>
+    <h3>Responsive Topnav</h3>
+    <p>How to use CSS media queries to create a responsive top navigation.</p>
+    <iframe
+      src="../../examples/horizontal-navbar/responsive-navbar_example.html"
+      style="width: 100%; height: 250px"
+      frameborder="0"
+    ></iframe>
+
+    <h3>Responsive Sidenav</h3>
+    <p>How to use CSS media queries to create a responsive side navigation.</p>
+    <iframe
+      src="../../examples/horizontal-navbar/responsive-sidenav_example.html"
+      style="width: 100%; height: 250px"
+      frameborder="0"
+    ></iframe>
+
+    <h3>Dropdown Navbar</h3>
+    <p>How to add a dropdown menu inside a navigation bar.</p>
+    <iframe
+      src="../../examples/horizontal-navbar/dropdown-navbar_example.html"
+      style="width: 100%; height: 150px"
+      frameborder="0"
+    ></iframe>
   </body>
 </html>
