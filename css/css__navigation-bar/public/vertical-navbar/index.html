@@ -5,58 +5,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles/index.css" />
-    <title>CSS Navigation Bar</title>
+    <title>CSS Vertical Navigation Bar</title>
   </head>
   <body>
-    <h1>CSS Navigation Bar</h1>
+    <h1>CSS Vertical Navigation Bar</h1>
     <hr />
 
-    <h2>Navigation Bars</h2>
-    <p>Having easy-to-use navigation is important for any web site.</p>
-    <p>
-      With CSS you can transform boring HTML menus into good-looking navigation
-      bars.
-    </p>
-
-    <hr />
-
-    <h2>Navigation Bar = List of Links</h2>
-    <p>A navigation bar needs standard HTML as a base.</p>
-    <p>
-      In our examples we will build the navigation bar from a standard HTML
-      list.
-    </p>
-    <p>
-      A navigation bar is basically a list of links, so using the ul and li
-      elements makes perfect sense:
-    </p>
+    <h2>Vertical Navigation Bar</h2>
     <iframe
-      src="../examples/nav-bar_example.html"
-      height="150px"
+      src="../../examples/vertical-navbar/vertical-navigation-bar.html"
+      height="170px"
       frameborder="0"
     ></iframe>
-    <code>
-      <pre>
-        <-ul>
-            <-li><-a href="default.asp">Home<-/a><-/li>
-            <-li><-a href="news.asp">News<-/a><-/li>
-            <-li><-a href="contact.asp">Contact<-/a><-/li>
-            <-li><-a href="about.asp">About<-/a><-/li>
-        <-/ul>
-    </pre
-      >
-    </code>
     <p>
-      Now let's remove the bullets and the margins and padding from the list:
+      To build a vertical navigation bar, you can style the a elements inside
+      the list, in addition to the code from the previous page:
     </p>
     <code>
       <pre>
-        ul 
-        {
-            list-style-type: none;
-            margin: 0;
-            padding: 0;
-        }
+      li a 
+      {
+        display: block;
+        width: 60px;
+      }
     </pre
       >
     </code>
@@ -64,13 +35,171 @@
     <h3>Example explained:</h3>
     <ul>
       <li>
-        <strong>list-style-type: none;</strong> - Removes the bullets. A
-        navigation bar does not need list markers
+        <strong>display: block;</strong> - Displaying the links as block
+        elements makes the whole link area clickable (not just the text), and it
+        allows us to specify the width (and padding, margin, height, etc. if you
+        want)
       </li>
       <li>
-        Set <strong>margin: 0;</strong> and <strong>padding: 0;</strong> to
-        remove browser default settings
+        <strong>width: 60px;</strong> - Block elements take up the full width
+        available by default. We want to specify a 60 pixels width
       </li>
     </ul>
+    <p>
+      You can also set the width of ul, and remove the width of a, as they will
+      take up the full width available when displayed as block elements. This
+      will produce the same result as our previous example:
+    </p>
+    <code>
+      <pre>
+      ul 
+      {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 60px;
+      }
+      
+      li a 
+      {
+        display: block;
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Vertical Navigation Bar Examples</h2>
+    <p>
+      Create a basic vertical navigation bar with a gray background color and
+      change the background color of the links when the user moves the mouse
+      over them:
+    </p>
+    <iframe
+      src="../../examples/vertical-navbar/basic-nav_example.html"
+      height="215px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      ul 
+      {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 200px;
+        background-color: #f1f1f1;
+      }
+      
+      li a 
+      {
+        display: block;
+        color: #000;
+        padding: 8px 16px;
+        text-decoration: none;
+      }
+      
+      /* Change the link color on hover */
+      li a:hover 
+      {
+        background-color: #555;
+        color: white;
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Active/Current Navigation Link</h2>
+    <p>
+      Add an "active" class to the current link to let the user know which page
+      he/she is on:
+    </p>
+    <iframe
+      src="../../examples/vertical-navbar/active-nav_example.html"
+      height="265px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      .active 
+      {
+        background-color: #04AA6D;
+        color: white;
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Center Links & Add Borders</h2>
+    <p>
+      Add <strong>text-align:center</strong> to li or a to center the links.
+    </p>
+    <p>
+      Add the border property to ul add a border around the navbar. If you also
+      want borders inside the navbar, add a border-bottom to all li elements,
+      except for the last one:
+    </p>
+    <iframe
+      src="../../examples/vertical-navbar/center-nav_example.html"
+      height="270px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      ul 
+      {
+        border: 1px solid #555;
+      }
+      
+      li 
+      {
+        text-align: center;
+        border-bottom: 1px solid #555;
+      }
+      
+      li:last-child 
+      {
+        border-bottom: none;
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Full-height Fixed Vertical Navbar</h2>
+    <p>Create a full-height, "sticky" side navigation:</p>
+    <iframe
+      src="../../examples/vertical-navbar/fixed-nav_example.html"
+      height="500px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      ul 
+      {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        width: 25%;
+        background-color: #f1f1f1;
+        height: 100%; /* Full height */
+        position: fixed; /* Make it stick, even on scroll */
+        overflow: auto; /* Enable scrolling if the sidenav has too much content */
+      }
+    </pre
+      >
+    </code>
+    <p>
+      <em
+        ><b>Note:</b> This example might not work properly on mobile
+        devices.</em
+      >
+    </p>
   </body>
 </html>
