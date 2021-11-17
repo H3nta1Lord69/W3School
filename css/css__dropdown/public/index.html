@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>CSS Dropdowns</title>
+  </head>
+  <body>
+    <h1>CSS Dropdowns</h1>
+    <hr />
+    <p>Create a hoverable dropdown with CSS.</p>
+    <hr />
+
+    <h2>Basic Dropdown</h2>
+    <p>
+      Create a dropdown box that appears when the user moves the mouse over an
+      element.
+    </p>
+    <iframe
+      src="../examples/basic_example.html"
+      height="200px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        <-style>
+            .dropdown {
+              position: relative;
+              display: inline-block;
+            }
+            
+            .dropdown-content {
+              display: none;
+              position: absolute;
+              background-color: #f9f9f9;
+              min-width: 160px;
+              box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+              padding: 12px 16px;
+              z-index: 1;
+            }
+            
+            .dropdown:hover .dropdown-content {
+              display: block;
+            }
+        <-/style>
+            
+        <-div class="dropdown">
+            <-span>Mouse over me<-/span>
+            <-div class="dropdown-content">
+            <-p>Hello World!<-/p>
+            <-/div>
+        <-/div>
+    </pre
+      >
+    </code>
+    <h3>Example Explained</h3>
+    <h4>HTML</h4>
+    <p>
+      Use any element to open the dropdown content, e.g. a span, or a button
+      element.
+    </p>
+    <p>
+      Use a container element (like div) to create the dropdown content and add
+      whatever you want inside of it.
+    </p>
+    <p>
+      Wrap a div element around the elements to position the dropdown content
+      correctly with CSS.
+    </p>
+    <h4>CSS</h4>
+    <p>
+      The <strong>.dropdown</strong> class uses
+      <strong>position:relative</strong>, which is needed when we want the
+      dropdown content to be placed right below the dropdown button (using
+      <strong>position:absolute</strong>).
+    </p>
+    <p></p>
+  </body>
+</html>
