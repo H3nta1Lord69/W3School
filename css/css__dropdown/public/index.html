@@ -26,12 +26,14 @@
     <code>
       <pre>
         <-style>
-            .dropdown {
+            .dropdown 
+            {
               position: relative;
               display: inline-block;
             }
             
-            .dropdown-content {
+            .dropdown-content 
+            {
               display: none;
               position: absolute;
               background-color: #f9f9f9;
@@ -41,7 +43,8 @@
               z-index: 1;
             }
             
-            .dropdown:hover .dropdown-content {
+            .dropdown:hover .dropdown-content 
+            {
               display: block;
             }
         <-/style>
@@ -76,6 +79,97 @@
       dropdown content to be placed right below the dropdown button (using
       <strong>position:absolute</strong>).
     </p>
-    <p></p>
+    <p>
+      The <strong>.dropdown-content</strong> class holds the actual dropdown
+      content. It is hidden by default, and will be displayed on hover (see
+      below). Note the <strong>min-width</strong> is set to 160px. Feel free to
+      change this. <b>Tip:</b> If you want the width of the dropdown content to
+      be as wide as the dropdown button, set the <strong>width</strong> to 100%
+      (and <strong>overflow:auto</strong> to enable scroll on small screens).
+    </p>
+    <p>
+      Instead of using a border, we have used the CSS
+      <strong>box-shadow</strong> property to make the dropdown menu look like a
+      "card".
+    </p>
+    <p>
+      The <strong>:hover</strong> selector is used to show the dropdown menu
+      when the user moves the mouse over the dropdown button.
+    </p>
+
+    <hr />
+
+    <h2>Dropdown Menu</h2>
+    <p>
+      Create a dropdown menu that allows the user to choose an option from a
+      list:
+    </p>
+    <iframe
+      src="../examples/menu_example.html"
+      height=""
+      frameborder="0"
+    ></iframe>
+    <p>
+      This example is similar to the previous one, except that we add links
+      inside the dropdown box and style them to fit a styled dropdown button:
+    </p>
+    <code>
+      <pre>
+        /* Style The Dropdown Button */
+        .dropbtn 
+        {
+        background-color: #4CAF50;
+        color: white;
+        padding: 16px;
+        font-size: 16px;
+        border: none;
+        cursor: pointer;
+        }
+
+        /* The container div - needed to position the dropdown content */
+        .dropdown 
+        {
+        position: relative;
+        display: inline-block;
+        }
+
+        /* Dropdown Content (Hidden by Default) */
+        .dropdown-content 
+        {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+        }
+
+        /* Links inside the dropdown */
+        .dropdown-content a 
+        {
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        }
+
+        /* Change color of dropdown links on hover */
+        .dropdown-content a:hover 
+        {background-color: #f1f1f1}
+
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content 
+        {
+        display: block;
+        }
+
+        /* Change the background color of the dropdown button when the dropdown content is shown */
+        .dropdown:hover .dropbtn 
+        {
+        background-color: #3e8e41;
+        }
+    </pre
+      >
+    </code>
   </body>
 </html>
