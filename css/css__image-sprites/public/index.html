@@ -1,13 +1,234 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./styles/index.css">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>CSS Image Sprites</title>
+  </head>
+  <body>
+    <h1>CSS Image Sprites</h1>
+    <hr />
+
+    <h2>Image Sprites</h2>
+    <p>An image sprite is a collection of images put into a single image.</p>
+    <p>
+      A web page with many images can take a long time to load and generates
+      multiple server requests.
+    </p>
+    <p>
+      Using image sprites will reduce the number of server requests and save
+      bandwidth.
+    </p>
+
+    <hr />
+
+    <h2>Image Sprites - Simple Example</h2>
+    <p>
+      Instead of using three separate images, we use this single image
+      ("img_navsprites.gif"):
+    </p>
+    <img src="../examples/img_navsprites.gif" alt="nav sprites" />
+    <p>With CSS, we can show just the part of the image we need.</p>
+    <p>
+      In the following example the CSS specifies which part of the
+      "img_navsprites.gif" image to show:
+    </p>
+    <iframe
+      src="../examples/simple_example.html"
+      height="70px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        #home {
+            width: 46px;
+            height: 44px;
+            background: url(img_navsprites.gif) 0 0;
+          }
+    </pre
+      >
+    </code>
+    <h3>Example explained</h3>
+    <ul>
+      <li>
+        img id="home" src="img_trans.gif" - Only defines a small transparent
+        image because the src attribute cannot be empty. The displayed image
+        will be the background image we specify in CSS
+      </li>
+      <li>
+        width: 46px; height: 44px; - Defines the portion of the image we want to
+        use
+      </li>
+      <li>
+        background: url(img_navsprites.gif) 0 0; - Defines the background image
+        and its position (left 0px, top 0px)
+      </li>
+    </ul>
+    <p>
+      This is the easiest way to use image sprites, now we want to expand it by
+      using links and hover effects.
+    </p>
+
+    <hr />
+
+    <h2>Image Sprites - Create a Navigation List</h2>
+    <p>
+      We want to use the sprite image ("img_navsprites.gif") to create a
+      navigation list.
+    </p>
+    <p>
+      We will use an HTML list, because it can be a link and also supports a
+      background image:
+    </p>
+    <iframe
+      src="../examples/nav_example.html"
+      height="70px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        #navlist 
+        {
+            position: relative;
+        }
+          
+        #navlist li 
+        {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            position: absolute;
+            top: 0;
+        }
+          
+        #navlist li, #navlist a 
+        {
+            height: 44px;
+            display: block;
+        }
+          
+        #home 
+        {
+            left: 0px;
+            width: 46px;
+            background: url('img_navsprites.gif') 0 0;
+        }
+          
+        #prev 
+        {
+            left: 63px;
+            width: 43px;
+            background: url('img_navsprites.gif') -47px 0;
+        }
+          
+        #next 
+        {
+            left: 129px;
+            width: 43px;
+            background: url('img_navsprites.gif') -91px 0;
+        }
+    </pre
+      >
+    </code>
+    <h3>Example explained:</h3>
+    <ul>
+      <li>
+        #navlist {position:relative;} - position is set to relative to allow
+        absolute positioning inside it
+      </li>
+      <li>
+        #navlist li
+        {margin:0;padding:0;list-style:none;position:absolute;top:0;} - margin
+        and padding are set to 0, list-style is removed, and all list items are
+        absolute positioned
+      </li>
+      <li>
+        #navlist li, #navlist a {height:44px;display:block;} - the height of all
+        the images are 44px
+      </li>
+    </ul>
+    <p>Now start to position and style for each specific part:</p>
+    <ul>
+      <li>
+        #home {left:0px;width:46px;} - Positioned all the way to the left, and
+        the width of the image is 46px
+      </li>
+      <li>
+        #home {background:url(img_navsprites.gif) 0 0;} - Defines the background
+        image and its position (left 0px, top 0px)
+      </li>
+      <li>
+        #prev {left:63px;width:43px;} - Positioned 63px to the right (#home
+        width 46px + some extra space between items), and the width is 43px.
+      </li>
+      <li>
+        #prev {background:url('img_navsprites.gif') -47px 0;} - Defines the
+        background image 47px to the right (#home width 46px + 1px line divider)
+      </li>
+      <li>
+        #next {left:129px;width:43px;}- Positioned 129px to the right (start of
+        #prev is 63px + #prev width 43px + extra space), and the width is 43px.
+      </li>
+      <li>
+        #next {background:url('img_navsprites.gif') -91px 0;} - Defines the
+        background image 91px to the right (#home width 46px + 1px line divider
+        + #prev width 43px + 1px line divider )
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Image Sprites - Hover Effect</h2>
+    <p>Now we want to add a hover effect to our navigation list.</p>
+    <p>
+      <em
+        ><b>Tip:</b> The <strong>:hover</strong> selector can be used on all
+        elements, not only on links.</em
+      >
+    </p>
+    <p>
+      Our new image ("img_navsprites_hover.gif") contains three navigation
+      images and three images to use for hover effects:
+    </p>
+    <img src="../examples/img_navsprites_hover.gif" alt="Nav sprites hover" />
+    <p>
+      Because this is one single image, and not six separate files, there will
+      be no loading delay when a user hovers over the image.
+    </p>
+    <p>We only add three lines of code to add the hover effect:</p>
+    <iframe
+      src="../examples/nav-hover_example.html"
+      height="70px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        #home a:hover 
+        {
+            background: url('img_navsprites_hover.gif') 0 -45px;
+        }
+          
+        #prev a:hover 
+        {
+            background: url('img_navsprites_hover.gif') -47px -45px;
+        }
+          
+        #next a:hover 
+        {
+            background: url('img_navsprites_hover.gif') -91px -45px;
+        }
+    </pre
+      >
+    </code>
+    <h3>Example explained:</h3>
+    <ul>
+      <li>
+        #home a:hover {background: url('img_navsprites_hover.gif') 0 -45px;} -
+        For all three hover images we specify the same background position, only
+        45px further down
+      </li>
+    </ul>
+  </body>
 </html>
