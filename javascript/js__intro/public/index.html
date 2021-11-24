@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/index.css" />
+    <!-- Title -->
+    <title>JavaScript Introduction</title>
+  </head>
+  <!-- Body -->
+  <body>
+    <h1>JavaScript Introduction</h1>
+    <hr />
+
+    <h2>JavaScript Can Change HTML Content</h2>
+    <p>
+      One of many JavaScript HTML methods is <strong>getElementById()</strong>.
+    </p>
+    <p>
+      The example below "finds" an HTML element (with id="demo"), and changes
+      the element content (innerHTML) to "Hello JavaScript":
+    </p>
+
+    <h2>What Can JavaScript Do?</h2>
+    <p id="demo">JavaScript can change HTML content.</p>
+    <button
+      type="button"
+      onclick='document.getElementById("demo").innerHTML = "Hello JavaScript!"'
+    >
+      Click Me!
+    </button>
+    <code>
+      <pre>
+      document.getElementById("demo").innerHTML = "Hello JavaScript";
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <p><em>JavaScript accepts both double and single quotes:</em></p>
+    <code>
+      <pre>
+      document.getElementById('demo').innerHTML = 'Hello JavaScript';
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>JavaScript Can Change HTML Attribute Values</h2>
+    <p>
+      In this example JavaScript changes the value of the
+      <strong>src</strong> (source) attribute of an <strong>img</strong> tag:
+    </p>
+
+    <h2>What Can JavaScript Do?</h2>
+    <p>JavaScript can change HTML attribute values.</p>
+    <p>
+      In this case JavaScript changes the value of the src (source) attribute of
+      an image.
+    </p>
+    <button
+      onclick="document.getElementById('myImage').src='./assets/pic_bulbon.gif'"
+    >
+      Turn on the light
+    </button>
+    <img id="myImage" src="./assets/pic_bulboff.gif" style="width: 100px" />
+    <button
+      onclick="document.getElementById('myImage').src='./assets/pic_bulboff.gif'"
+    >
+      Turn off the light
+    </button>
+
+    <hr />
+
+    <h2>JavaScript Can Change HTML Styles (CSS)</h2>
+    <p>
+      Changing the style of an HTML element, is a variant of changing an HTML
+      attribute:
+    </p>
+
+    <h2>What Can JavaScript Do?</h2>
+    <p id="demo">JavaScript can change the style of an HTML element.</p>
+    <button
+      type="button"
+      onclick="document.getElementById('demo').style.fontSize='35px'"
+    >
+      Click Me!
+    </button>
+    <code>
+      <pre>
+      document.getElementById("demo").style.fontSize = "35px";
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>JavaScript Can Hide HTML Elements</h2>
+    <p>
+      Hiding HTML elements can be done by changing the
+      <strong>display</strong> style:
+    </p>
+
+    <h2>What Can JavaScript Do?</h2>
+    <p id="demo">JavaScript can hide HTML elements.</p>
+    <button
+      type="button"
+      onclick="document.getElementById('demo').style.display='none'"
+    >
+      Click Me!
+    </button>
+    <code>
+      <pre>
+      document.getElementById("demo").style.display = "none";
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>JavaScript Can Show HTML Elements</h2>
+    <p>
+      Showing hidden HTML elements can also be done by changing the
+      <strong>display</strong> style:
+    </p>
+
+    <h2>What Can JavaScript Do?</h2>
+    <p>JavaScript can show hidden HTML elements.</p>
+    <p id="demo" style="display: none">Hello JavaScript!</p>
+    <button
+      type="button"
+      onclick="document.getElementById('demo').style.display='block'"
+    >
+      Click Me!
+    </button>
+    <code>
+      <pre>
+      document.getElementById("demo").style.display = "block";
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <em>
+      <h2>Did You Know?</h2>
+      <p>
+        JavaScript and Java are completely different languages, both in concept
+        and design.
+      </p>
+      <p>
+        JavaScript was invented by Brendan Eich in 1995, and became an ECMA
+        standard in 1997.
+      </p>
+      <p>
+        ECMA-262 is the official name of the standard. ECMAScript is the
+        official name of the language.
+      </p>
+    </em>
+
+    <!-- Scripts -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
