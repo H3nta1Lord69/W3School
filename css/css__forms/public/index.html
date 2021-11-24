@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles/index.css" />
+    <title>CSS Forms</title>
+  </head>
+  <body>
+    <h1>CSS Forms</h1>
+    <hr />
+
+    <p>The look of an HTML form can be greatly improved with CSS:</p>
+    <iframe
+      src="../examples/form_example.html"
+      height="400px"
+      frameborder="0"
+    ></iframe>
+
+    <hr />
+
+    <h2>Styling Input Fields</h2>
+    <p>
+      Use the <strong>width</strong> property to determine the width of the
+      input field:
+    </p>
+    <form>
+      <label for="fname">First Name</label>
+      <input type="text" id="fname" name="fname" />
+    </form>
+    <code>
+      <pre>
+        input 
+        {
+            width: 100%;
+        }
+    </pre
+      >
+    </code>
+    <p>
+      The example above applies to all input elements. If you only want to style
+      a specific input type, you can use attribute selectors:
+    </p>
+    <ul>
+      <li><strong>input[type=text]</strong> - will only select text fields</li>
+      <li>
+        <strong>input[type=password]</strong> - will only select password fields
+      </li>
+      <li>
+        <strong>input[type=number]</strong> - will only select number fields
+      </li>
+      <li>etc..</li>
+    </ul>
+
+    <hr />
+
+    <h2>Padded Inputs</h2>
+    <p>
+      Use the <strong>padding</strong> property to add space inside the text
+      field.
+    </p>
+    <p>
+      <em
+        ><b>Tip:</b> When you have many inputs after each other, you might also
+        want to add some margin, to add more space outside of them:</em
+      >
+    </p>
+    <iframe
+      src="../examples/padded_example.html"
+      height="230px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        input[type=text] 
+        {
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+    </pre
+      >
+    </code>
+    <em>
+      <p>
+        Note that we have set the <strong>box-sizing</strong> property to
+        <strong>border-box</strong>. This makes sure that the padding and
+        eventually borders are included in the total width and height of the
+        elements.
+      </p>
+    </em>
+
+    <hr />
+
+    <h2>Bordered Inputs</h2>
+    <p>
+      Use the <strong>border</strong> property to change the border size and
+      color, and use the <strong>botder-radius</strong> property to add rounded
+      corners.
+    </p>
+    <iframe
+      src="../examples/bordered_example.html"
+      height="230px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        input[type=text] 
+        {
+            border: 2px solid red;
+            border-radius: 4px;
+        }
+    </pre
+      >
+    </code>
+    <p>
+      If you only want a bottom border, use the
+      <strong>border-bottom</strong> property:
+    </p>
+    <iframe
+      src="../examples/bottom-border_example.html"
+      height="230px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+        input[type=text] 
+        {
+            border: none;
+            border-bottom: 2px solid red;
+        }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2></h2>
+  </body>
+</html>
