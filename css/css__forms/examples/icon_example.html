@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      input[type="text"] {
+        width: 100%;
+        box-sizing: border-box;
+        border-radius: 4px;
+        font-size: 16px;
+        background-color: white;
+        background-image: url("searchicon.png");
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding: 12px 20px 12px 40px;
+        border: 3px solid #ccc;
+        -webkit-transition: 0.5s;
+        transition: 0.5s;
+        outline: none;
+      }
+
+      input[type="text"]:focus {
+        border: 3px solid #555;
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Input field with an icon inside</h2>
+
+    <form>
+      <input type="text" name="search" placeholder="Search.." />
+    </form>
+  </body>
+</html>

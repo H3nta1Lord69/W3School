@@ -137,6 +137,185 @@
 
     <hr />
 
-    <h2></h2>
+    <h2>Colored Inputs</h2>
+    <p>
+      Use the <strong>background-color</strong> property to add a background
+      color to the input, and the <strong>color</strong> property to change the
+      text color:
+    </p>
+    <iframe
+      src="../examples/colored_example.html"
+      height="230px"
+      frameborder="0"
+    ></iframe>
+
+    <hr />
+
+    <h2>Focused Inputs</h2>
+    <p>
+      By default, some browsers will add a blue outline around the input when it
+      gets focus (clicked on). You can remove this behavior by adding
+      <strong>outline: none;</strong> to the input.
+    </p>
+    <p>
+      Use the <strong>:focus</strong> selector to do something with the input
+      field when it gets focus:
+    </p>
+    <iframe
+      src="../examples/bg-focus_example.html"
+      height="260px"
+      frameborder="0"
+    ></iframe>
+    <iframe
+      src="../examples/border-focus_example.html"
+      height="310px"
+      frameborder="0"
+    ></iframe>
+
+    <hr />
+
+    <h2>Input with icon/image</h2>
+    <p>
+      If you want an icon inside the input, use the
+      <strong>background-image</strong> property and position it with the
+      <strong>background-position</strong> property. Also notice that we add a
+      large left padding to reserve the space of the icon:
+    </p>
+    <iframe
+      src="../examples/icon_example.html"
+      height="125px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      input[type=text] 
+      {
+        background-color: white;
+        background-image: url('searchicon.png');
+        background-position: 10px 10px;
+        background-repeat: no-repeat;
+        padding-left: 40px;
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Animated Search Input</h2>
+    <p>
+      In this example we use the CSS <strong>transition</strong> property to
+      animate the width of the search input when it gets focus.
+    </p>
+    <iframe
+      src="../examples/animated_example.html"
+      height="125px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      input[type=text] 
+      {
+        transition: width 0.4s ease-in-out;
+      }
+      
+      input[type=text]:focus 
+      {
+        width:100%
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Styling Textareas</h2>
+    <p>
+      <b>Tip:</b> Use the <strong>resize</strong> property to prevent textareas
+      from being resized (disable the "grabber" in the bottom right corner):
+    </p>
+    <iframe
+      src="../examples/textarea_example.html"
+      height="285px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      textarea 
+      {
+        width: 100%;
+        height: 150px;
+        padding: 12px 20px;
+        box-sizing: border-box;
+        border: 2px solid #ccc;
+        border-radius: 4px;
+        background-color: #f8f8f8;
+        resize: none;
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Styling Select Menus</h2>
+    <iframe
+      src="../examples/select_example.html"
+      height="150px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      select 
+      {
+        width: 100%;
+        padding: 16px 20px;
+        border: none;
+        border-radius: 4px;
+        background-color: #f1f1f1;
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Styling Input Buttons</h2>
+    <iframe
+      src="../examples/button_example.html"
+      height="135px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      input[type=button], input[type=submit], input[type=reset] 
+      {
+        background-color: #4CAF50;
+        border: none;
+        color: white;
+        padding: 16px 32px;
+        text-decoration: none;
+        margin: 4px 2px;
+        cursor: pointer;
+      }
+      
+      /* Tip: use width: 100% for full-width buttons */
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Responsive Form</h2>
+    <p>
+      Resize the browser window to see the effect. When the screen is less than
+      600px wide, make the two columns stack on top of each other instead of
+      next to each other.
+    </p>
+    <iframe
+      src="../examples/responsive_example.html"
+      height="580px"
+      frameborder="0"
+    ></iframe>
   </body>
 </html>
