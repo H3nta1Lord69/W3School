@@ -8,10 +8,228 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/index.css" />
     <!-- Title -->
-    <title>Document</title>
+    <title>JavaScript Where To</title>
   </head>
   <!-- Body -->
   <body>
+    <h1>JavaScript Where To</h1>
+    <hr />
+
+    <h2>The script Tag</h2>
+    <p>
+      In HTML, JavaScript code is inserted between <-script> and <-/script>
+      tags.
+    </p>
+    <code>
+      <pre>
+      script>
+        document.getElementById("demo").innerHTML = "My First JavaScript";
+      /script>
+    </pre
+      >
+    </code>
+    <em>
+      <p>
+        Old JavaScript examples may use a type attribute: script
+        type="text/javascript">.
+      </p>
+      <p>
+        The type attribute is not required. JavaScript is the default scripting
+        language in HTML.
+      </p>
+    </em>
+
+    <hr />
+
+    <h2>JavaScript Functions and Events</h2>
+    <p>
+      A JavaScript <strong>function</strong> is a block of JavaScript code, that
+      can be executed when "called" for.
+    </p>
+    <p>
+      For example, a function can be called when an <b>event</b> occurs, like
+      when the user clicks a button.
+    </p>
+
+    <hr />
+
+    <h2>JavaScript in head> or body></h2>
+    <p>You can place any number of scripts in an HTML document.</p>
+    <p>
+      Scripts can be placed in the body>, or in the head> section of an HTML
+      page, or in both.
+    </p>
+
+    <hr />
+
+    <h2>JavaScript in head></h2>
+    <p>
+      In this example, a JavaScript <strong>function</strong> is placed in the
+      head> section of an HTML page.
+    </p>
+    <p>The function is invoked (called) when a button is clicked:</p>
+    <iframe
+      src="../examples/head_example.html"
+      height="130px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      <-!DOCTYPE html>
+        <-html>
+          <-head>
+          <-script>
+          function myFunction() {
+            document.getElementById("demo").innerHTML = "Paragraph changed.";
+          }
+          <-/script>
+          <-/head>
+            <-body>
+              <-h2>Demo JavaScript in Head<-/h2>
+
+              <-p id="demo">A Paragraph<-/p>
+              <-button type="button" onclick="myFunction()">Try it<-/button>
+
+            <-/body>
+        <-/html>
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>JavaScript in body></h2>
+    <p>
+      In this example, a JavaScript <strong>function</strong> is placed in the
+      body> section of an HTML page.
+    </p>
+    <p>The function is invoked (called) when a button is clicked:</p>
+    <iframe
+      src="../examples/body_example.html"
+      height="130px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      <-!DOCTYPE html>
+      <-html>
+        <-body>
+
+          <-h2>Demo JavaScript in Body<-/h2>
+
+          <-p id="demo">A Paragraph<-/p>
+
+          <-button type="button" onclick="myFunction()">Try it<-/button>
+
+          <-script>
+          function myFunction() {
+            document.getElementById("demo").innerHTML = "Paragraph changed.";
+          }
+          <-/script>
+
+        <-/body>
+      <-/html>
+    </pre
+      >
+    </code>
+    <p>
+      <em
+        >Placing scripts at the bottom of the body> element improves the display
+        speed, because script interpretation slows down the display.</em
+      >
+    </p>
+
+    <hr />
+
+    <h2>External JavaScript</h2>
+    <p>Scripts can also be placed in external files:</p>
+    <code>
+      <pre>
+      function myFunction() 
+      {
+        document.getElementById("demo").innerHTML = "Paragraph changed.";
+      }
+    </pre
+      >
+    </code>
+    <p>
+      External scripts are practical when the same code is used in many
+      different web pages.
+    </p>
+    <p>JavaScript files have the file extension .js.</p>
+    <p>
+      To use an external script, put the name of the script file in the
+      <strong>src</strong> (source) attribute of a script> tag:
+    </p>
+    <iframe
+      src="../examples/external_example.html"
+      height="210px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      script src="myScript.js">/script>
+    </pre
+      >
+    </code>
+    <p>
+      You can place an external script reference in head> or body> as you like.
+    </p>
+    <p>
+      The script will behave as if it was located exactly where the script> tag
+      is located.
+    </p>
+    <p><em>External scripts cannot contain script> tags.</em></p>
+
+    <hr />
+
+    <h2>External JavaScript Advantages</h2>
+    <p>Placing scripts in external files has some advantages:</p>
+    <ul>
+      <li>It separates HTML and code</li>
+      <li>It makes HTML and JavaScript easier to read and maintain</li>
+      <li>Cached JavaScript files can speed up page loads</li>
+    </ul>
+    <p>To add several script files to one page - use several script tags:</p>
+    <code>
+      <pre>
+      <-script src="myScript1.js"><-/script>
+      <-script src="myScript2.js"><-/script>
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>External References</h2>
+    <p>An external script can be referenced in 3 different ways:</p>
+    <ul>
+      <li>With a full URL (a full web address)</li>
+      <li>With a file path (like /js/)</li>
+      <li>Without any path</li>
+    </ul>
+    <p>This example uses a <b>full URL</b> to link to myScript.js:</p>
+    <code>
+      <pre>
+      <-script src="https://www.w3schools.com/js/myScript.js"><-/script>
+    </pre
+      >
+    </code>
+    <p>This example uses a <b>file path</b> to link to myScript.js:</p>
+    <code>
+      <pre>
+      <-script src="/js/myScript.js"><-/script>
+    </pre
+      >
+    </code>
+    <p>This example uses no path to link to myScript.js:</p>
+    <code>
+      <pre>
+      <-script src="myScript.js"><-/script>
+    </pre
+      >
+    </code>
+
     <!-- Scripts -->
     <script src="./js/index.js"></script>
   </body>
