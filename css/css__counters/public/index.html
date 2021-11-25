@@ -8,10 +8,167 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/index.css" />
     <!-- Title -->
-    <title>Document</title>
+    <title>CSS Counters</title>
   </head>
   <!-- Body -->
   <body>
+    <h1>CSS Counters</h1>
+    <hr />
+    <p>
+      CSS counters are "variables" maintained by CSS whose values can be
+      incremented by CSS rules (to track how many times they are used). Counters
+      let you adjust the appearance of content based on its placement in the
+      document.
+    </p>
+
+    <hr />
+
+    <h2>Automatic Numbering With Counters</h2>
+    <p>
+      CSS counters are like "variables". The variable values can be incremented
+      by CSS rules (which will track how many times they are used).
+    </p>
+    <p>To work with CSS counters we will use the following properties:</p>
+    <ul>
+      <li><strong>counter-reset</strong> - Creates or resets a counter</li>
+      <li><strong>counter-increment</strong> - Increments a counter value</li>
+      <li><strong>content</strong> - Inserts generated content</li>
+      <li>
+        <strong>counter()</strong> or <strong>counters()</strong> function -
+        Adds the value of a counter to an element
+      </li>
+    </ul>
+    <p>
+      To use a CSS counter, it must first be created with
+      <strong>counter-reset</strong>.
+    </p>
+    <p>
+      The following example creates a counter for the page (in the body
+      selector), then increments the counter value for each h2 element and adds
+      "Section value of the counter:" to the beginning of each h2 element:
+    </p>
+    <iframe
+      src="../examples/automatic_example.html"
+      height="320px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      body 
+      {
+        counter-reset: section;
+      }
+      
+      h2::before 
+      {
+        counter-increment: section;
+        content: "Section " counter(section) ": ";
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Nesting Counters</h2>
+    <p>
+      Nesting Counters The following example creates one counter for the page
+      (section) and one counter for each h1 element (subsection). The "section"
+      counter will be counted for each h1 element with "Section value of the
+      section counter.", and the "subsection" counter will be counted for each
+      h2 element with "value of the section counter.value of the subsection
+      counter":
+    </p>
+    <iframe
+      src="../examples/nesting_example.html"
+      height="670px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      body 
+      {
+        counter-reset: section;
+      }
+      
+      h1 
+      {
+        counter-reset: subsection;
+      }
+      
+      h1::before 
+      {
+        counter-increment: section;
+        content: "Section " counter(section) ". ";
+      }
+      
+      h2::before 
+      {
+        counter-increment: subsection;
+        content: counter(section) "." counter(subsection) " ";
+      }
+    </pre
+      >
+    </code>
+    <p>
+      A counter can also be useful to make outlined lists because a new instance
+      of a counter is automatically created in child elements. Here we use the
+      <strong>counters()</strong> function to insert a string between different
+      levels of nested counters:
+    </p>
+    <iframe
+      src="../examples/lists_example.html"
+      height="290px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      ol 
+      {
+        counter-reset: section;
+        list-style-type: none;
+      }
+      
+      li::before 
+      {
+        counter-increment: section;
+        content: counters(section,".") " ";
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>CSS Counter Properties</h2>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width: 20%">Property</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><a href="#">content</a></td>
+          <td>
+            Used with the ::before and ::after pseudo-elements, to insert
+            generated content
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">counter-increment</a></td>
+          <td>Increments one or more counter values</td>
+        </tr>
+        <tr>
+          <td><a href="#">counter-reset</a></td>
+          <td>Creates or resets one or more counters</td>
+        </tr>
+        <tr>
+          <td><a href="#">counter()</a></td>
+          <td>Returns the current value of the named counter</td>
+        </tr>
+      </tbody>
+    </table>
+
     <!-- Scripts -->
     <script src="./js/index.js"></script>
   </body>
