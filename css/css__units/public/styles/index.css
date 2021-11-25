@@ -47,3 +47,28 @@ th
     background-color: #04AA6D;
     color: white;
 }
+
+.bsChrome {
+    background-image: url(../assets/compatible_chrome.gif);
+    background-repeat: no-repeat;
+}
+
+.bsEdge {
+    background-image: url(../assets/compatible_edge.png);
+    background-repeat: no-repeat;
+}
+
+.bsFirefox {
+    background-image: url(../assets/compatible_firefox.png);
+    background-repeat: no-repeat;
+}
+
+table.browserref .bsSafari {
+    background-image: url(../assets/compatible_safari.gif);
+    background-repeat: no-repeat;
+}
+
+.bsOpera {
+    background-image: url(../assets/compatible_opera.gif);
+    background-repeat: no-repeat;
+}

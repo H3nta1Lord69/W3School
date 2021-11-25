@@ -8,10 +8,440 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/index.css" />
     <!-- Title -->
-    <title>Document</title>
+    <title>CSS Units</title>
   </head>
   <!-- Body -->
   <body>
+    <h1>CSS Units</h1>
+    <hr />
+
+    <h2>CSS Units</h2>
+    <p>CSS has several different units for expressing a length.</p>
+    <p>
+      Many CSS properties take "length" values, such as <strong>width</strong>,
+      <strong>margin</strong>, <strong>padding</strong>,
+      <strong>font-size</strong>, etc.
+    </p>
+    <p>
+      <b>Length</b> is a number followed by a length unit, such as 10px, 2em,
+      etc.
+    </p>
+    <iframe
+      src="../examples/units_example.html"
+      height="355px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      h1 
+      {
+        font-size: 60px;
+      }
+      
+      p 
+      {
+        font-size: 25px;
+        line-height: 50px;
+      }
+    </pre
+      >
+    </code>
+    <p>
+      <em
+        ><b>Note:</b> A whitespace cannot appear between the number and the
+        unit. However, if the value is <strong>0</strong>, the unit can be
+        omitted.</em
+      >
+    </p>
+    <p>For some CSS properties, negative lengths are allowed.</p>
+    <p>
+      There are two types of length units: <b>absolute</b> and <b>relative</b>.
+    </p>
+
+    <hr />
+
+    <h2>Absolute Lengths</h2>
+    <p>
+      The absolute length units are fixed and a length expressed in any of these
+      will appear as exactly that size.
+    </p>
+    <p>
+      Absolute length units are not recommended for use on screen, because
+      screen sizes vary so much. However, they can be used if the output medium
+      is known, such as for print layout.
+    </p>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width: 12%">Unit</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td>cm</td>
+          <td>centimeters</td>
+          <td>
+            <code>
+              <pre>
+              h1 {font-size: 1.5cm;}
+              h2 {font-size: 1cm;}
+              p {
+                font-size: 0.5cm;
+                line-height: 1cm;
+              }
+            </pre
+              >
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>mm</td>
+          <td>millimeters</td>
+          <td>
+            <code>
+              <pre>
+              h1 {font-size: 15mm;}
+              h2 {font-size: 10mm;}
+              p {
+                font-size: 5mm;
+                line-height: 10mm;
+              }
+            </pre
+              >
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>in</td>
+          <td>inches (1in = 96px = 2.54cm)</td>
+          <td>
+            <code>
+              <pre>
+              h1 {font-size: 1in;}
+              h2 {font-size: 0.5in;}
+              p {
+                font-size: 0.2in;
+                line-height: 0.5in;
+              }
+            </pre
+              >
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>px *</td>
+          <td>pixels (1px = 1/96th of 1in)</td>
+          <td>
+            <code>
+              <pre>
+              h1 {font-size: 50px;}
+              h2 {font-size: 30px;}
+              p {
+                font-size: 15px;
+                line-height: 20px;
+              }
+            </pre
+              >
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>pt</td>
+          <td>points (1pt = 1/72 of 1in)</td>
+          <td>
+            <code>
+              <pre>
+              h1 {font-size: 50pt;}
+              h2 {font-size: 25pt;}
+              p {
+                font-size: 15pt;
+                line-height: 25pt;
+              }
+            </pre
+              >
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>pc</td>
+          <td>picas (1pc = 12 pt)</td>
+          <td>
+            <code>
+              <pre>
+              h1 {font-size: 4.5pc;}
+              h2 {font-size: 3pc;}
+              p {
+                font-size: 1.5pc;
+                line-height: 3pc;
+              }
+            </pre
+              >
+            </code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <em
+        >* Pixels (px) are relative to the viewing device. For low-dpi devices,
+        1px is one device pixel (dot) of the display. For printers and high
+        resolution screens 1px implies multiple device pixels.</em
+      >
+    </p>
+
+    <hr />
+
+    <h2>Relative Lengths</h2>
+    <p>
+      Relative length units specify a length relative to another length
+      property. Relative length units scales better between different rendering
+      mediums.
+    </p>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width: 12%">Unit</th>
+          <th>Description</th>
+          <th></th>
+        </tr>
+        <tr>
+          <td>em</td>
+          <td>
+            Relative to the font-size of the element (2em means 2 times the size
+            of the current font)
+          </td>
+          <td>
+            <code>
+              <pre>
+              p {
+                font-size: 16px;
+                line-height: 2em;
+              }
+              
+              div {
+                font-size: 30px;
+                border: 1px solid black;
+              }
+              
+              span {
+                font-size: 0.5em;
+              }
+            </pre
+              >
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>ex</td>
+          <td>Relative to the x-height of the current font (rarely used)</td>
+          <td>
+            <code>
+              <pre>
+              div {
+                font-size: 30px;
+                border: 1px solid black;
+              }
+              
+              span {
+                font-size: 1ex;
+              }
+            </pre
+              >
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>ch</td>
+          <td>Relative to width of the "0" (zero)</td>
+          <td>
+            <code>
+              <pre>
+            body{ 
+              font-size:16px;
+            }
+            
+            div {
+              font-size: 3ch;
+              border: 1px solid black;
+            }
+            </pre
+              >
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>rem</td>
+          <td>Relative to font-size of the root element</td>
+          <td>
+            <code>
+              <pre>
+              body {
+                font-size:16px;
+               }
+               
+              div {
+                font-size: 2rem;
+                border: 1px solid black;
+              }
+            </pre
+              >
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>vw</td>
+          <td>Relative to 1% of the width of the viewport*</td>
+          <td>
+            <code>
+              <pre>
+              h1 {
+                font-size: 20vw;
+              }
+            </pre
+              >
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>vh</td>
+          <td>Relative to 1% of the height of the viewport*</td>
+          <td>
+            <code>
+              <pre>
+              h1 {
+                font-size: 20vh;
+              }
+            </pre
+              >
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>vmin</td>
+          <td>Relative to 1% of viewport's* smaller dimension</td>
+          <td>
+            <code>
+              <pre>
+              h1 {
+                font-size: 15vmin;
+              }
+            </pre
+              >
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>vmax</td>
+          <td>Relative to 1% of viewport's* larger dimension</td>
+          <td>
+            <code>
+              <pre>
+              h1 {
+                font-size: 15vmax;
+              }
+            </pre
+              >
+            </code>
+          </td>
+        </tr>
+        <tr>
+          <td>%</td>
+          <td>Relative to the parent element</td>
+          <td>
+            <code>
+              <pre>
+              body {
+                font-size:16px;
+               }
+               
+              div {
+                font-size: 150%;
+                border: 1px solid black;
+              }
+            </pre
+              >
+            </code>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>
+      <em
+        ><b>Tip:</b> The em and rem units are practical in creating perfectly
+        scalable layout! * Viewport = the browser window size. If the viewport
+        is 50cm wide, 1vw = 0.5cm.</em
+      >
+    </p>
+
+    <hr />
+
+    <h2>Browser Support</h2>
+    <p>
+      The numbers in the table specify the first browser version that fully
+      supports the length unit.
+    </p>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width: 20%; font-size: 16px; text-align: left">
+            Length Unit
+          </th>
+          <th style="width: 16%" class="bsChrome" title="Chrome"></th>
+          <th style="width: 16%" class="bsEdge" title="Internet Explorer"></th>
+          <th style="width: 16%" class="bsFirefox" title="Firefox"></th>
+          <th style="width: 16%" class="bsSafari" title="Safari"></th>
+          <th style="width: 16%" class="bsOpera" title="Opera"></th>
+        </tr>
+        <tr>
+          <td style="text-align: left">em, ex, %, px, cm, mm, in, pt, pc</td>
+          <td>1.0</td>
+          <td>3.0</td>
+          <td>1.0</td>
+          <td>1.0</td>
+          <td>3.5</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">ch</td>
+          <td>27.0</td>
+          <td>9.0</td>
+          <td>1.0</td>
+          <td>7.0</td>
+          <td>20.0</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">rem</td>
+          <td>4.0</td>
+          <td>9.0</td>
+          <td>3.6</td>
+          <td>4.1</td>
+          <td>11.6</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">vh, vw</td>
+          <td>20.0</td>
+          <td>9.0</td>
+          <td>19.0</td>
+          <td>6.0</td>
+          <td>20.0</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">vmin</td>
+          <td>20.0</td>
+          <td>12.0</td>
+          <td>19.0</td>
+          <td>6.0</td>
+          <td>20.0</td>
+        </tr>
+        <tr>
+          <td style="text-align: left">vmax</td>
+          <td>26.0</td>
+          <td>16.0</td>
+          <td>19.0</td>
+          <td>7.0</td>
+          <td>20.0</td>
+        </tr>
+      </tbody>
+    </table>
+
     <!-- Scripts -->
     <script src="./js/index.js"></script>
   </body>
