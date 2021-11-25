@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Meta Tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Styles -->
+    <link rel="stylesheet" href="./styles/index.css" />
+    <!-- Title -->
+    <title>JavaScript Output</title>
+  </head>
+  <!-- Body -->
+  <body>
+    <h1>JavaScript Output</h1>
+    <hr />
+
+    <h2>JavaScript Display Possibilities</h2>
+    <p>JavaScript can "display" data in different ways:</p>
+    <ul>
+      <li>Writing into an HTML element, using <strong>innerHTML.</strong></li>
+      <li>
+        Writing into the HTML output using <strong>document.write()</strong>.
+      </li>
+      <li>Writing into an alert box, using <strong>window.alert()</strong>.</li>
+      <li>
+        Writing into the browser console, using <strong>console.log()</strong>.
+      </li>
+    </ul>
+
+    <hr />
+
+    <h2>Using innerHTML</h2>
+    <p>
+      To access an HTML element, JavaScript can use the
+      <strong>document.getElementById(id)</strong> method.
+    </p>
+    <p>
+      The <strong>id</strong> attribute defines the HTML element. The
+      <strong>innerHTML</strong> property defines the HTML content:
+    </p>
+    <iframe
+      src="../examples/inner_example.html"
+      height="140px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      <-!DOCTYPE html>
+        <-html>
+          <-body>
+
+            <-h1>My First Web Page<-/h1>
+            <-p>My First Paragraph<-/p>
+
+            <-p id="demo"><-/p>
+
+            <-script>
+            document.getElementById("demo").innerHTML = 5 + 6;
+            <-/script>
+
+          <-/body>
+        <-/html>
+    </pre
+      >
+    </code>
+    <p>
+      Changing the innerHTML property of an HTML element is a common way to
+      display data in HTML.
+    </p>
+
+    <hr />
+
+    <h2>Using document.write()</h2>
+    <p>
+      For testing purposes, it is convenient to use
+      <strong>document.write()</strong>:
+    </p>
+    <iframe
+      src="../examples/write_example.html"
+      height="180px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      <-!DOCTYPE html>
+        <-html>
+          <-body>
+
+            <-h1>My First Web Page<-/h1>
+            <-p>My first paragraph.<-/p>
+
+            <-script>
+            document.write(5 + 6);
+            <-/script>
+
+          <-/body>
+        <-/html>
+    </pre
+      >
+    </code>
+    <p>
+      <em
+        ><b
+          >Using document.write() after an HTML document is loaded, will
+          <strong>delete all existing HTML</strong>:</b
+        ></em
+      >
+    </p>
+    <iframe
+      src="../examples/write-method_example.html"
+      height="130px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      <-!DOCTYPE html>
+        <-html>
+          <-body>
+
+            <-h1>My First Web Page<-/h1>
+            <-p>My first paragraph.<-/p>
+
+            <-button type="button" onclick="document.write(5 + 6)">Try it<-/button>
+
+          <-/body>
+        <-/html>
+    </pre
+      >
+    </code>
+    <p><em>The document.write() method should only be used for testing.</em></p>
+
+    <hr />
+
+    <h2>Using window.alert()</h2>
+    <p>You can use an alert box to display data:</p>
+    <iframe
+      src="../examples/window_example.html"
+      height=""
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      <-!DOCTYPE html>
+        <-html>
+          <-body>
+
+            <-h1>My First Web Page<-/h1>
+            <-p>My first paragraph.<-/p>
+
+            <-script>
+            window.alert(5 + 6);
+            <-/script>
+
+          <-/body>
+        <-/html>
+    </pre
+      >
+    </code>
+    <p>You can skip the <strong>window</strong> keyword.</p>
+    <p>
+      In JavaScript, the window object is the global scope object, that means
+      that variables, properties, and methods by default belong to the window
+      object. This also means that specifying the
+      <strong>window</strong> keyword is optional:
+    </p>
+
+    <!-- Scripts -->
+    <script src="./js/index.js"></script>
+  </body>
+</html>
