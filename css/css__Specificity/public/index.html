@@ -8,10 +8,183 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/index.css" />
     <!-- Title -->
-    <title>Document</title>
+    <title>CSS Specificity</title>
   </head>
   <!-- Body -->
   <body>
+    <h1>CSS Specificity</h1>
+    <hr />
+
+    <h2>What is Specificity?</h2>
+    <p>
+      If there are two or more conflicting CSS rules that point to the same
+      element, the browser follows some rules to determine which one is most
+      specific and therefore wins out.
+    </p>
+    <p>
+      Think of specificity as a score/rank that determines which style
+      declarations are ultimately applied to an element.
+    </p>
+    <p>
+      The universal selector (*) has low specificity, while ID selectors are
+      highly specific!
+    </p>
+    <p>
+      <em
+        ><b>Note:</b> Specificity is a common reason why your CSS-rules don't
+        apply to some elements, although you think they should.</em
+      >
+    </p>
+
+    <hr />
+
+    <h2>Specificity Hierarchy</h2>
+    <p>
+      Every selector has its place in the specificity hierarchy. There are four
+      categories which define the specificity level of a selector:
+    </p>
+    <p>
+      <b>Inline styles</b> - An inline style is attached directly to the element
+      to be styled. Example: h1 style="color: #ffffff;">.
+    </p>
+    <p>
+      <b>IDs</b> - An ID is a unique identifier for the page elements, such as
+      #navbar.
+    </p>
+    <p>
+      <b>Classes, attributes and pseudo-classes</b> - This category includes
+      .classes, [attributes] and pseudo-classes such as :hover, :focus etc.
+    </p>
+    <p>
+      <b>Elements and pseudo-elements</b> - This category includes element names
+      and pseudo-elements, such as h1, div, :before and :after.
+    </p>
+
+    <hr />
+
+    <h2>How to Calculate Specificity?</h2>
+    <p>Memorize how to calculate specificity!</p>
+    <p>
+      Start at 0, add 1000 for style attribute, add 100 for each ID, add 10 for
+      each attribute, class or pseudo-class, add 1 for each element name or
+      pseudo-element.
+    </p>
+    <p>Consider these three code fragments:</p>
+    <code>
+      <pre>
+      A: h1
+      B: #content h1
+      C: div id="content">h1 style="color: #ffffff">Heading/h1>/div>
+    </pre
+      >
+    </code>
+    <p>The specificity of A is 1 (one element)</p>
+    <p>The specificity of B is 101 (one ID reference and one element)</p>
+    <p>The specificity of C is 1000 (inline styling)</p>
+    <p>
+      Since 1 < 101 < 1000, the third rule (C) has a greater level of
+      specificity, and therefore will be applied.
+    </p>
+
+    <hr />
+
+    <h2>Specificity Rules</h2>
+    <p>
+      <b>Equal specificity: the latest rule counts</b> - If the same rule is
+      written twice into the external style sheet, then the lower rule in the
+      style sheet is closer to the element to be styled, and therefore will be
+      applied:
+    </p>
+    <iframe
+      src="../examples/equal_example.html"
+      height="80px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      h1 {background-color: yellow;}
+      h1 {background-color: red;}
+    </pre
+      >
+    </code>
+    <p>The latter rule is always applied.</p>
+
+    <hr />
+
+    <p>
+      <b>ID selectors have a higher specificity than attribute selectors</b> -
+      Look at the following three code lines:
+    </p>
+    <iframe
+      src="../examples/id_example.html"
+      height="40px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      div#a {background-color: green;}
+      #a {background-color: yellow;}
+      div[id=a] {background-color: blue;}
+    </pre
+      >
+    </code>
+    <p>
+      The first rule is more specific than the other two, and will be applied.
+    </p>
+
+    <hr />
+
+    <p>
+      <b
+        >Contextual selectors are more specific than a single element
+        selector</b
+      >
+      - The embedded style sheet is closer to the element to be styled. So in
+      the following situation
+    </p>
+    <code>
+      <pre>
+      From external CSS file:
+      #content h1 {background-color: red;}
+
+      In HTML file:
+      <-style>
+      #content h1 {
+        background-color: yellow;
+      }
+      <-/style>
+    </pre
+      >
+    </code>
+    <p>The latter rule will be applied.</p>
+
+    <hr />
+
+    <p>
+      <b>A class selector beats any number of element selectors</b> - a class
+      selector such as .intro beats h1, p, div, etc:
+    </p>
+    <iframe
+      src="../examples/class_example.html"
+      height="80px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      .intro {background-color: yellow;}
+      h1 {background-color: red;}
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <p>
+      <b>The universal selector and inherited values have a specificity of 0</b>
+      - *, body * and similar have a zero specificity. Inherited values also
+      have a specificity of 0.
+    </p>
+
     <!-- Scripts -->
     <script src="./js/index.js"></script>
   </body>
