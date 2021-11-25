@@ -136,7 +136,7 @@
     <p>You can use an alert box to display data:</p>
     <iframe
       src="../examples/window_example.html"
-      height=""
+      height="101px"
       frameborder="0"
     ></iframe>
     <code>
@@ -159,11 +159,91 @@
     </code>
     <p>You can skip the <strong>window</strong> keyword.</p>
     <p>
-      In JavaScript, the window object is the global scope object, that means
-      that variables, properties, and methods by default belong to the window
-      object. This also means that specifying the
+      In JavaScript, the <strong>window</strong> object is the global scope
+      object, that means that variables, properties, and methods by default
+      belong to the window object. This also means that specifying the
       <strong>window</strong> keyword is optional:
     </p>
+    <iframe
+      src="../examples/window-alert_example.html"
+      height="101px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      <-!DOCTYPE html>
+        <-html>
+          <-body>
+
+            <-h1>My First Web Page<-/h1>
+            <-p>My first paragraph.<-/p>
+
+            <-script>
+            alert(5 + 6);
+            <-/script>
+
+          <-/body>
+        <-/html>
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>Using console.log()</h2>
+    <p>
+      For debugging purposes, you can call the
+      <strong>console.log()</strong> method in the browser to display data.
+    </p>
+    <iframe
+      src="../examples/console_example.html"
+      height="170px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      <-!DOCTYPE html>
+        <-html>
+          <-body>
+
+            <-script>
+            console.log(5 + 6);
+            <-/script>
+
+          <-/body>
+        <-/html>
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>JavaScript Print</h2>
+    <p>JavaScript does not have any print object or print methods.</p>
+    <p>You cannot access output devices from JavaScript.</p>
+    <p>
+      The only exception is that you can call the
+      <strong>window.print()</strong> method in the browser to print the content
+      of the current window.
+    </p>
+    <iframe
+      src="../examples/print_example.html"
+      height="130px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      <-!DOCTYPE html>
+        <-html>
+          <-body>
+
+            <-button onclick="window.print()">Print this page<-/button>
+
+          <-/body>
+        <-/html>
+    </pre
+      >
+    </code>
 
     <!-- Scripts -->
     <script src="./js/index.js"></script>
