@@ -8,10 +8,189 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/index.css" />
     <!-- Title -->
-    <title>Document</title>
+    <title>CSS The !important Rule</title>
   </head>
   <!-- Body -->
   <body>
+    <h1>CSS The !important Rule</h1>
+    <hr />
+
+    <h2>What is !important?</h2>
+    <p>
+      The <strong>!important</strong> rule in CSS is used to add more importance
+      to a property/value than normal.
+    </p>
+    <p>
+      In fact, if you use the <strong>!important</strong> rule, it will override
+      ALL previous styling rules for that specific property on that element!
+    </p>
+    <p>Let us look at an example:</p>
+    <iframe
+      src="../examples/important_example.html"
+      height="120px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      #myid 
+      {
+        background-color: blue;
+      }
+      
+      .myclass 
+      {
+        background-color: gray;
+      }
+      
+      p 
+      {
+        background-color: red !important;
+      }
+    </pre
+      >
+    </code>
+    <h3>Example Explained</h3>
+    <p>
+      In the example above. all three paragraphs will get a red background
+      color, even though the ID selector and the class selector has a higher
+      specificity. The <strong>!important</strong> rule overrides the
+      <strong>background-color</strong> property in both cases.
+    </p>
+
+    <hr />
+
+    <h2>Important About !important</h2>
+    <p>
+      The only way to override an <strong>!important</strong> rule is to include
+      another <strong>!important</strong> rule on a declaration with the same
+      (or higher) specificity in the source code - and here the problem starts!
+      This makes the CSS code confusing and the debugging will be hard,
+      especially if you have a large style sheet!
+    </p>
+    <p>
+      Here we have created a simple example. It is not very clear, when you look
+      at the CSS source code, which color is considered most important:
+    </p>
+    <iframe
+      src="../examples/important-important_example.html"
+      height="120px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      #myid 
+      {
+        background-color: blue !important;
+      }
+      
+      .myclass 
+      {
+        background-color: gray !important;
+      }
+      
+      p 
+      {
+        background-color: red !important;
+      }
+    </pre
+      >
+    </code>
+    <p>
+      <em
+        ><b>Tip:</b> It is good to know about the
+        <strong>!important</strong> rule, you might see it in some CSS source
+        code. However, do not use it unless you absolutely have to.</em
+      >
+    </p>
+
+    <hr />
+
+    <h2>Maybe One or Two Fair Uses of !important</h2>
+    <p>
+      One way to use <strong>!important</strong> is if you have to override a
+      style that cannot be overridden in any other way. This could be if you are
+      working on a Content Management System (CMS) and cannot edit the CSS code.
+      Then you can set some custom styles to override some of the CMS styles.
+    </p>
+    <p>
+      Another way to use <strong>!important</strong> is: Assume you want a
+      special look for all buttons on a page. Here, buttons are styled with a
+      gray background color, white text, and some padding and border:
+    </p>
+    <iframe
+      src="../examples/button-important_example.html"
+      height="90px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      .button 
+      {
+        background-color: #8c8c8c;
+        color: white;
+        padding: 5px;
+        border: 1px solid black;
+      }
+    </pre
+      >
+    </code>
+    <p>
+      The look of a button can sometimes change if we put it inside another
+      element with higher specificity, and the properties get in conflict. Here
+      is an example of this:
+    </p>
+    <iframe
+      src="../examples/another-button-important_example.html"
+      height="120px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      .button 
+      {
+        background-color: #8c8c8c;
+        color: white;
+        padding: 5px;
+        border: 1px solid black;
+      }
+      
+      #myDiv a 
+      {
+        color: red;
+        background-color: yellow;
+      }
+    </pre
+      >
+    </code>
+    <p>
+      To "force" all buttons to have the same look, no matter what, we can add
+      the <strong>!important</strong> rule to the properties of the button, like
+      this:
+    </p>
+    <iframe
+      src="../examples/force-important_example.html"
+      height="120px"
+      frameborder="0"
+    ></iframe>
+    <code>
+      <pre>
+      .button 
+      {
+        background-color: #8c8c8c !important;
+        color: white !important;
+        padding: 5px !important;
+        border: 1px solid black !important;
+      }
+      
+      #myDiv a 
+      {
+        color: red;
+        background-color: yellow;
+      }
+    </pre
+      >
+    </code>
+
     <!-- Scripts -->
     <script src="./js/index.js"></script>
   </body>
