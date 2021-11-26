@@ -8,10 +8,200 @@
     <!-- Styles -->
     <link rel="stylesheet" href="./styles/index.css" />
     <!-- Title -->
-    <title>Document</title>
+    <title>CSS Math Functions</title>
   </head>
   <!-- Body -->
   <body>
+    <h1>CSS Math Functions</h1>
+    <hr />
+    <p>
+      The CSS math functions allow mathematical expressions to be used as
+      property values. Here, we will explain the <strong>calc()</strong>,
+      <strong>max()</strong> and <strong>min()</strong> functions.
+    </p>
+    <hr />
+
+    <h2>The calc() Function</h2>
+    <p>
+      The <strong>calc()</strong> function performs a calculation to be used as
+      the property value.
+    </p>
+    <h3>CSS Syntax</h3>
+    <code>
+      <pre>
+      calc(<i>expression</i>)
+    </pre
+      >
+    </code>
+    <table>
+      <tbody>
+        <tr>
+          <th>Value</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><i>expression</i></td>
+          <td>
+            Required. A mathematical expression. The result will be used as the
+            value. The following operators can be used: + - * /
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Let us look at an example:</p>
+    <iframe
+      src="../examples/calc_example.html"
+      height="155px"
+      frameborder="0"
+    ></iframe>
+    <p>Use calc() to calculate the width of a div element:</p>
+    <code>
+      <pre>
+      #div1 
+      {
+        position: absolute;
+        left: 50px;
+        width: calc(100% - 100px);
+        border: 1px solid black;
+        background-color: yellow;
+        padding: 5px;
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>The max() Function</h2>
+    <p>
+      The <strong>max()</strong> function uses the largest value, from a
+      comma-separated list of values, as the property value.
+    </p>
+    <h3>CSS Syntax</h3>
+    <code>
+      <pre>
+      max(<i>value1, value2, ...</i>)
+    </pre>
+    </code>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width: 20%">Value</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><em>value1</em>, <em>value2</em>, ...</td>
+          <td>
+            Required. A list of comma-separated values - where the largest value
+            is chosen
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Let us look at an example:</p>
+    <iframe
+      src="../examples/max_example.html"
+      height="270px"
+      frameborder="0"
+    ></iframe>
+    <p>
+      Use max() to set the width of #div1 to whichever value is largest, 50% or
+      300px:
+    </p>
+    <code>
+      <pre>
+      #div1 
+      {
+        background-color: yellow;
+        height: 100px;
+        width: max(50%, 300px);
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>The min() Function</h2>
+    <p>
+      The <strong>min()</strong> function uses the smallest value, from a
+      comma-separated list of values, as the property value.
+    </p>
+    <h3>CSS Syntax</h3>
+    <code>
+      <pre>
+      min(<i>value1, value2, ...</i>)
+    </pre>
+    </code>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width: 20%">Value</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><em>value1</em>, <em>value2</em>, ...</td>
+          <td>
+            Required. A list of comma-separated values - where the smallest
+            value is chosen
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <p>Let us look at an example:</p>
+    <iframe
+      src="../examples/min_example.html"
+      height="270px"
+      frameborder="0"
+    ></iframe>
+    <p>
+      Use min() to set the width of #div1 to whichever value is smallest, 50% or
+      300px:
+    </p>
+    <code>
+      <pre>
+      #div1 
+      {
+        background-color: yellow;
+        height: 100px;
+        width: min(50%, 300px);
+      }
+    </pre
+      >
+    </code>
+
+    <hr />
+
+    <h2>All CSS Math Functions</h2>
+    <table>
+      <tbody>
+        <tr>
+          <th style="width: 30%">Function</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><a href="#">calc()</a></td>
+          <td>
+            Allows you to perform calculations to determine CSS property values
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">max()</a></td>
+          <td>
+            Uses the largest value, from a comma-separated list of values, as
+            the property value
+          </td>
+        </tr>
+        <tr>
+          <td><a href="#">min()</a></td>
+          <td>
+            Uses the smallest value, from a comma-separated list of values, as
+            the property value
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
     <!-- Scripts -->
     <script src="./js/index.js"></script>
   </body>
