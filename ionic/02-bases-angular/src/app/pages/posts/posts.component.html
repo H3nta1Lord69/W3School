@@ -4,6 +4,7 @@
   <app-post
     *ngFor="let message of messages | async"
     [message]="message"
+    (clickPost)="hearClick($event)"
   ></app-post>
 
   <!-- <li *ngFor="let message of messages | async" class="list-group-item">
