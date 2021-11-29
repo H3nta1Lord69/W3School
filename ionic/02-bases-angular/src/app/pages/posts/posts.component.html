@@ -1,8 +1,8 @@
 <h1>Posts</h1>
 
 <ul class="list-group">
-  <li *ngFor="let post of [1, 1, 1, 1, 1, 1, 1]" class="list-group-item">
-    <h2>Title</h2>
-    <p>Hello there</p>
+  <li *ngFor="let message of messages | async" class="list-group-item">
+    <h2>{{ message.title }}</h2>
+    <p>{{ message.body }}</p>
   </li>
 </ul>
