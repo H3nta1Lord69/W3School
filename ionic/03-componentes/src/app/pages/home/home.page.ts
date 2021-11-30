@@ -22,7 +22,7 @@ export class HomePage implements OnInit {
       redirectTo: '/action-sheet'
     },
     {
-      icon: 'logo-apple-appstore',
+      icon: 'alert-circle-outline',
       name: 'Alert',
       redirectTo: '/alert'
     }
