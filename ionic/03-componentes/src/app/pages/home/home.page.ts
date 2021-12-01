@@ -50,6 +50,11 @@ export class HomePage implements OnInit {
       icon: 'calendar-outline',
       name: 'Datetime',
       redirectTo: '/date-time'
+    },
+    {
+      icon: 'car-outline',
+      name: 'Fab',
+      redirectTo: '/fab'
     }
   ];
 
