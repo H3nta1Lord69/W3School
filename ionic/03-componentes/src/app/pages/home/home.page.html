@@ -1,5 +1,11 @@
 <ion-header>
   <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="showMenu()" color="primary">
+        <ion-icon slot="icon-only" name="menu-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
     <ion-title color="primary">Componentes</ion-title>
   </ion-toolbar>
 </ion-header>
@@ -11,8 +17,8 @@
       routerLink="{{ c.redirectTo }}"
       detail
     >
-      <ion-icon slot="start" name="{{ c.icon }}" color="primary"></ion-icon> {{
-      c.name }}
+      <ion-icon slot="start" name="{{ c.icon }}" color="primary"></ion-icon>
+      {{ c.name }}
     </ion-item>
   </ion-list>
 
