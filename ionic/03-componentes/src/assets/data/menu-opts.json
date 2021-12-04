@@ -70,8 +70,13 @@
       "redirectTo": "/loading"
     },
     {
-      "icon": "phone-portrait-outline",
+      "icon": "tablet-portrait-outline",
       "name": "Modal",
       "redirectTo": "/modal"
+    },
+    {
+      "icon": "phone-portrait-outline",
+      "name": "Popover",
+      "redirectTo": "/popover"
     }
   ]
