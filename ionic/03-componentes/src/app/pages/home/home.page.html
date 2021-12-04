@@ -13,7 +13,7 @@
 <ion-content>
   <ion-list>
     <ion-item
-      *ngFor="let c of components"
+      *ngFor="let c of components | async"
       routerLink="{{ c.redirectTo }}"
       detail
     >
