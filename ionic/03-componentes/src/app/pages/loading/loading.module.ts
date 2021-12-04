@@ -7,13 +7,15 @@ import { IonicModule } from '@ionic/angular';
 import { LoadingPageRoutingModule } from './loading-routing.module';
 
 import { LoadingPage } from './loading.page';
+import { ComponentsModule } from '../../components/components.module'
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    LoadingPageRoutingModule
+    LoadingPageRoutingModule,
+    ComponentsModule
   ],
   declarations: [LoadingPage]
 })
