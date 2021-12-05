@@ -14,7 +14,7 @@ export class ProgressPage implements OnInit {
   ngOnInit() {
   }
 
-  rangeChange( e ) {
+  rangeChange( e ) { 
     this.percentage = e.detail.value / 100;
   }
 
