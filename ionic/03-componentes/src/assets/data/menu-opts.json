@@ -90,7 +90,7 @@
       "redirectTo": "/refresher"
     },
     {
-      "icon": "arrow-down-circle-outline",
+      "icon": "search-outline",
       "name": "Search",
       "redirectTo": "/search"
     }

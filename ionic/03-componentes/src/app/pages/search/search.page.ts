@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { DataService } from '../../services/data.service';
 
 @Component({
   selector: 'app-search',
@@ -7,9 +8,20 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchPage implements OnInit {
 
-  constructor() { }
+  albums: any[] = [];
+
+  constructor( private dataService: DataService ) { }
 
   ngOnInit() {
+    this.dataService.getAlbums().subscribe( albums => {
+      console.log(albums);
+      this.albums = albums;
+    });
+    
+  }
+
+  onSearchChange( ev ) {
+    console.log(ev.detail.value);
   }
 
 }

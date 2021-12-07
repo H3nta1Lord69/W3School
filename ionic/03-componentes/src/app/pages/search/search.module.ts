@@ -14,8 +14,7 @@ import { ComponentsModule } from '../../components/components.module';
     CommonModule,
     FormsModule,
     IonicModule,
-    SearchPageRoutingModule,
-    ComponentsModule
+    SearchPageRoutingModule
   ],
   declarations: [SearchPage]
 })
