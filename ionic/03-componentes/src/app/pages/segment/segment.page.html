@@ -1,4 +1,4 @@
-<ion-header>
+<ion-header class="ion-no-border">
   <ion-toolbar>
     <ion-buttons slot="start">
       <ion-back-button defaultHref="/" color="primary"></ion-back-button>
@@ -22,7 +22,9 @@
 
 <ion-content>
   <ion-list>
-    <ion-item *ngFor="let heroe of superHeroes | async">
+    <ion-item
+      *ngFor="let heroe of (superHeroes | async) | filtro: publisher:'publisher'"
+    >
       <ion-label>
         <h3>
           <b>{{ heroe.superhero }}</b> <small> {{ heroe.alter_ego }} </small>
