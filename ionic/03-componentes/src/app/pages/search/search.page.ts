@@ -12,16 +12,17 @@ export class SearchPage implements OnInit {
 
   constructor( private dataService: DataService ) { }
 
+  searchText: string = '';
+
   ngOnInit() {
     this.dataService.getAlbums().subscribe( albums => {
-      console.log(albums);
       this.albums = albums;
     });
     
   }
 
   onSearchChange( ev ) {
-    console.log(ev.detail.value);
+    this.searchText = ev.detail.value;
   }
 
 }
