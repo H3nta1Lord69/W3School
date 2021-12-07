@@ -27,4 +27,10 @@ export class DataService {
     
   }
 
+  getHeroes() {
+
+    return this.http.get<Components[]>('/assets/data/superheroes.json');
+    
+  }
+
 }
