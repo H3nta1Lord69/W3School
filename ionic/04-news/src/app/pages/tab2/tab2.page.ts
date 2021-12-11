@@ -29,14 +29,13 @@ export class Tab2Page implements OnInit {
     
     this.newsService.getTopHeadlinesByCategory(this.selectedCategory)
       .subscribe( articles => {
-        this.articles = [ ...this.articles, ...articles ];
+        this.articles = [ ...articles ];
     });
 
   }
 
   segmentChanged( ev: any ) {
     this.selectedCategory = ev.detail.value;
-    console.log(ev.detail.value);
     this.newsService.getTopHeadlinesByCategory(this.selectedCategory)
       .subscribe( articles => {
         this.articles = [ ...articles ];
