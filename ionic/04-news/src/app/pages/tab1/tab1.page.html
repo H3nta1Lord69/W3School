@@ -1,23 +1,28 @@
 <ion-header [translucent]="true" mode="ios" class="ion-no-border">
   <ion-toolbar>
-    <ion-title>
-      Carlos News
-    </ion-title>
+    <ion-title> Carlos News </ion-title>
   </ion-toolbar>
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ion-header 
-  collapse="condense" 
-  mode="ios" 
-  class="ion-no-border"
-  ><ion-toolbar>
+  <ion-header collapse="condense" mode="ios" class="ion-no-border"
+    ><ion-toolbar>
       <ion-title size="large">Carlos News</ion-title>
     </ion-toolbar>
   </ion-header>
 
-  <app-articles 
-    [articles]="articles"
-  ></app-articles>
+  <app-articles [articles]="articles"></app-articles>
 
+  <ion-infinite-scroll
+    threshold="25%"
+    [disabled]="true"
+    position="bottom"
+    (ionInfinite)="loadData()"
+  >
+    <ion-infinite-scroll-content
+      loadingSpinner="bubbles"
+      loadingText="Loading..."
+    >
+    </ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>
