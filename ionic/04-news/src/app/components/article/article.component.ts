@@ -40,10 +40,14 @@ export class ArticleComponent {
   }
 
   async onOpenMenu() {
+    const articleInFavorite = this.storageService.articleInFavorites(
+      this.article
+    );
+
     const btns: ActionSheetButton[] = [
       {
-        text: 'Favorite',
-        icon: 'heart-outline',
+        text: articleInFavorite ? 'Remove favorite' : 'Favorite',
+        icon: articleInFavorite ? 'heart' : 'heart-outline',
         handler: () => this.onToggleFavorite(),
       },
       {
