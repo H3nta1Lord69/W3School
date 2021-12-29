@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MoviesService } from '../../services/movies.service';
+import { Pelicula } from '../../interfaces';
 
 @Component({
   selector: 'app-tab1',
@@ -8,12 +9,15 @@ import { MoviesService } from '../../services/movies.service';
 })
 export class Tab1Page implements OnInit {
 
+  recentMovies: Pelicula[] = [];
+
   constructor( private movieService: MoviesService  ) {}
 
   ngOnInit() {
     this.movieService.getFeature()
       .subscribe( resp => {
         console.log('Resp: ', resp);
+        this.recentMovies = resp.results;
       } );
   }
 
