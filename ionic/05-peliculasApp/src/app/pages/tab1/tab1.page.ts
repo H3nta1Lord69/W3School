@@ -12,7 +12,9 @@ export class Tab1Page implements OnInit {
 
   ngOnInit() {
     this.movieService.getFeature()
-      .subscribe( console.log );
+      .subscribe( resp => {
+        console.log('Resp: ', resp);
+      } );
   }
 
 }
