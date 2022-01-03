@@ -36,7 +36,7 @@ export class MoviesService {
     const end = `${today.getFullYear()}-${stringMonth}-${lastDay}`;
 
     return this.executeQuery<RespuestaMDB>(
-      `/discover/movie?primary_release_date.gte=${init}&primary_release_date.lte=${end}`
+      `/discover/movie?primary_release_date.gte=2021-10-01&primary_release_date.lte=2021-12-31`
     );
   }
 }
