@@ -6,11 +6,5 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <ion-slides mode="ios" [options]="slideOpts">
-    <ion-slide *ngFor="let pelicula of recentMovies">
-      <ion-card>
-        <img [src]="pelicula.backdrop_path | imagen" />
-      </ion-card>
-    </ion-slide>
-  </ion-slides>
+  <app-slideshow-backdrop [movie]="recentMovies"></app-slideshow-backdrop>
 </ion-content>

@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { Pelicula } from 'src/app/interfaces';
 
 @Component({
   selector: 'app-slideshow-backdrop',
@@ -6,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slideshow-backdrop.component.scss'],
 })
 export class SlideshowBackdropComponent implements OnInit {
+  @Input() movie: Pelicula[] = [];
 
-  constructor() { }
+  slideOpts = {
+    slidesPerView: 1.1,
+    freeMode: true,
+  };
+
+  constructor() {}
 
   ngOnInit() {}
-
 }

@@ -5,25 +5,17 @@ import { Pelicula } from '../../interfaces';
 @Component({
   selector: 'app-tab1',
   templateUrl: 'tab1.page.html',
-  styleUrls: ['tab1.page.scss']
+  styleUrls: ['tab1.page.scss'],
 })
 export class Tab1Page implements OnInit {
-
   recentMovies: Pelicula[] = [];
 
-  slideOpts = {
-    slidesPerView: 1.1,
-    freeMode: true
-  }
-
-  constructor( private movieService: MoviesService  ) {}
+  constructor(private movieService: MoviesService) {}
 
   ngOnInit() {
-    this.movieService.getFeature()
-      .subscribe( resp => {
-        console.log('Resp: ', resp);
-        this.recentMovies = resp.results;
-      } );
+    this.movieService.getFeature().subscribe((resp) => {
+      console.log('Resp: ', resp);
+      this.recentMovies = resp.results;
+    });
   }
-
 }
