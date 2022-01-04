@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { Pelicula } from '../../interfaces';
 
 @Component({
   selector: 'app-slideshow-pairs',
@@ -6,9 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./slideshow-pairs.component.scss'],
 })
 export class SlideshowPairsComponent implements OnInit {
+  @Input() moviePoster: Pelicula[] = [];
 
-  constructor() { }
+  slideOpts = {
+    slidesPerView: 2.5,
+    freeMode: true,
+    spaceBetween: -30,
+  };
+
+  constructor() {}
 
   ngOnInit() {}
-
 }
