@@ -22,5 +22,8 @@
       </ion-col>
     </ion-row>
   </ion-grid>
-  <app-slideshow-pairs [moviePoster]="populars"></app-slideshow-pairs>
+  <app-slideshow-pairs
+    [moviePoster]="populars"
+    (loadMore)="loadMore()"
+  ></app-slideshow-pairs>
 </ion-content>
