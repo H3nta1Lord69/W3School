@@ -1,3 +1,4 @@
+// Angular imports
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
@@ -7,23 +8,21 @@ import { PagesModule } from './pages/pages.module';
 
 //Components
 import { AppComponent } from './app.component';
-import { LoginComponent } from './auth/login/login.component';
-import { RegisterComponent } from './auth/register/register.component';
 import { NopagefoundComponent } from './pages/nopagefound/nopagefound.component';
 import { SharedModule } from './shared/shared.module';
+import { AuthModule } from './auth/auth.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent,
-    RegisterComponent,
     NopagefoundComponent,
   ],
   imports: [
     PagesModule,
     BrowserModule,
     AppRoutingModule,
-    SharedModule
+    SharedModule,
+    AuthModule
   ],
   bootstrap: [AppComponent]
 })
