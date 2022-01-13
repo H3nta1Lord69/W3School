@@ -9,6 +9,9 @@ import { AuthRoutingModule } from './auth/auth.routing';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
 const routes: Routes = [
+  // path: '/dashboard' => PagesRouting
+  // path: '/login' => AuthRouting
+
   { path: '**', component: NopagefoundComponent}
 ];
 
