@@ -8,13 +8,12 @@ import { FirstGraphicComponent } from './first-graphic/first-graphic.component';
 const routes: Routes = [
     
     { 
-        path: '', 
+        path: 'dashboard', 
         component: PagesComponent,
         children: [
-          { path: 'dashboard', component: DashboardComponent},
+          { path: '', component: DashboardComponent},
           { path: 'progress', component: ProgressComponent},
           { path: 'first_graphic', component: FirstGraphicComponent},
-          { path: '', redirectTo: '/dashboard', pathMatch: 'full'}
         ]
     },
     //{ path: 'path/:routeParam', component: MyComponent },
