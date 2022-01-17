@@ -11,11 +11,13 @@ import { AppComponent } from './app.component';
 import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 import { SharedModule } from './shared/shared.module';
 import { AuthModule } from './auth/auth.module';
+import { IncreaserComponent } from './components/increaser/increaser.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NopagefoundComponent,
+    IncreaserComponent,
   ],
   imports: [
     PagesModule,
