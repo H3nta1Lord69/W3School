@@ -1,12 +1,10 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-
-
+import { IncreaserComponent } from './increaser/increaser.component';
 
 @NgModule({
-  declarations: [],
-  imports: [
-    CommonModule
-  ]
+  declarations: [IncreaserComponent],
+  exports: [IncreaserComponent],
+  imports: [CommonModule],
 })
-export class ComponentsModule { }
+export class ComponentsModule {}
