@@ -1,16 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-increaser',
   templateUrl: './increaser.component.html',
-  styles: [
-  ]
+  styles: [],
 })
-export class IncreaserComponent implements OnInit {
+export class IncreaserComponent {
+  progress: number = 70;
 
-  constructor() { }
-
-  ngOnInit(): void {
+  get getPercentage() {
+    return `${this.progress}%`;
   }
 
+  changeValue(value: number) {
+    if (this.progress >= 100 && value >= 0) {
+      return (this.progress = 100);
+    }
+
+    if (this.progress <= 0 && value < 0) {
+      return (this.progress = 0);
+    }
+
+    return (this.progress = this.progress + value);
+  }
 }
