@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-increaser',
@@ -6,11 +6,7 @@ import { Component } from '@angular/core';
   styles: [],
 })
 export class IncreaserComponent {
-  progress: number = 70;
-
-  get getPercentage() {
-    return `${this.progress}%`;
-  }
+  @Input() progress: number = 70;
 
   changeValue(value: number) {
     if (this.progress >= 100 && value >= 0) {
