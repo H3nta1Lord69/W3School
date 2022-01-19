@@ -21,7 +21,7 @@ export class IncreaserComponent {
       return (this.progress = 0);
     }
 
-    this.valueOutput.emit(this.progress);
-    return (this.progress = this.progress + value);
+    this.progress = this.progress + value;
+    return this.valueOutput.emit(this.progress);
   }
 }

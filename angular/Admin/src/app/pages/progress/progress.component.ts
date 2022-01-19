@@ -18,8 +18,4 @@ export class ProgressComponent {
     return `${ this.s_progress }%`;
   }
 
-  changeChildComponent( ev: number ) {
-    console.log("Hey!!!!!", ev);
-  }
-
 }

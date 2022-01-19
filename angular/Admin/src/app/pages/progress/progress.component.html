@@ -34,7 +34,7 @@
     <div class="card">
       <div class="card-body">
         <!-- Input -->
-        <app-increaser (valueOutput)="changeChildComponent( $event )" [value]="15"></app-increaser>
+        <app-increaser (valueOutput)="f_progress = $event" [value]="f_progress"></app-increaser>
       </div>
     </div>
   </div>
@@ -42,7 +42,7 @@
     <div class="card">
       <div class="card-body">
       <!-- Input -->
-      <app-increaser></app-increaser>
+      <app-increaser (valueOutput)="s_progress = $event" [value]="s_progress"></app-increaser>
     </div>
   </div>
 </div>
