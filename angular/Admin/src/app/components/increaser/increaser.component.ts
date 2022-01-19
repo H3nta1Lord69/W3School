@@ -7,6 +7,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 })
 export class IncreaserComponent {
   @Input('value') progress: number = 70;
+  @Input() btnClass: string = 'btn btn-primary';
 
   @Output() valueOutput: EventEmitter<number> = new EventEmitter();
 
