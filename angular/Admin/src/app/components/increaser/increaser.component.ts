@@ -6,7 +6,7 @@ import { Component, Input } from '@angular/core';
   styles: [],
 })
 export class IncreaserComponent {
-  @Input() progress: number = 70;
+  @Input('value') progress: number = 70;
 
   changeValue(value: number) {
     if (this.progress >= 100 && value >= 0) {
