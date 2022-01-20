@@ -1,6 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
-import { ChartData, Color } from 'chart.js';
+import { ChartData, ChartType } from 'chart.js';
 
 @Component({
   selector: 'app-doughnut',
@@ -9,21 +9,24 @@ import { ChartData, Color } from 'chart.js';
 })
 export class DoughnutComponent {
 
+  @Input() title: string = 'Undefined';
+
   // constructor() { }
 
   // ngOnInit(): void {
   // }
 
   // Doughnut
-  public doughnutChartLabels: string[] = [ 'Download Sales', 'In-Store Sales', 'Mail-Order Sales' ];
-  public doughnutChartData: ChartData<'doughnut'> = {
+  @Input('labels') doughnutChartLabels: string[] = [ 'f_label', 's_label', 't_label' ];
+  @Input('data') doughnutChartData: ChartData<'doughnut'> = {
     labels: this.doughnutChartLabels,
     datasets: [
-      { data: [ 350, 450, 100 ] }
+      { data: [ 100, 100, 100 ] }
     ]
   };
 
-  // events
+  public doughnutChartType: ChartType = 'doughnut';
+
   public chartClicked({ event, active }: { event: MouseEvent, active: {}[] }): void {
     console.log(event, active);
   }
@@ -31,9 +34,5 @@ export class DoughnutComponent {
   public chartHovered({ event, active }: { event: MouseEvent, active: {}[] }): void {
     console.log(event, active);
   }
-
-  public colors: Color[] = [
-    //{ backgroundColor: [ '#6857E6', '#009FEE', '#F02059' ] }
-  ];
 
 }
