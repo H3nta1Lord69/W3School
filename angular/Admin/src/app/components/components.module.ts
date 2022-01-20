@@ -5,9 +5,10 @@ import { FormsModule } from '@angular/forms';
 
 // Components
 import { IncreaserComponent } from './increaser/increaser.component';
+import { DoughnutComponent } from './doughnut/doughnut.component';
 
 @NgModule({
-  declarations: [IncreaserComponent],
+  declarations: [IncreaserComponent, DoughnutComponent],
   exports: [IncreaserComponent],
   imports: [CommonModule, FormsModule],
 })
