@@ -31,6 +31,7 @@ import { AccountSettingsComponent } from './account-settings/account-settings.co
     ProgressComponent,
     FirstGraphicComponent,
     PagesComponent,
+    AccountSettingsComponent,
   ],
   imports: [
     CommonModule,
