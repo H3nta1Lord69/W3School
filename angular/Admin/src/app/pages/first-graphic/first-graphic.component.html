@@ -1,1 +1,35 @@
-<p>first-graphic works!</p>
+<div class="row">
+    <div class="col-6">
+        <app-doughnut 
+            title="Sales"
+            [labels]="label1"
+            [data]="data1"
+        ></app-doughnut>
+    </div>
+
+    <div class="col-6">
+        <app-doughnut 
+            title="Professions"
+            [labels]="label2"
+            [data]="data2"
+        ></app-doughnut>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-6">
+        <app-doughnut 
+            title="Incomings"
+            [labels]="label3"
+            [data]="data3"
+        ></app-doughnut>
+    </div>
+
+    <div class="col-6">
+        <app-doughnut 
+            title="Materials"
+            [labels]="label4"
+            [data]="data4"
+        ></app-doughnut>
+    </div>
+</div>
