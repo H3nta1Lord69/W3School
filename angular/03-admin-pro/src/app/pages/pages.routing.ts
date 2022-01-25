@@ -8,6 +8,7 @@ import { ProgressComponent } from './progress/progress.component';
 import { FirstGraphicComponent } from './first-graphic/first-graphic.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromisesComponent } from './promises/promises.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
       { path: 'first-graphic', component: FirstGraphicComponent },
       { path: 'account-settings', component: AccountSettingsComponent },
       { path: 'promises', component: PromisesComponent },
+      { path: 'rxjs', component: RxjsComponent },
     ],
   },
   //{ path: 'path/:routeParam', component: MyComponent },
