@@ -7,6 +7,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProgressComponent } from './progress/progress.component';
 import { FirstGraphicComponent } from './first-graphic/first-graphic.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
+import { PromisesComponent } from './promises/promises.component';
 
 const routes: Routes = [
   {
@@ -17,6 +18,7 @@ const routes: Routes = [
       { path: 'progress', component: ProgressComponent },
       { path: 'first-graphic', component: FirstGraphicComponent },
       { path: 'account-settings', component: AccountSettingsComponent },
+      { path: 'promises', component: PromisesComponent },
     ],
   },
   //{ path: 'path/:routeParam', component: MyComponent },

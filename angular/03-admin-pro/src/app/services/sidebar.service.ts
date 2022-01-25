@@ -21,6 +21,10 @@ export class SidebarService {
           title: 'Graphics',
           url: 'first-graphic',
         },
+        {
+          title: 'Promises',
+          url: 'promises',
+        },
       ],
     },
   ];
