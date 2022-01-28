@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { Observable } from 'rxjs';
+import { retry } from 'rxjs/operators';
 
 @Component({
   selector: 'app-rxjs',
@@ -8,8 +9,9 @@ import { Observable } from 'rxjs';
 })
 export class RxjsComponent {
   constructor() {
+    let i = -1;
+
     const obs$ = new Observable((observer) => {
-      let i = -1;
       const interval = setInterval(() => {
         i++;
         observer.next(i);
@@ -25,7 +27,7 @@ export class RxjsComponent {
       }, 1000);
     });
 
-    obs$.subscribe(
+    obs$.pipe(retry()).subscribe(
       (value) => console.log('Subs:', value),
       (err) => console.warn('Error:', err),
       () => console.info('Obs terminado')
