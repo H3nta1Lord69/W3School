@@ -1,4 +1,5 @@
 const express = require("express");
+require("dotenv").config();
 const { dbConnection } = require("./database/config");
 
 // Create server
@@ -16,6 +17,6 @@ app.get("/", (req, res) => {
 });
 
 // Server running on 8080 port
-app.listen(8080, () => {
-  console.log("Server running on port " + 8080);
+app.listen(process.env.PORT, () => {
+  console.log("Server running on port " + process.env.PORT);
 });

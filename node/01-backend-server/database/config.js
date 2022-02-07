@@ -2,9 +2,7 @@ const mongoose = require("mongoose");
 
 const dbConnection = async () => {
   try {
-    await mongoose.connect(
-      "mongodb+srv://HL69:Baj69420@cluster0.gnmfk.mongodb.net/hospitaldb"
-    );
+    await mongoose.connect(process.env.DB_CNN);
     console.log("Db Online");
   } catch (error) {
     console.log(error);
