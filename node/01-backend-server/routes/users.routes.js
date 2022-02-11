@@ -3,14 +3,10 @@
  */
 
 const { Router } = require("express");
+const { getUsers } = require("../controller/users.controller");
 
 const router = Router();
 
-router.get("/", (req, res) => {
-  res.status(200).json({
-    ok: true,
-    users: [],
-  });
-});
+router.get("/", getUsers);
 
 module.exports = router;
