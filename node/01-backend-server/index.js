@@ -15,17 +15,18 @@ app.use(cors());
 dbConnection();
 
 // Routes
-app.get("/api/users", (req, res) => {
-  res.status(200).json({
-    ok: true,
-    users: [
-      {
-        id: 123,
-        name: "Carl",
-      },
-    ],
-  });
-});
+app.use("/api/users", require("./routes/users.routes"));
+// app.get("/api/users", (req, res) => {
+//   res.status(200).json({
+//     ok: true,
+//     users: [
+//       {
+//         id: 123,
+//         name: "Carl",
+//       },
+//     ],
+//   });
+// });
 
 // Server running on 8080 port
 app.listen(process.env.PORT, () => {
