@@ -15,10 +15,15 @@ app.use(cors());
 dbConnection();
 
 // Routes
-app.get("/", (req, res) => {
+app.get("/api/users", (req, res) => {
   res.status(200).json({
     ok: true,
-    msg: "Holiwi",
+    users: [
+      {
+        id: 123,
+        name: "Carl",
+      },
+    ],
   });
 });
 
