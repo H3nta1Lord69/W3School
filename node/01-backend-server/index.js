@@ -11,6 +11,9 @@ const app = express();
 // CORS
 app.use(cors());
 
+// Body parser
+app.use(express.json());
+
 // Database
 dbConnection();
 
