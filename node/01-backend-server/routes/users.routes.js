@@ -9,6 +9,7 @@ const {
   getUsers,
   createUsers,
   updateUsers,
+  deleteUsers,
 } = require("../controller/users.controller");
 
 const router = Router();
@@ -35,5 +36,7 @@ router.put(
   ],
   updateUsers
 );
+
+router.delete("/:id", deleteUsers);
 
 module.exports = router;
