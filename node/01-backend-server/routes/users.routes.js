@@ -11,10 +11,11 @@ const {
   updateUsers,
   deleteUsers,
 } = require("../controller/users.controller");
+const { validateJwt } = require("../middlewares/validate-jwt");
 
 const router = Router();
 
-router.get("/", getUsers);
+router.get("/", validateJwt, getUsers);
 router.post(
   "/",
   [
