@@ -20,4 +20,4 @@ HospitalSchema.method("toJSON", function () {
   return object;
 });
 
-module.exports = model("User", HospitalSchema);
+module.exports = model("Hospital", HospitalSchema);
