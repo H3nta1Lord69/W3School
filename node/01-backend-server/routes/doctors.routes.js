@@ -22,6 +22,7 @@ router.post(
   [
     validateJwt,
     check("name", "Hospital name is mandatory.").not().isEmpty(),
+    check("hospital", "Id Hospital must be valid.").isMongoId(),
     validateFields,
   ],
   createDoctors
