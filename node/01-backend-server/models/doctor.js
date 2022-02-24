@@ -26,4 +26,4 @@ DoctorSchema.method("toJSON", function () {
   return object;
 });
 
-module.exports = model("User", DoctorSchema);
+module.exports = model("Doctor", DoctorSchema);
