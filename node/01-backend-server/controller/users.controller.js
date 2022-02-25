@@ -10,10 +10,12 @@ const getUsers = async (req, res) => {
     .skip(from)
     .limit(5);
 
+  const total = await User.count();
+
   res.status(200).json({
     ok: true,
     user,
-    uid: req.uid,
+    total,
   });
 };
 
