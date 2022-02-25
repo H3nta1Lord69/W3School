@@ -4,7 +4,11 @@ const res = require("express/lib/response");
 const { generateJWT } = require("../helpers/jwt");
 
 const getUsers = async (req, res) => {
-  const user = await User.find();
+  const from = Number(req.query.from) || 0;
+
+  const user = await User.find({}, "name email role google")
+    .skip(from)
+    .limit(5);
 
   res.status(200).json({
     ok: true,
