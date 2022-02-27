@@ -1,5 +1,5 @@
 /**
- * Route: api/general/:search
+ * Route: api/general/
  */
 
 const { Router } = require("express");
@@ -11,5 +11,7 @@ const { validateJwt } = require("../middlewares/validate-jwt");
 const router = Router();
 
 router.get("/:search", validateJwt, getAllData);
+
+router.get("collection/:table/:search", validateJwt, getAllData);
 
 module.exports = router;
