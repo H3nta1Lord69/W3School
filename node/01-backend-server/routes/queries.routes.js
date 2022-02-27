@@ -15,6 +15,6 @@ const router = Router();
 
 router.get("/:search", validateJwt, getAllData);
 
-router.get("collection/:table/:search", validateJwt, getCollectionData);
+router.get("/collection/:table/:search", validateJwt, getCollectionData);
 
 module.exports = router;
