@@ -52,6 +52,8 @@ const fileUpload = (req, res) => {
       });
     }
 
+    // Update database
+
     res.status(200).json({
       ok: true,
       msg: "File uploaded correctly",
