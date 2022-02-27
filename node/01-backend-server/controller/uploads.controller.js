@@ -1,4 +1,5 @@
 const { v4: uuidv4 } = require("uuid");
+const { updateImage } = require("../helpers/update-image");
 
 const fileUpload = (req, res) => {
   const type = req.params.type;
@@ -53,6 +54,7 @@ const fileUpload = (req, res) => {
     }
 
     // Update database
+    updateImage(type, id, nameFile);
 
     res.status(200).json({
       ok: true,
