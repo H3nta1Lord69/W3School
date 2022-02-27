@@ -23,6 +23,7 @@ app.use("/api/hospitals", require("./routes/hospitals.routes"));
 app.use("/api/doctors", require("./routes/doctors.routes"));
 app.use("/api/login", require("./routes/auth.routes"));
 app.use("/api/general", require("./routes/queries.routes"));
+app.use("/api/uploads", require("./routes/upload.routes"));
 
 // Server running on 8080 port
 app.listen(process.env.PORT, () => {
