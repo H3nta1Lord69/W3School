@@ -4,9 +4,29 @@ const User = require("../models/users");
 const Doctor = require("../models/doctor");
 const Hospital = require("../models/hospital");
 
+const deleteImage = (path) => {
+  if (fs.existsSync(path)) {
+    // Delete old image
+    fs.unlinkSync(path);
+  }
+};
+
 const updateImage = async (type, id, nameFile) => {
+  let oldPath = "";
   switch (type) {
     case "hospitals":
+      const hospital = await Hospital.findById(id);
+      if (!hospital) {
+        console.log(`Hospital doesn't exists`);
+        return false;
+      }
+
+      oldPath = `./uploads/hospitals/${hospital.img}`;
+      deleteImage(oldPath);
+
+      hospital.img = nameFile;
+      await hospital.save();
+      return true;
       break;
 
     case "doctors":
@@ -16,11 +36,8 @@ const updateImage = async (type, id, nameFile) => {
         return false;
       }
 
-      const oldPath = `./uploads/doctors/${doctor.img}`;
-      if (fs.existsSync(oldPath)) {
-        // Delete old image
-        fs.unlinkSync(oldPath);
-      }
+      oldPath = `./uploads/doctors/${doctor.img}`;
+      deleteImage(oldPath);
 
       doctor.img = nameFile;
       await doctor.save();
@@ -28,6 +45,18 @@ const updateImage = async (type, id, nameFile) => {
       break;
 
     case "users":
+      const user = await User.findById(id);
+      if (!user) {
+        console.log(`User doesn't exists`);
+        return false;
+      }
+
+      oldPath = `./uploads/users/${user.img}`;
+      deleteImage(oldPath);
+
+      user.img = nameFile;
+      await user.save();
+      return true;
       break;
 
     default:
