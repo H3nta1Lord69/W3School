@@ -8,6 +8,6 @@ const { validateJwt } = require("../middlewares/validate-jwt");
 
 const router = Router();
 
-router.get("/:search", validateJwt);
+router.get("/:type/:id", validateJwt);
 
 module.exports = router;
