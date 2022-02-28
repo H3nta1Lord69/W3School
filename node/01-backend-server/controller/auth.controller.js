@@ -1,6 +1,7 @@
 const bcryptjs = require("bcryptjs");
 const { generateJWT } = require("../helpers/jwt");
 const User = require("../models/users");
+const { googleVerify } = require("../helpers/google-verify");
 
 const login = async (req, res) => {
   const { email, password } = req.body;
@@ -42,11 +43,26 @@ const login = async (req, res) => {
   }
 };
 
-const googleSignIn = (req, res) => {
-  res.status(200).json({
-    ok: true,
-    msg: "Login with google sucesful",
-  });
+const googleSignIn = async (req, res) => {
+  const googleToken = req.body.token;
+
+  try {
+    const { name, email, picture } = await googleVerify(googleToken);
+
+    res.status(200).json({
+      ok: true,
+      msg: "Login with google succesful",
+      name,
+      email,
+      picture,
+    });
+  } catch (error) {
+    res.status(401).json({
+      ok: false,
+      msg: "Invalid token",
+      error,
+    });
+  }
 };
 
 // Module exports
