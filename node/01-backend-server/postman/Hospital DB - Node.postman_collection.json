@@ -35,6 +35,36 @@
 			"response": []
 		},
 		{
+			"name": "Login Google",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"token\": \"eyJhbGciOiJSUzI1NiIsImtpZCI6IjNkZDZjYTJhODFkYzJmZWE4YzM2NDI0MzFlN2UyOTZkMmQ3NWI0NDYiLCJ0eXAiOiJKV1QifQ.eyJpc3MiOiJhY2NvdW50cy5nb29nbGUuY29tIiwiYXpwIjoiODIxNTAzMzY3MDYtY2xqdmYyZXMyZTJrb29xajRtZ25vbWxlMHR0M2c3bWcuYXBwcy5nb29nbGV1c2VyY29udGVudC5jb20iLCJhdWQiOiI4MjE1MDMzNjcwNi1jbGp2ZjJlczJlMmtvb3FqNG1nbm9tbGUwdHQzZzdtZy5hcHBzLmdvb2dsZXVzZXJjb250ZW50LmNvbSIsInN1YiI6IjEwOTkxNzQwMTA1NjA4OTIyNDY3MSIsImVtYWlsIjoiY2FybG9zLnNhZW56Lmc5OUBnbWFpbC5jb20iLCJlbWFpbF92ZXJpZmllZCI6dHJ1ZSwiYXRfaGFzaCI6IkRKa0lPT05JQmNLQTFTNWFZWXl6enciLCJuYW1lIjoiQ2FybG9zIEdhcmNpYSBTYWVueiIsInBpY3R1cmUiOiJodHRwczovL2xoMy5nb29nbGV1c2VyY29udGVudC5jb20vYS0vQU9oMTRHajd2UUFQZXNQcWFFLWNfeEZleUdxTnFBLU9UelZTeGxJaVpoUlVvZz1zOTYtYyIsImdpdmVuX25hbWUiOiJDYXJsb3MiLCJmYW1pbHlfbmFtZSI6IkdhcmNpYSBTYWVueiIsImxvY2FsZSI6ImVzIiwiaWF0IjoxNjQ2MDEwMDIzLCJleHAiOjE2NDYwMTM2MjMsImp0aSI6IjZiYjlhZWI2YzNkMzliNGQzYjVlODUwNmU2NWNmOGYwZDUyYTFiYzQifQ.i7qPPEu0MViaBBGSbHgdBdTdgKDw7hNy0cui0b52ZHk9k_799yC3jh3TaUszD2ZuCroTujqegjD2tFB1lvwV33Z9Jl3C3fkAkGwSJJrjezKYYgIMIyQKYfy8NopVIwJsgMCHRHrV4cqN4peYB_Gqcu-Z2FrYIqUnCxfUvM9VukovT3weUvHhE_SeQMr8oa46U4MwpVYjrZSOlFJdOOZrGqcohXi8DG_EmZbapIT5AN3kCLw4DHNH3rkos93BjCWQz0fQT41hc7MsR5H8uE4MjdSFP29QXHEVpicWtSAt1Xv5pIGHxuGtpioB3jk68x-0OKhJRp5ExfHdeQ7y4au55A\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/login/google",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login",
+						"google"
+					]
+				}
+			},
+			"response": []
+		},
+		{
 			"name": "General Get",
 			"protocolProfileBehavior": {
 				"disableBodyPruning": true
@@ -123,12 +153,7 @@
 							"type": "file",
 							"src": "/G:/Others/DC Mm/crocodile.png"
 						}
-					],
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					]
 				},
 				"url": {
 					"raw": "http://localhost:8080/api/uploads/users/62185ccc51519670df93b760",
@@ -169,15 +194,10 @@
 							"type": "file",
 							"src": "/G:/Others/DC Mm/crocodile.png"
 						}
-					],
-					"options": {
-						"raw": {
-							"language": "json"
-						}
-					}
+					]
 				},
 				"url": {
-					"raw": "http://localhost:8080/api/uploads/doctors/e426cae5-dc60-4911-b86c-baa31ca2473d2.png",
+					"raw": "http://localhost:8080/api/uploads/doctors/e426cae5-dc60-4911-b86c-ba31ca2473d2.png",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -187,7 +207,7 @@
 						"api",
 						"uploads",
 						"doctors",
-						"e426cae5-dc60-4911-b86c-baa31ca2473d2.png"
+						"e426cae5-dc60-4911-b86c-ba31ca2473d2.png"
 					]
 				}
 			},
