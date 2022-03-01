@@ -29,11 +29,40 @@ const createHospitals = async (req, res) => {
   }
 };
 
-const updateHospitals = (req, res) => {
-  res.json({
-    ok: true,
-    msg: "updateHospitals",
-  });
+const updateHospitals = async (req, res) => {
+  const id = req.params.id;
+  const uid = req.uid;
+
+  try {
+    const hospital = await Hospital.findById(id);
+
+    if (!hospital) {
+      res.status(404).json({
+        ok: true,
+        msg: "We can't find the hospital",
+      });
+    }
+
+    const changes = {
+      ...req.body,
+      user: uid,
+    };
+
+    const updatedHospital = await Hospital.findByIdAndUpdate(id, changes, {
+      new: true,
+    });
+
+    res.json({
+      ok: true,
+      hospital: updatedHospital,
+    });
+  } catch (error) {
+    res.status(500).json({
+      ok: true,
+      msg: "Contact an administrator",
+      error,
+    });
+  }
 };
 
 const deleteHospitals = (req, res) => {
