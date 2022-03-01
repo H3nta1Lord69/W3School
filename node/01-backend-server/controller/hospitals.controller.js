@@ -65,11 +65,32 @@ const updateHospitals = async (req, res) => {
   }
 };
 
-const deleteHospitals = (req, res) => {
-  res.json({
-    ok: true,
-    msg: "deleteHospitals",
-  });
+const deleteHospitals = async (req, res) => {
+  const id = req.params.id;
+
+  try {
+    const hospital = await Hospital.findById(id);
+
+    if (!hospital) {
+      res.status(404).json({
+        ok: true,
+        msg: "We can't find the hospital",
+      });
+    }
+
+    await Hospital.findByIdAndDelete(id);
+
+    res.json({
+      ok: true,
+      msg: "Hospital deleted",
+    });
+  } catch (error) {
+    res.status(500).json({
+      ok: false,
+      msg: "Contact an administrator",
+      error,
+    });
+  }
 };
 
 module.exports = {
