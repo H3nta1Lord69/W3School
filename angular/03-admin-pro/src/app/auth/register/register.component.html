@@ -13,7 +13,9 @@
         <form
           class="form-horizontal form-material"
           id="loginform"
-          action="index.html"
+          autocomplete="off"
+          [formGroup]="registerForm"
+          (ngSubmit)="createUser()"
         >
           <h3 class="box-title m-b-20">Sign Up</h3>
           <div class="form-group">
@@ -23,6 +25,7 @@
                 type="text"
                 required=""
                 placeholder="Name"
+                formControlName="name"
               />
             </div>
           </div>
@@ -31,7 +34,7 @@
               <input
                 class="form-control"
                 type="text"
-                required=""
+                formControlName="email"
                 placeholder="Email"
               />
             </div>
@@ -41,7 +44,7 @@
               <input
                 class="form-control"
                 type="password"
-                required=""
+                formControlName="password"
                 placeholder="Password"
               />
             </div>
@@ -51,7 +54,7 @@
               <input
                 class="form-control"
                 type="password"
-                required=""
+                formControlName="password2"
                 placeholder="Confirm Password"
               />
             </div>
@@ -63,6 +66,7 @@
                   id="checkbox-signup"
                   type="checkbox"
                   class="filled-in chk-col-light-blue"
+                  formControlName="terms"
                 />
                 <label for="checkbox-signup">
                   I agree to all <a href="javascript:void(0)">Terms</a></label
