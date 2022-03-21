@@ -95,6 +95,7 @@
           </div>
           <div class="row">
             <div class="col text-danger">
+              <p *ngIf="passwordValidation()">* Passwords doesn't match</p>
               <p *ngIf="acceptTerms()">
                 * You must accept the Terms and Conditions
               </p>
