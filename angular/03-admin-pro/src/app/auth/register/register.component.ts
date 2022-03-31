@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-register',
@@ -11,27 +12,34 @@ export class RegisterComponent {
 
   public registerForm = this.fb.group(
     {
-      name: ['', [Validators.required]],
-      email: ['', [Validators.required, Validators.email]],
-      password: ['', [Validators.required]],
-      password2: ['', [Validators.required]],
-      terms: [false, [Validators.required]],
+      name: ['Carls', [Validators.required]],
+      email: ['carls@carls.com', [Validators.required, Validators.email]],
+      password: ['123qwe', [Validators.required]],
+      password2: ['123qwe', [Validators.required]],
+      terms: [true, [Validators.required]],
     },
     { validators: this.samePasswords('password', 'password2') }
   );
 
-  constructor(private fb: FormBuilder) {}
+  constructor(private fb: FormBuilder, private userService: UserService) {}
 
   createUser() {
     this.formSubmitted = true;
-    console.log(this.registerForm.value);
 
-    if (this.registerForm.valid) {
-      console.log('Posting user form');
-    } else {
-      console.log('User form invalid');
-      console.log(this.registerForm.valid);
+    if (this.registerForm.invalid) {
+      return;
     }
+
+    // Create user
+    this.userService.createUser(this.registerForm.value).subscribe(
+      (response) => {
+        console.log('User created!');
+        console.log(response);
+      },
+      (err) => {
+        console.log(err.error.msg);
+      }
+    );
   }
 
   fieldInvalid(field: string): boolean {
