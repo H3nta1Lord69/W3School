@@ -3,6 +3,8 @@ import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
+declare const gapi: any;
+
 import { LoginForm } from 'src/app/interfaces/login-form.interface';
 import { UserService } from 'src/app/services/user.service';
 
@@ -29,7 +31,9 @@ export class LoginComponent implements OnInit {
     private userService: UserService
   ) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.renderButton();
+  }
 
   login() {
     this.formSubmitted = true;
@@ -46,5 +50,31 @@ export class LoginComponent implements OnInit {
         Swal.fire('Error', err.error.msg, 'error');
       }
     );
+  }
+
+  onSuccess(googleUser: any) {
+    console.log('Logged in as: ' + googleUser.getBasicProfile().getName());
+    var id_token = googleUser.getAuthResponse().id_token;
+    console.log(id_token);
+  }
+
+  onFailure(error: any) {
+    console.log(error);
+  }
+
+  revokeAllScopes() {
+    gapi.auth2.getAuthInstance().disconnect();
+  }
+
+  renderButton() {
+    gapi.signin2.render('my-signin2', {
+      scope: 'profile email',
+      width: 240,
+      height: 50,
+      longtitle: true,
+      theme: 'dark',
+      onsuccess: this.onSuccess,
+      onfailure: this.onFailure,
+    });
   }
 }
