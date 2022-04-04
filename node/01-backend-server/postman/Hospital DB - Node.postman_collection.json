@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "04f883b2-41d3-4789-97b1-0817d39bffa2",
+		"_postman_id": "f686a491-0e41-4bdc-9e0f-dc080f36d58f",
 		"name": "Hospital DB - Node",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
@@ -59,6 +59,33 @@
 						"api",
 						"login",
 						"google"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Renew Token",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-token",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1aWQiOiI2MjBkZGJiNTJjNTQ1YTdjYTk3YmVmNGMiLCJpYXQiOjE2NDkxMDMwMzAsImV4cCI6MTY0OTEzMTgzMH0.AnNo2puRd7rgpRtJLLTrzGC1ZYkOpbfgXMG-vxjZbBg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/api/login/renew",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"login",
+						"renew"
 					]
 				}
 			},
