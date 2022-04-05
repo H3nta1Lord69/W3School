@@ -46,6 +46,8 @@ export class LoginComponent implements OnInit {
         } else {
           localStorage.removeItem('email');
         }
+
+        this.router.navigate(['/dashboard']);
       },
       (err) => {
         Swal.fire('Error', err.error.msg, 'error');
@@ -88,7 +90,9 @@ export class LoginComponent implements OnInit {
       (googleUser: any) => {
         const id_token = googleUser.getAuthResponse().id_token;
         // user signed in
-        this.userService.loginGoogle(id_token).subscribe();
+        this.userService
+          .loginGoogle(id_token)
+          .subscribe((resp) => this.router.navigate(['/dashboard']));
 
         // TODO: Move to dashboard
       },
