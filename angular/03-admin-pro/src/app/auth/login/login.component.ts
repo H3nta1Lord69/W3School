@@ -1,11 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, NgZone, OnInit } from '@angular/core';
 import { FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import Swal from 'sweetalert2';
 
 declare const gapi: any;
 
-import { LoginForm } from 'src/app/interfaces/login-form.interface';
 import { UserService } from 'src/app/services/user.service';
 
 @Component({
@@ -29,7 +28,8 @@ export class LoginComponent implements OnInit {
   constructor(
     private router: Router,
     private fb: FormBuilder,
-    private userService: UserService
+    private userService: UserService,
+    private ngZone: NgZone
   ) {}
 
   ngOnInit(): void {
@@ -90,9 +90,11 @@ export class LoginComponent implements OnInit {
       (googleUser: any) => {
         const id_token = googleUser.getAuthResponse().id_token;
         // user signed in
-        this.userService
-          .loginGoogle(id_token)
-          .subscribe((resp) => this.router.navigate(['/dashboard']));
+        this.userService.loginGoogle(id_token).subscribe((resp) => {
+          this.ngZone.run(() => {
+            this.router.navigate(['/dashboard']);
+          });
+        });
 
         // TODO: Move to dashboard
       },
