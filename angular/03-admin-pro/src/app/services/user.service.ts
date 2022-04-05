@@ -31,12 +31,15 @@ export class UserService {
   public auth2: any;
 
   googleInit() {
-    gapi.load('auth2', () => {
-      // Retrieve the singleton for the GoogleAuth library and set up the client.
-      this.auth2 = gapi.auth2.init({
-        client_id:
-          '82150336706-cljvf2es2e2kooqj4mgnomle0tt3g7mg.apps.googleusercontent.com',
-        cookiepolicy: 'single_host_origin',
+    return new Promise<void>((resolve) => {
+      gapi.load('auth2', () => {
+        // Retrieve the singleton for the GoogleAuth library and set up the client.
+        this.auth2 = gapi.auth2.init({
+          client_id:
+            '82150336706-cljvf2es2e2kooqj4mgnomle0tt3g7mg.apps.googleusercontent.com',
+          cookiepolicy: 'single_host_origin',
+        });
+        resolve();
       });
     });
   }
