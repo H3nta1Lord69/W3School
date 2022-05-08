@@ -11,6 +11,7 @@ import { environment } from 'src/environments/environment';
 import { RegisterForm } from '../interfaces/register-form.interface';
 import { LoginForm } from '../interfaces/login-form.interface';
 import { Router } from '@angular/router';
+import { User } from '../models/user.model';
 
 const base_url = environment.base_url;
 
@@ -20,6 +21,9 @@ declare const gapi: any;
   providedIn: 'root',
 })
 export class UserService {
+  public auth2: any;
+  public user?: User;
+
   constructor(
     private http: HttpClient,
     private router: Router,
@@ -27,8 +31,6 @@ export class UserService {
   ) {
     this.googleInit();
   }
-
-  public auth2: any;
 
   googleInit() {
     return new Promise<void>((resolve) => {
@@ -65,6 +67,10 @@ export class UserService {
       })
       .pipe(
         tap((resp: any) => {
+          const { email, google, name, role, img, uid } = resp.user;
+          this.user = new User(name, email, '', img, google, role, uid);
+
+          this.user.printUser();
           localStorage.setItem('token', resp['token']);
         }),
         map((resp: any) => true),

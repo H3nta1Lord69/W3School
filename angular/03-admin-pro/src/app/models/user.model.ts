@@ -8,4 +8,6 @@ export class User {
     public role?: string,
     public uid?: string
   ) {}
+
+  printUser() {}
 }
