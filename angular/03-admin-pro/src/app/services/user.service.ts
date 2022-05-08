@@ -70,7 +70,6 @@ export class UserService {
           const { email, google, name, role, img, uid } = resp.user;
           this.user = new User(name, email, '', img, google, role, uid);
 
-          this.user.printUser();
           localStorage.setItem('token', resp['token']);
         }),
         map((resp: any) => true),
