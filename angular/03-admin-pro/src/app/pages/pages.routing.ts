@@ -12,6 +12,7 @@ import { FirstGraphicComponent } from './first-graphic/first-graphic.component';
 import { AccountSettingsComponent } from './account-settings/account-settings.component';
 import { PromisesComponent } from './promises/promises.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { ProfileComponent } from './profile/profile.component';
 
 const routes: Routes = [
   {
@@ -21,9 +22,9 @@ const routes: Routes = [
     children: [
       { path: '', component: DashboardComponent, data: { title: 'Dashboard' } },
       {
-        path: 'progress',
-        component: ProgressComponent,
-        data: { title: 'Progress bar' },
+        path: 'account-settings',
+        component: AccountSettingsComponent,
+        data: { title: 'Account settings' },
       },
       {
         path: 'first-graphic',
@@ -31,9 +32,14 @@ const routes: Routes = [
         data: { title: 'First graphic' },
       },
       {
-        path: 'account-settings',
-        component: AccountSettingsComponent,
-        data: { title: 'Account settings' },
+        path: 'profile',
+        component: ProfileComponent,
+        data: { title: 'Profile' },
+      },
+      {
+        path: 'progress',
+        component: ProgressComponent,
+        data: { title: 'Progress bar' },
       },
       {
         path: 'promises',

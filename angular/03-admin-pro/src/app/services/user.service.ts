@@ -66,13 +66,13 @@ export class UserService {
         },
       })
       .pipe(
-        tap((resp: any) => {
-          const { email, google, name, role, img, uid } = resp.user;
+        map((resp: any) => {
+          const { email, google, name, role, img = '', uid } = resp.user;
           this.user = new User(name, email, '', img, google, role, uid);
 
           localStorage.setItem('token', resp['token']);
+          return true;
         }),
-        map((resp: any) => true),
         catchError((error) => of(false))
       );
   }
