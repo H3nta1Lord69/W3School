@@ -1,7 +1,7 @@
 // Angular Importations
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 // Other libraries
 import { NgChartsModule } from 'ng2-charts';
@@ -43,6 +43,7 @@ import { ProfileComponent } from './profile/profile.component';
     CommonModule,
     FormsModule,
     NgChartsModule,
+    ReactiveFormsModule,
     SharedModule,
     AppRoutingModule,
     ComponentsModule,
