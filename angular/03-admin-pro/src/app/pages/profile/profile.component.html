@@ -55,11 +55,13 @@
         <h6 class="card-subtitle">User Image</h6>
 
         <img src="" />
-        <input type="file" /><br /><br />
+        <input type="file" (change)="changeImage($event)" /><br /><br />
 
         <button
           type="button"
           class="btn btn-success btn-block waves-effect waves-light m-r-10"
+          [disabled]="!uploadImage"
+          (click)="imageUpload()"
         >
           <i class="fa fa-save"></i>
           Change image
