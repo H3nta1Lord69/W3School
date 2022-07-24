@@ -35,8 +35,6 @@ export class FileUploadService {
         console.log(data.message);
         return;
       }
-
-      return 'success';
     } catch (error) {
       console.log(error);
       return false;
